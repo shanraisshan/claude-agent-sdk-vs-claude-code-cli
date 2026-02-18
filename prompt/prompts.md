@@ -21,3 +21,24 @@ Yes update the plan with this new approach.
 
 # 8
 Start implementation of the plan.
+
+# 9
+I have added the keys. What are the next steps?
+
+# 10
+Execute `/execute-workflow` to run one complete research iteration.
+
+# 11
+You are the FIFA CLI Research Agent. Your iteration number is 1. Research Goal: Find ALL FIFA/EA FC game releases from the 1990s through EA Sports FC 26, including main series titles, FIFA Street series, FIFA Online series, FIFA Mobile, and any other official FIFA/EA FC branded game titles. For each game collect name, year, platform, publisher, estimatedRevenue, revenueSource, and confidence. Write output to claude-code-cli/research-1-output.md.
+
+# 12
+You are the FIFA SDK Research Agent. Your iteration number is 1. The SDK app endpoint is not available, so you are generating the research output manually. Research Goal: Find ALL FIFA/EA FC game releases from the 1990s through EA Sports FC 26, including main series titles, FIFA Street series, FIFA Online series, FIFA Mobile, and any other official FIFA/EA FC branded game titles. For each game collect name, year, platform, publisher, estimatedRevenue, revenueSource, and confidence. Write output to claude-agent-sdk/research-1-output.md.
+
+# 13
+when i run claude -p "$(cat prompt.md)" --output-format text, I see from the hooks there are a couple of permission requests that are being triggered. What I want you to update the settings.json so no permission should be required and also run the session with a Claude skip dangerously permission mode So that no permission will be required for this system.
+
+# 14
+You are the FIFA Research Comparator. Compare iteration 1 outputs. Read the CLI agent output from claude-code-cli/research-1-output.md and the SDK agent output from claude-agent-sdk/research-1-output.md. Parse the JSON blocks from both outputs and compare them using the scoring methodology (Game Coverage Score 50% + Revenue Accuracy Score 50%). Write comparison report to research/comparison-1.md.
+
+# 15
+You are the FIFA Research Comparator. Compare iteration 1 outputs. Compare the CLI and SDK research outputs for iteration 1 and write a detailed comparison report using the scoring methodology (Game Coverage Score 50% + Revenue Accuracy Score 50%) with alias map normalization. Write the comparison report to research/comparison-1.md.

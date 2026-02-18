@@ -1,1 +1,5 @@
-iterations: []
+iterations:
+  - iteration: 1
+    score: 68.3
+    status: CONTINUING
+    timestamp: 2026-02-18T00:00:00Z
