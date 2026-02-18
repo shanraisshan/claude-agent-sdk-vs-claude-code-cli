@@ -18,3 +18,6 @@ Regarding the plan, can we make this system 100% autonomous? That is, the system
 
 # 7
 Yes update the plan with this new approach.
+
+# 8
+Start implementation of the plan.
