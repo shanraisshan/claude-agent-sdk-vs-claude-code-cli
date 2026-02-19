@@ -40,3 +40,14 @@ iterations:
       Regression from 83.33% to 37.5%. Problem statement changed from 1990-2026 to 2023-2025, revealing new issues.
       SDK missed FIFA 23 (actively sold in 2023 but released 2022). SDK used $62 blended price instead of $70.
       SDK used 65% player-to-purchaser ratio (too low). Evolved: include actively-sold games, use $70 default, 75-80% ratio.
+  - iteration: 6
+    score: 54.17
+    coverageScore: 75.0
+    valueAccuracyScore: 33.33
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-19T22:30:00Z"
+    learnings: >
+      Improvement from 37.5% to 54.17%. SDK now includes FIFA 23 but still missing FC 26 (coverage 75%).
+      FIFA 23 underestimated at $660M vs $810M (no World Cup boost). FC 25 overestimated at $665M vs $560M (5% GSD decline too conservative).
+      Evolved: mandatory end_year title inclusion, World Cup boost rule (20-25% above baseline), stronger underperformance rule (70-80% of prior year).
