@@ -159,3 +159,12 @@ Change the agent definition to search for only 10 posts. Do not spawn the agent 
 
 # 48
 Execute /workflow-research-cli
+
+# 49
+What is the use case of the ENV file at the root chat? I delete this, and also tell me how can I get the auth token for the CLAUDE agent SDK?
+
+# 50
+Go over the internet and search. Is there any way that the agent SDK should use the MCP as the CLI is using, and also use the agents and command as the CLI is using? If yes, that's possible, then try to mimic the same behavior. Write a plan on this.
+
+# 51
+implement the plan @plans/plan-4-sdk-mimic-cli-workflow.md

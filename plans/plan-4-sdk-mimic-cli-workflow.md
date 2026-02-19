@@ -1,3 +1,50 @@
+# Plan 4: Refactor SDK to Mimic CLI Workflow Using MCP, Subagents & Task Tool
+
+## Problem
+
+The current SDK (`agent.py`) does NOT replicate the CLI workflow. It pastes the agent instructions into a system prompt and asks a single Claude session to do everything in one shot. The CLI uses a 2-step architecture:
+
+1. **Spawn** the `reddit-game-research-agent` subagent via Task tool → writes `reddit-data-{n}.md`
+2. **Synthesize** the raw data into `research-{n}.md` with revenue table + JSON
+
+The SDK should use the **exact same architecture**.
+
+## Research Findings
+
+The Claude Agent SDK (`claude-agent-sdk` v0.1.38) officially supports:
+
+| Feature | Support | Docs |
+|---------|---------|------|
+| MCP Servers | `mcp_servers` param in `ClaudeAgentOptions` | [MCP Docs](https://platform.claude.com/docs/en/agent-sdk/mcp) |
+| Subagents | `agents` param with `AgentDefinition` | [Subagents Docs](https://platform.claude.com/docs/en/agent-sdk/subagents) |
+| Task Tool | Subagents invoked via Task tool (must be in `allowed_tools`) | Same as above |
+| `.mcp.json` auto-load | SDK auto-loads `.mcp.json` from `cwd` | [MCP Docs](https://platform.claude.com/docs/en/agent-sdk/mcp) |
+
+## What Changes
+
+### File: `claude-agent-sdk/agent.py` (full rewrite)
+
+**Before (current):**
+- Loads agent instructions as text, pastes into system prompt
+- Single Claude session does everything (no subagent)
+- MCP config loaded manually and passed as dict
+- No Task tool, no AgentDefinition
+
+**After (new):**
+- Defines `reddit-game-research-agent` as an `AgentDefinition` with proper tools
+- Main query uses `Task` tool to spawn the subagent (same as CLI)
+- MCP server config passed via `mcp_servers` param
+- 2-step workflow: subagent collects data → main agent synthesizes report
+
+### File: `claude-agent-sdk/main.py`
+
+No changes needed. It just calls `run_research_agent(iteration)`.
+
+## Implementation Steps
+
+### Step 1: Rewrite `_run_research()` in `agent.py`
+
+```python
 import asyncio
 import json
 import re
@@ -8,7 +55,6 @@ PROJECT_ROOT = Path(__file__).parent.parent
 
 
 def load_problem() -> dict:
-    """Load the research problem definition from problem-statement/problem-statement.json."""
     problem_path = PROJECT_ROOT / "problem-statement" / "problem-statement.json"
     if problem_path.exists():
         return json.loads(problem_path.read_text(encoding="utf-8"))
@@ -20,13 +66,13 @@ def load_agent_prompt() -> str:
     agent_path = PROJECT_ROOT / ".claude" / "agents" / "reddit-game-research-agent.md"
     if agent_path.exists():
         content = agent_path.read_text(encoding="utf-8")
+        # Strip YAML frontmatter (between --- markers)
         match = re.match(r"^---\n.*?\n---\n(.*)", content, re.DOTALL)
         return match.group(1).strip() if match else content
     return ""
 
 
 def load_mcp_config() -> dict:
-    """Load MCP server config from .mcp.json."""
     mcp_path = PROJECT_ROOT / ".mcp.json"
     if mcp_path.exists():
         data = json.loads(mcp_path.read_text(encoding="utf-8"))
@@ -35,7 +81,7 @@ def load_mcp_config() -> dict:
 
 
 async def _run_research(iteration: int) -> dict:
-    """Run research using the same 2-step workflow as the CLI command."""
+    """Run research using the same workflow as the CLI command."""
     problem_data = load_problem()
     game = problem_data["game"]
     start_year = problem_data["start_year"]
@@ -163,3 +209,72 @@ Output: SDK_RESEARCH_COMPLETE iteration={iteration}"""
 def run_research_agent(iteration: int) -> dict:
     """Sync wrapper for the async research agent."""
     return asyncio.run(_run_research(iteration))
+```
+
+### Step 2: Verify `requirements.txt` has correct dependencies
+
+```
+claude-agent-sdk>=0.1.38
+fastapi
+uvicorn[standard]
+```
+
+No `anthropic` package needed — the `claude-agent-sdk` handles everything.
+
+### Step 3: Remove unused imports and functions
+
+Remove from `agent.py`:
+- `load_evolution_log()` — evolution log is a self-evolving loop concern, not the agent's
+- `load_agent_instructions()` → replaced by `load_agent_prompt()` (strips frontmatter)
+
+## Architecture Comparison
+
+### Before (SDK v3)
+```
+FastAPI POST /research-claude-agent-sdk
+  └── agent.py: _run_research()
+        └── query() with system_prompt containing agent instructions
+              └── Single Claude session does everything
+                    ├── Searches Reddit (maybe)
+                    └── Writes both files (maybe)
+```
+
+### After (SDK v4 — this plan)
+```
+FastAPI POST /research-claude-agent-sdk
+  └── agent.py: _run_research()
+        └── query() with Task tool + AgentDefinition
+              ├── STEP 1: Task tool spawns reddit-game-research-agent
+              │     └── Subagent searches Reddit via MCP
+              │     └── Writes reddit-data-{n}.md
+              └── STEP 2: Main agent reads raw data
+                    └── Synthesizes research-{n}.md
+```
+
+This matches the CLI workflow exactly:
+```
+/workflow-research-cli
+  └── STEP 2: Task tool spawns reddit-game-research-agent
+  │     └── Subagent searches Reddit via MCP
+  │     └── Writes reddit-data-{n}.md
+  └── STEP 3: Command reads raw data
+        └── Synthesizes research-{n}.md
+```
+
+## What Does NOT Change
+
+- `.claude/agents/reddit-game-research-agent.md` — never modified (ground truth)
+- `.mcp.json` — same MCP config, auto-loaded by SDK
+- `problem-statement/problem-statement.json` — same problem source
+- `main.py` — no changes, just calls `run_research_agent()`
+- Output file structure — same `reddit-data-{n}.md` + `research-{n}.md`
+- CLI workflow — completely untouched
+
+## Risk Assessment
+
+| Risk | Mitigation |
+|------|------------|
+| `AgentDefinition` import may not exist in v0.1.38 | Check installed package; upgrade if needed |
+| `bypassPermissions` may not be a valid mode | Fallback to `dangerouslySkipPermissions` |
+| MCP wildcard `mcp__reddit-mcp-server__*` may not work | List individual tool names explicitly |
+| Subagent may not write to correct directory | Explicit path in prompt + verify after |
