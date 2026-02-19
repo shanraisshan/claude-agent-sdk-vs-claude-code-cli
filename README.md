@@ -39,8 +39,9 @@ The SDK replicates the CLI's architecture 1:1. Every CLI concept has a direct SD
 | Concept | CLI | SDK | How It Maps | Match |
 |---------|-----|-----|-------------|-------|
 | **Problem source** | Reads `problem-statement/problem-statement.json` | Reads `problem-statement/problem-statement.json` | Same file, same JSON format — `load_problem()` in `agent.py` | ✅ 100% |
-| **Research agent** | `.claude/agents/reddit-game-research-agent.md` | `AgentDefinition(prompt=load_agent_prompt())` | SDK loads the **same agent file**, strips YAML frontmatter, passes as `AgentDefinition.prompt` | ✅ 100% |
-| **MCP config** | `.mcp.json` auto-loaded by Claude Code | `mcp_servers=load_mcp_config()` from same `.mcp.json` | Same file. SDK loads it explicitly via `load_mcp_config()` | ✅ 100% |
+| **Research agent** | `.claude/agents/reddit-game-research-agent.md` · **Claude Opus 4.6** (`model: opus`) | `AgentDefinition(prompt=load_agent_prompt(), model="opus")` · **Claude Opus 4.6** | SDK loads the **same agent file**, strips YAML frontmatter. Both run the subagent on Opus 4.6 (`claude-opus-4-6`) | ✅ 100% |
+| **Orchestrator model** | **Claude Opus 4.6** (`claude-opus-4-6`, Claude Code default) | **Claude Opus 4.6** (`claude-opus-4-6`, Agent SDK default) | Both use Opus 4.6 as the main orchestrator that reads the workflow command and synthesizes the final report | ✅ 100% |
+| **MCP config** | `.mcp.json` auto-loaded by Claude Code | `mcp_servers=.mcp.json` path passed to SDK | Same file. SDK passes the file path directly to `ClaudeAgentOptions` | ✅ 100% |
 | **Reddit tools** | `mcp__reddit-mcp-server__*` tools | `mcp__reddit-mcp-server__*` tools | Identical MCP tools — search_reddit, get_post_details, browse_subreddit | ✅ 100% |
 | **Output schema** | Revenue table + JSON block in `research-{n}.md` | Revenue table + JSON block in `research-{n}.md` | Identical output format — same table columns, same JSON keys | ✅ 100% |
 | **Subagent spawning** | `Task tool` with `subagent_type: reddit-game-research-agent` | `Task tool` with `agents: {"reddit-game-research-agent": ...}` | Both use Task tool to spawn. SDK registers via `ClaudeAgentOptions.agents` | ✅ 100% |

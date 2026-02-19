@@ -5,6 +5,9 @@ iterations:
     valueAccuracyScore: 66.7
     converged: false
     date: "2026-02-19"
+    learnings: >
+      SDK output was generated manually (endpoint not available), so similarity was artificially high.
+      Real SDK integration via Agent SDK had not been tested yet — no CLAUDECODE env var issue discovered.
   - iteration: 2
     score: 62.5
     coverageScore: 100.0
@@ -12,3 +15,6 @@ iterations:
     status: CONTINUING
     converged: false
     timestamp: "2026-02-19T18:00:00Z"
+    learnings: >
+      First real Agent SDK run — fixed CLAUDECODE nested session blocker and mcp_servers config.
+      SDK overestimated copies sold for FC 24/25/26 due to conflating "players" with purchasers; added conservative estimation rules.
