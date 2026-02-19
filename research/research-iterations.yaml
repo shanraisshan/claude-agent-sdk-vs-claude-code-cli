@@ -64,3 +64,14 @@ iterations:
       FC 25 overestimated ($665M vs $560M) — used inflated FC 24 base for underperformance calc.
       FC 26 underestimated ($490M vs $665M) — reported copies-to-date instead of full-year projection.
       Evolved: clarified no lifecycle bump after conversion, correct prior-year base, full-year estimation for active titles.
+  - iteration: 8
+    score: 100.0
+    coverageScore: 100.0
+    valueAccuracyScore: 100.0
+    status: CONVERGED
+    converged: true
+    timestamp: "2026-02-19T23:55:00Z"
+    learnings: >
+      Full convergence achieved. All 4 games matched with 100% coverage. All revenue values within 10% tolerance:
+      FIFA 23 ($810M vs $780M, 3.7% diff), FC 24 ($770M vs $770M, 0%), FC 25 ($560M vs $560M, 0%), FC 26 ($665M vs $630M, 5.26% diff).
+      Previous iteration's evolution fixes (no lifecycle bump, correct base, full-year estimation) resolved all discrepancies.
