@@ -10,7 +10,7 @@ if [ -z "$1" ]; then
 fi
 
 echo "========================================"
-echo "FIFA Research Self-Evolving Loop"
+echo "Self-Evolving Research Loop"
 echo "Max iterations: $1"
 echo "========================================"
 echo ""

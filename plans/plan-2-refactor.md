@@ -200,9 +200,48 @@ Phase-by-phase updates:
 
 1. `cd claude-agent-sdk && pip install -r requirements.txt`
 2. `uvicorn main:app --reload --port 8000` — verify Swagger at `http://localhost:8000/docs`
-3. POST `{"iteration": 1}` to `http://localhost:8000/research` — verify output files created at `research/research-1/claude-agent-sdk/`
+3. POST `{"iteration": 1}` to `http://localhost:8000/research-claude-agent-sdk` — verify output files created at `research/research-1/claude-agent-sdk/`
 4. Single iteration test: `claude --dangerously-skip-permissions -p "$(cat prompt.md)" --output-format text`
 5. Verify CLI outputs at `research/research-1/claude-code-cli/research-1.md` and `reddit-data-1.md`
 6. Verify SDK outputs at `research/research-1/claude-agent-sdk/research-1.md` and `reddit-data-1.md`
 7. Verify comparison at `research/research-1/comparison-1.md`
 8. Full loop: `./ralph.sh 100`
+
+---
+
+## Plan 2 Amendment — Externalize Research Problem + Rename Commands
+
+### Changes (implemented)
+
+1. **Created `problem/problem.md`** — Single source of truth for the research problem definition. Contains topic, scope, data fields, revenue methodology, research sources, and output schema. No more hardcoding the FIFA problem in agent prompts.
+
+2. **Renamed workflow command**: `.claude/commands/execute-workflow.md` → `.claude/commands/research-claude-code-cli.md`
+   - Slash command changes from `/execute-workflow` to `/research-claude-code-cli`
+   - Phase 1 now reads `problem/problem.md` first
+   - Phase 2 passes problem contents to CLI subagent
+   - Phase 3 calls `localhost:8000/research-claude-agent-sdk` (renamed endpoint)
+
+3. **Renamed FastAPI endpoint**: `POST /research` → `POST /research-claude-agent-sdk`
+   - `main.py` endpoint updated
+   - Health endpoint message updated
+
+4. **Updated `agent.py`** — Added `load_problem()` function that reads `problem/problem.md`. System prompt now includes the problem definition dynamically instead of hardcoding FIFA-specific text.
+
+5. **Updated all agents** to reference `problem/problem.md`:
+   - `opus-cli-researcher.md` — reads problem from file, generic search strategy
+   - `opus-comparator.md` — reads problem to understand context
+
+6. **Updated references in**: `prompt.md`, `CLAUDE.md`, `ralph.sh` (no change needed — it just calls `prompt.md`)
+
+### Files Changed
+
+| Action | File |
+|--------|------|
+| CREATE | `problem/problem.md` |
+| RENAME | `.claude/commands/execute-workflow.md` → `research-claude-code-cli.md` |
+| MODIFY | `claude-agent-sdk/main.py` — endpoint `/research-claude-agent-sdk` |
+| MODIFY | `claude-agent-sdk/agent.py` — reads `problem/problem.md` |
+| MODIFY | `.claude/agents/opus-cli-researcher.md` — references problem file |
+| MODIFY | `.claude/agents/opus-comparator.md` — references problem file |
+| MODIFY | `prompt.md` — `/research-claude-code-cli` command |
+| MODIFY | `CLAUDE.md` — updated architecture docs |

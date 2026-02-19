@@ -1,19 +1,16 @@
-# Ralph Loop Prompt
+# Self-Evolving Loop Prompt
 
-Execute `/execute-workflow` to run one complete research iteration.
+Execute `/self-evolving-workflow` to run one complete iteration.
 
-The workflow handles everything autonomously:
-- Generates FIFA/EA FC game research via CLI agent (MCP tools)
-- Triggers SDK agent research via HTTP (localhost:3000)
-- Compares both outputs using the comparator agent
-- Evaluates similarity score against 90% threshold
-- Updates agent prompts with discrepancy findings
-- Commits all results to git
-- Reports status
+This orchestrates the full autonomous workflow:
+1. Generates CLI research (ground truth) via `/research-claude-code-cli`
+2. Triggers SDK research via HTTP (localhost:8000/research-claude-agent-sdk)
+3. If SDK fails, fixes the FastAPI code and retries
+4. Compares both outputs via `/compare-research` (CLI = ground truth)
+5. If < 90% similarity, evolves the SDK code to improve its output
+6. Commits all results to git
 
 ## Exit Conditions
 
-The workflow will output one of:
-
-- `<promise>COMPLETE</promise>` - Both agents converged (similarity >= 90%)
-- `CONTINUING_RESEARCH` - Need more iterations (similarity < 90%)
+- `<promise>COMPLETE</promise>` - SDK output matches CLI at 90%+ similarity
+- `CONTINUING_RESEARCH` - SDK needs more evolution (similarity < 90%)

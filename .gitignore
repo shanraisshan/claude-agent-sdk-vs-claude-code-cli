@@ -6,3 +6,10 @@ dist/
 *.log
 .DS_Store
 research/research-status.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
