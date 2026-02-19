@@ -129,34 +129,16 @@ Each iteration:
 | `claude-agent-sdk/.claude-resources/` | `.claude/commands/` |
 | `research/sdk-evolution-log.md` | CLI research output files |
 
-## Project Structure
+## Authentication
 
-```
-ralph.sh                                        — Bash loop entry point
-prompt.md                                       — Loop prompt (triggers /workflow-self-evolving-loop)
-problem-statement/
-  problem-statement.json                        — Research problem definition
-.claude/commands/
-  workflow-research-cli.md                      — CLI research orchestrator
-  compare-research.md                           — Comparison command
-  workflow-self-evolving-loop.md                — Thin orchestrator (delegates to sub-commands)
-.claude/agents/
-  reddit-game-research-agent.md                 — Reddit research agent (never modified)
-claude-agent-sdk/                               — FastAPI Python app (EVOLVES each iteration)
-  main.py                                       — POST /research-claude-agent-sdk
-  agent.py                                      — SDK agent (Claude Agent SDK, Max sub)
-  .claude-resources/commands/
-    workflow-research-sdk.md                    — SDK workflow command (mirrors CLI command)
-research/
-  self-evolving-state.yaml                      — State machine
-  research-iterations.yaml                      — Score history
-  research-status.json                          — Status for ralph.sh
-  sdk-evolution-log.md                          — Log of SDK changes
-  research-{n}/                                 — Per-iteration outputs
-    claude-code-cli/                            — CLI outputs (ground truth)
-    claude-agent-sdk/                           — SDK outputs (evolving)
-    comparison-{n}.md                           — Comparison report
-```
+| | Claude Code CLI | Claude Agent SDK |
+|---|---|---|
+| **Auth method** | Max subscription (local session) | Max subscription (via Agent SDK) |
+| **API key needed?** | No | No |
+| **Data source** | Reddit MCP server | Same Reddit MCP server |
+| **Cost** | Included in Max plan | Included in Max plan |
+
+Both agents are powered by your **Claude Max subscription** — no API key, no pay-per-token billing.
 
 ## Changing the Research Problem
 

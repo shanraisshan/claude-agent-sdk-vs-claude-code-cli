@@ -1,1 +1,7 @@
-iterations: []
+iterations:
+  - iteration: 1
+    similarityScore: 83.3
+    coverageScore: 100.0
+    valueAccuracyScore: 66.7
+    converged: false
+    date: "2026-02-19"

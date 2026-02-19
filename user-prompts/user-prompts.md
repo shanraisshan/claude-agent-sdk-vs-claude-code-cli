@@ -171,3 +171,6 @@ implement the plan @plans/plan-4-sdk-mimic-cli-workflow.md
 
 # 52
 Now, since we have almost the system is completed, do a comprehensive analysis of the README.md and redesign all the SVG diagrams. Also, in the end, create a table that shows how the agent SDK is mimicking the CLI.
+
+# 53
+Remove the project structure from README.md and append the authentication table. Since research one is done, update the research status properly.
