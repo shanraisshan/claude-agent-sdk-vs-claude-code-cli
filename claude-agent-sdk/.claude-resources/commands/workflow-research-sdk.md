@@ -66,3 +66,9 @@ Output: `SDK_RESEARCH_COMPLETE iteration={iteration}`
 ## Rules
 
 - Revenue = copy sales only (physical + digital). No microtransactions, DLC, or in-app purchases.
+- Only include premium paid games in the games list. Do NOT include free-to-play mobile titles (e.g. FIFA Mobile, EA Sports FC Mobile) — they have no copy sales.
+- "Players" reported by EA ≠ copies sold. EA counts EA Play, Game Pass, PS Plus trial users as "players." Actual purchasers are typically 60-75% of reported player counts.
+- When a title is described as "underperforming" with EA slashing forecasts, losing billions in market value, or being discounted 50% within 2 months, use the LOWER end of estimate ranges.
+- For games still in their active sales window (< 6 months since launch), use conservative estimates — these games haven't reached lifetime sales yet.
+- Average retail price: use weighted average across all platforms. If a game launched on last-gen ($59.99), current-gen ($69.99), and Switch ($39.99), the blended average is typically $60-65. Only use $70 if the game is current-gen exclusive.
+- totalGamesFound should count only premium paid titles included in the games array.
