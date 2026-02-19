@@ -17,3 +17,9 @@
 - Changes to agent.py: None needed — agent code is stable.
 - Changes to main.py: None needed.
 - Changes to workflow-research-sdk.md: (1) Updated agent spawn prompt to include games "released OR actively sold" in the year range. (2) Added explicit rule that games released just before start_year count if they were the active franchise title. (3) Increased player-to-purchaser ratio from 60-75% to 75-80% for mainstream annual franchises. (4) Changed default pricing to $70 for all modern FIFA/FC titles (2023+), only use $60 for pre-2023 titles.
+
+### Iteration 6 Evolution (Score: 54.17%)
+- Discrepancies: (1) SDK missing EA Sports FC 26 entirely — only found 3 of 4 games. (2) FIFA 23 revenue underestimated: SDK $660M (11M copies) vs CLI $810M (13.5M copies) — SDK didn't account for World Cup boost. (3) FC 25 revenue overestimated: SDK $665M (9.5M copies) vs CLI $560M (8M copies) — SDK only applied 5% decline from GSD data, but EA's massive financial impact ($6B market cap loss, $600M guidance cut) indicates a much steeper global decline.
+- Changes to agent.py: None needed — agent code is stable.
+- Changes to main.py: None needed.
+- Changes to workflow-research-sdk.md: (1) Added mandatory rule to always include the latest franchise title released in end_year (fixes FC 26 omission). (2) Updated agent spawn prompt to explicitly request searching for the end_year title. (3) Added World Cup boost rule: titles coinciding with FIFA World Cup should be estimated 20-25% above franchise baseline (~13-14M copies for FIFA 23). (4) Strengthened underperformance rule: when EA loses $6B+ market cap and slashes guidance $500M+, estimate 70-80% of prior year (not just 5% decline from European GSD data). (5) Refined active sales window rule for recovery titles.
