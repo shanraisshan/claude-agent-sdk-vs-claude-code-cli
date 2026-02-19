@@ -51,3 +51,16 @@ iterations:
       Improvement from 37.5% to 54.17%. SDK now includes FIFA 23 but still missing FC 26 (coverage 75%).
       FIFA 23 underestimated at $660M vs $810M (no World Cup boost). FC 25 overestimated at $665M vs $560M (5% GSD decline too conservative).
       Evolved: mandatory end_year title inclusion, World Cup boost rule (20-25% above baseline), stronger underperformance rule (70-80% of prior year).
+  - iteration: 7
+    score: 62.5
+    coverageScore: 100.0
+    valueAccuracyScore: 25.0
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-19T23:30:00Z"
+    learnings: >
+      Improvement from 54.17% to 62.5%. Full coverage achieved (4/4 games). FIFA 23 now matches perfectly ($810M).
+      FC 24 overestimated ($875M vs $770M) — lifecycle bump added on top of player-to-buyer conversion.
+      FC 25 overestimated ($665M vs $560M) — used inflated FC 24 base for underperformance calc.
+      FC 26 underestimated ($490M vs $665M) — reported copies-to-date instead of full-year projection.
+      Evolved: clarified no lifecycle bump after conversion, correct prior-year base, full-year estimation for active titles.
