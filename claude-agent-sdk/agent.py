@@ -46,13 +46,9 @@ def load_workflow_command(iteration: int, game: str, start_year: int, end_year: 
     return ""
 
 
-def load_mcp_config() -> dict:
-    """Load MCP server config from .mcp.json."""
-    mcp_path = PROJECT_ROOT / ".mcp.json"
-    if mcp_path.exists():
-        data = json.loads(mcp_path.read_text(encoding="utf-8"))
-        return data.get("mcpServers", {})
-    return {}
+def get_mcp_config_path() -> Path:
+    """Return path to .mcp.json for the SDK to load directly."""
+    return PROJECT_ROOT / ".mcp.json"
 
 
 async def _run_research(iteration: int) -> dict:
@@ -63,7 +59,7 @@ async def _run_research(iteration: int) -> dict:
     end_year = problem_data["end_year"]
 
     agent_prompt = load_agent_prompt()
-    mcp_servers = load_mcp_config()
+    mcp_config_path = get_mcp_config_path()
 
     # Ensure output directory exists
     output_dir = PROJECT_ROOT / "research" / f"research-{iteration}" / "claude-agent-sdk"
@@ -89,9 +85,12 @@ async def _run_research(iteration: int) -> dict:
 
     prompt = f"Execute the research workflow for iteration {iteration}. Spawn the reddit-game-research-agent subagent first, then synthesize the report."
 
+    # Ensure CLAUDECODE is unset right before query (in case it was re-inherited)
+    os.environ.pop("CLAUDECODE", None)
+
     options = ClaudeAgentOptions(
         system_prompt=system_prompt,
-        mcp_servers=mcp_servers,
+        mcp_servers=mcp_config_path,
         allowed_tools=[
             "Read", "Write", "Glob", "Grep", "Task",
             "mcp__reddit-mcp-server__*",
@@ -102,6 +101,7 @@ async def _run_research(iteration: int) -> dict:
         permission_mode="bypassPermissions",
         cwd=str(PROJECT_ROOT),
         max_turns=30,
+        stderr=lambda msg: print(f"[SDK STDERR] {msg}"),
     )
 
     final_text = ""
