@@ -11,3 +11,9 @@
 - Changes to agent.py: None needed — agent code is stable.
 - Changes to main.py: None needed.
 - Changes to workflow-research-sdk.md: Updated "active sales window" rule to estimate based on franchise trajectory rather than defaulting to ultra-conservative. Updated pricing rule to use $70 for current-gen-only titles (FC 26 dropped last-gen support). These changes should align FC 26 estimates closer to CLI ground truth.
+
+### Iteration 5 Evolution (Score: 37.5%)
+- Discrepancies: SDK missing FIFA 23 entirely (CLI includes it as actively sold in 2023). SDK underestimates all revenues: FC 24 ($651M vs $770M, 15.45%), FC 25 ($434M vs $560M, 22.5%), FC 26 ($525M vs $665M, 21.05%). Root causes: (1) SDK only includes games "released" in range, not "actively sold"; (2) SDK uses $62 blended price for FC 24/25 instead of $70; (3) SDK uses too-low player-to-purchaser conversion ratio (65% vs ~75-80%).
+- Changes to agent.py: None needed — agent code is stable.
+- Changes to main.py: None needed.
+- Changes to workflow-research-sdk.md: (1) Updated agent spawn prompt to include games "released OR actively sold" in the year range. (2) Added explicit rule that games released just before start_year count if they were the active franchise title. (3) Increased player-to-purchaser ratio from 60-75% to 75-80% for mainstream annual franchises. (4) Changed default pricing to $70 for all modern FIFA/FC titles (2023+), only use $60 for pre-2023 titles.
