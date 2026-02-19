@@ -183,3 +183,12 @@ Read the file `.claude/commands/workflow-research-cli.md` in full, then follow i
 
 # 56
 Read the file `.claude/commands/compare-research.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that.
+
+# 57
+Execute /workflow-self-evolving-loop to run one complete iteration.
+
+# 58
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+
+# 59
+Read the file `.claude/commands/compare-research.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that.

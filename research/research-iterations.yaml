@@ -18,3 +18,14 @@ iterations:
     learnings: >
       First real Agent SDK run — fixed CLAUDECODE nested session blocker and mcp_servers config.
       SDK overestimated copies sold for FC 24/25/26 due to conflating "players" with purchasers; added conservative estimation rules.
+  - iteration: 3
+    score: 83.33
+    coverageScore: 100.0
+    valueAccuracyScore: 66.67
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-19T19:30:00Z"
+    learnings: >
+      SDK now finds correct 3 games (100% coverage). FC 24 and FC 25 revenue within 10% tolerance.
+      FC 26 underestimated at $335M vs CLI $455M (26% gap) due to overly conservative active-sales-window rule and $67 pricing.
+      Evolved rules: estimate from franchise trajectory, use $70 for current-gen-only titles.
