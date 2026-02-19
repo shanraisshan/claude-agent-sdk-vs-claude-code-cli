@@ -29,3 +29,9 @@
 - Changes to agent.py: None needed — agent code is stable.
 - Changes to main.py: None needed.
 - Changes to workflow-research-sdk.md: (1) Clarified that 75-80% player-to-buyer conversion IS the final lifecycle estimate — no additional lifecycle bump. For 14.5M players: 14.5M × 0.76 ≈ 11M final. (2) Clarified underperformance rule must use CORRECT prior-year base (11M × 0.73 = 8M, not 12.5M × 0.76 = 9.5M). (3) Changed active sales window rule to estimate FULL annual lifecycle total, not just copies-to-date. Recovery titles should be 15-20% above underperforming predecessor's full-year total (8M × 1.19 ≈ 9.5M).
+
+### Iteration 9 Evolution (Score: 50%)
+- Discrepancies: Coverage 100% (4/4 games). ALL revenue estimates overestimated: FIFA 23 ($810M vs CLI $617.4M, +31.2%), FC 24 ($770M vs CLI $595M, +29.4%), FC 25 ($560M vs CLI $385M, +45.5%), FC 26 ($595M vs CLI $455M, +30.8%). SDK total $2.74B vs CLI $2.05B. Root cause: SDK workflow had prescriptive estimation formulas (World Cup boost 20-25%, player-to-copies 75-80% conversion, underperformance at 70-80% of prior year) that systematically inflate estimates above what the CLI derives from Reddit data alone. The CLI workflow has minimal rules and lets the agent derive conservative estimates naturally.
+- Changes to agent.py: None needed — agent code is stable.
+- Changes to main.py: None needed.
+- Changes to workflow-research-sdk.md: Stripped all prescriptive estimation formulas (World Cup boost, player-to-copies conversion ratio, underperformance percentage rules, lifecycle projection formulas, specific pricing rules). Replaced with minimal, conservative guidance matching CLI approach: be conservative, derive from Reddit data, err on lower side when ambiguous, players ≠ copies sold (without specifying a ratio).
