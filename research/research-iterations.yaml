@@ -75,3 +75,15 @@ iterations:
       Full convergence achieved. All 4 games matched with 100% coverage. All revenue values within 10% tolerance:
       FIFA 23 ($810M vs $780M, 3.7% diff), FC 24 ($770M vs $770M, 0%), FC 25 ($560M vs $560M, 0%), FC 26 ($665M vs $630M, 5.26% diff).
       Previous iteration's evolution fixes (no lifecycle bump, correct base, full-year estimation) resolved all discrepancies.
+  - iteration: 9
+    score: 50.0
+    coverageScore: 100.0
+    valueAccuracyScore: 0.0
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-20T00:15:00Z"
+    learnings: >
+      Regression from 100% to 50%. Coverage still 100% (4/4 games). All revenue estimates overestimated by 29-46%.
+      SDK used prescriptive formulas (World Cup boost, player-to-copies conversion, underperformance percentages) that
+      systematically inflate above CLI's data-driven approach. Evolved: stripped all prescriptive formulas, adopted
+      CLI's minimalist rules — be conservative, derive from Reddit data, err on lower side.
