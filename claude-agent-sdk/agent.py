@@ -1,8 +1,13 @@
 import asyncio
 import json
+import os
 import re
 from pathlib import Path
 from claude_agent_sdk import query, ClaudeAgentOptions, AgentDefinition, AssistantMessage, ResultMessage, TextBlock
+
+# Remove CLAUDECODE env var to allow SDK to spawn Claude CLI subprocess
+# (prevents "cannot be launched inside another Claude Code session" error)
+os.environ.pop("CLAUDECODE", None)
 
 PROJECT_ROOT = Path(__file__).parent.parent
 SDK_ROOT = Path(__file__).parent
