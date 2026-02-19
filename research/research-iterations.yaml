@@ -5,3 +5,10 @@ iterations:
     valueAccuracyScore: 66.7
     converged: false
     date: "2026-02-19"
+  - iteration: 2
+    score: 62.5
+    coverageScore: 100.0
+    valueAccuracyScore: 25.0
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-19T18:00:00Z"
