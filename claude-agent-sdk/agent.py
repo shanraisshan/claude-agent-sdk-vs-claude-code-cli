@@ -6,12 +6,12 @@ from claude_agent_sdk import query, ClaudeAgentOptions, AssistantMessage, Result
 PROJECT_ROOT = Path(__file__).parent.parent
 
 
-def load_problem() -> str:
-    """Load the research problem definition from problem-statement/problem-statement.md."""
-    problem_path = PROJECT_ROOT / "problem" / "problem.md"
+def load_problem() -> dict:
+    """Load the research problem definition from problem-statement/problem-statement.json."""
+    problem_path = PROJECT_ROOT / "problem-statement" / "problem-statement.json"
     if problem_path.exists():
-        return problem_path.read_text(encoding="utf-8")
-    return "No problem definition found. Check problem-statement/problem-statement.md."
+        return json.loads(problem_path.read_text(encoding="utf-8"))
+    return {"game": "FIFA", "start_year": 1990, "end_year": 2026}
 
 
 def load_agent_instructions() -> str:
@@ -41,7 +41,8 @@ def load_mcp_config() -> dict:
 
 async def _run_research(iteration: int) -> dict:
     """Run the research agent using Claude Agent SDK (uses Max subscription)."""
-    problem = load_problem()
+    problem_data = load_problem()
+    problem = f"Calculate the revenue of all the {problem_data['game']} games released from {problem_data['start_year']} to {problem_data['end_year']}."
     agent_instructions = load_agent_instructions()
     evolution_log = load_evolution_log()
     mcp_servers = load_mcp_config()

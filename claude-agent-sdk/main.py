@@ -5,7 +5,7 @@ from pathlib import Path
 
 app = FastAPI(
     title="Research SDK Agent",
-    description="Claude Agent SDK-based research agent. Uses Max subscription via Claude Code. Reads problem from problem-statement/problem-statement.md.",
+    description="Claude Agent SDK-based research agent. Uses Max subscription via Claude Code. Reads problem from problem-statement/problem-statement.json.",
     version="4.0.0",
 )
 

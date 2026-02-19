@@ -29,16 +29,16 @@ Always check the last heading number in `user-prompts/user-prompts.md` and incre
 |---------|---------|
 | `/research-claude-code-cli` | Generates CLI research (ground truth). Never modified by the self-evolving process. |
 | `/compare-research` | Compares CLI output (truth) vs SDK output. Measures how close SDK is to CLI. |
-| `/self-evolving-workflow` | Full orchestrator — generates CLI research, hits SDK API, compares, and **evolves SDK code** if < 90%. |
+| `/self-evolving-workflow` | Thin orchestrator — delegates to `/research-claude-code-cli` and `/compare-research`, hits SDK API, and evolves SDK code if < 90%. |
 
 ### Components
 
 - **Ralph Wiggum Loop**: `ralph.sh` spawns fresh `claude -p` each iteration, triggers `/self-evolving-workflow`
-- **Research Problem**: `problem-statement/problem-statement.md` — single source of truth for what to research
+- **Research Problem**: `problem-statement/problem-statement.json` — single source of truth for what to research
 - **CLI Agent (🔴 Red)**: `.claude/agents/claude-code-cli-games-revenue-researcher.md` — produces ground truth output (never modified)
 - **SDK Agent**: `claude-agent-sdk/` — FastAPI Python app using **Claude Agent SDK** (`claude-agent-sdk` package). Runs on Max subscription (no API key needed). Evolves each iteration. Uses the same agent definition as CLI (`code-cli-researcher.md`)
 - **Comparator (🔵 Blue)**: `.claude/agents/research-compare.md` — measures SDK closeness to CLI
-- **State**: `research/research-workflow-state.yaml` — resumable state machine
+- **State**: `research/self-evolving-state.yaml` — resumable state machine
 
 ### What Evolves
 
@@ -49,7 +49,7 @@ Always check the last heading number in `user-prompts/user-prompts.md` and incre
 ### What NEVER Changes
 
 - `.claude/agents/claude-code-cli-games-revenue-researcher.md` — CLI agent definition (ground truth)
-- `problem-statement/problem-statement.md` — research problem definition
+- `problem-statement/problem-statement.json` — research problem definition
 - CLI research output files
 
 ## Key Directories
@@ -57,11 +57,11 @@ Always check the last heading number in `user-prompts/user-prompts.md` and incre
 ```
 ralph.sh                                    → Bash loop entry point
 prompt.md                                   → Loop prompt (triggers /self-evolving-workflow)
-problem-statement/problem-statement.md                          → Research problem definition
+problem-statement/problem-statement.json                          → Research problem definition
 .claude/commands/
   research-claude-code-cli.md               → CLI research command (ground truth)
   compare-research.md                       → Comparison command
-  self-evolving-workflow.md                 → Full orchestrator (evolves SDK)
+  self-evolving-workflow.md                 → Thin orchestrator (delegates to sub-commands, evolves SDK)
 .claude/agents/
   claude-code-cli-games-revenue-researcher.md → CLI research agent 🔴 Red (never modified)
   research-compare.md                        → Comparison agent 🔵 Blue
@@ -73,7 +73,7 @@ research/
     claude-code-cli/                        → CLI outputs (ground truth)
     claude-agent-sdk/                       → SDK outputs (evolving)
     comparison-{n}.md                       → Comparison report
-  research-workflow-state.yaml              → State machine
+  self-evolving-state.yaml                  → State machine
   research-iterations.yaml                  → Score history
   research-status.json                      → Status for ralph.sh
   sdk-evolution-log.md                      → Log of SDK changes per iteration
@@ -141,5 +141,5 @@ Each iteration: CLI research (truth) → SDK research → compare → evolve SDK
 - CLI output is **ground truth** — never modify CLI agent files
 - SDK code evolves — `agent.py` and `main.py` are modified each iteration
 - If SDK API fails, **fix the code** — never use fallback subagents
-- The research problem is defined in `problem-statement/problem-statement.md` — never hardcode it
+- The research problem is defined in `problem-statement/problem-statement.json` — never hardcode it
 - Only Reddit is used for research — no Tavily or other web search tools

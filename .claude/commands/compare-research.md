@@ -8,7 +8,7 @@ You are the research comparator. Your ONLY job is to compare the CLI output (gro
 
 ## STEP 1: DETERMINE ITERATION
 
-1. Read `research/research-workflow-state.yaml` to get the current iteration number
+1. Read `research/self-evolving-state.yaml` to get the current iteration number
 2. Use that iteration number for all file paths below
 
 ---

@@ -6,8 +6,8 @@ You are the CLI research agent orchestrator. Your ONLY job is to generate resear
 
 ## STEP 1: READ PROBLEM & STATE
 
-1. Read `problem-statement/problem-statement.md` to load the research problem definition
-2. Read `research/research-workflow-state.yaml` to get the current iteration number
+1. Read `problem-statement/problem-statement.json` to load the research problem definition (JSON with keys: `game`, `start_year`, `end_year`)
+2. Read `research/self-evolving-state.yaml` to get the current iteration number
 3. Determine the iteration: use the current iteration from state (it should already be set by the self-evolving-workflow orchestrator). If state shows iteration 0 or IDLE, use iteration 1.
 4. Create the output directory: `mkdir -p research/research-{iteration}/claude-code-cli`
 
@@ -15,17 +15,17 @@ You are the CLI research agent orchestrator. Your ONLY job is to generate resear
 
 ## STEP 2: GENERATE CLI RESEARCH
 
-1. Read `problem-statement/problem-statement.md` for the research problem
+1. Read `problem-statement/problem-statement.json` for the research problem (parse JSON: `game`, `start_year`, `end_year`)
 2. Read `.claude/agents/claude-code-cli-games-revenue-researcher.md` for the agent instructions
 3. Use the Task tool to spawn a subagent (subagent_type: "general-purpose") with these instructions:
    - Tell it: "You are the CLI Research Agent. Your iteration number is {iteration}."
-   - Include the **full contents** of `problem-statement/problem-statement.md` so the agent knows what to research
+   - Include the parsed problem: "Calculate the revenue of all the {game} games released from {start_year} to {end_year}."
    - Include the **full contents** of code-cli-researcher.md instructions
    - Tell it to use Reddit MCP tools ONLY (NO Tavily or other web search)
    - Tell it to write TWO files:
      1. `research/research-{iteration}/claude-code-cli/reddit-data-{iteration}.md` — raw Reddit data
      2. `research/research-{iteration}/claude-code-cli/research-{iteration}.md` — synthesized research with JSON block
-   - The research output must contain a markdown summary AND a JSON code block with the ResearchOutput schema from `problem-statement/problem-statement.md`
+   - The research output must contain a markdown summary AND a JSON code block with the ResearchOutput schema from the agent instructions
 4. Wait for the subagent to complete
 5. Verify both output files exist
 
@@ -52,10 +52,10 @@ Output: `CLI_RESEARCH_COMPLETE iteration={iteration}`
 
 ## Critical Rules
 
-- Read `problem-statement/problem-statement.md` — the research problem is defined there, not hardcoded
+- Read `problem-statement/problem-statement.json` — the research problem is defined there as JSON (`game`, `start_year`, `end_year`), not hardcoded
 - The CLI output is **ground truth** — it is always considered correct
 - Do NOT trigger the SDK agent or run comparisons — that is handled by other commands
-- Do NOT modify `research/research-workflow-state.yaml` — the self-evolving-workflow manages state
+- Do NOT modify `research/self-evolving-state.yaml` — the self-evolving-workflow manages state
 - Always write outputs before committing
 - JSON output blocks in research files must be valid parseable JSON
 - The agent must produce TWO files: reddit-data and research

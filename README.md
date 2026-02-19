@@ -6,7 +6,7 @@ The **Claude Code CLI** produces ground-truth research output. The **Claude Agen
 
 ## How It Works
 
-1. A research problem is defined in [`problem-statement/problem-statement.md`](problem-statement/problem-statement.md)
+1. A research problem is defined in [`problem-statement/problem-statement.json`](problem-statement/problem-statement.json)
 2. The **CLI agent** (Claude Code CLI + Reddit MCP) produces the **ground truth** output
 3. The **SDK agent** (FastAPI + Claude Agent SDK) independently produces its output — uses the same agent definition and Reddit MCP as CLI
 4. A comparator measures how close the SDK output is to the CLI ground truth
@@ -15,13 +15,25 @@ The **Claude Code CLI** produces ground-truth research output. The **Claude Agen
 7. Loop repeats until SDK matches CLI at 90%+ similarity
 8. Every step is committed to git
 
+## CLI Research Flow
+
+<p align="center">
+  <img src="docs/cli-research-flow.svg" alt="CLI Research Workflow" width="900"/>
+</p>
+
+## Self-Evolving Workflow
+
+<p align="center">
+  <img src="docs/self-evolving-workflow.svg" alt="Self-Evolving Workflow" width="960"/>
+</p>
+
 ## Three Commands
 
 | Command | Purpose |
 |---------|---------|
 | `/research-claude-code-cli` | CLI research only (ground truth) — never modified |
 | `/compare-research` | Compare CLI (truth) vs SDK output — scores similarity |
-| `/self-evolving-workflow` | Full orchestrator — CLI research → SDK API → compare → evolve SDK |
+| `/self-evolving-workflow` | Thin orchestrator — delegates to sub-commands, hits SDK API, evolves SDK |
 
 ## Prerequisites
 
@@ -90,7 +102,7 @@ Each iteration:
 | Evolves (SDK) | Never Changes (CLI) |
 |---------------|-------------------|
 | `claude-agent-sdk/agent.py` | `.claude/agents/claude-code-cli-games-revenue-researcher.md` |
-| `claude-agent-sdk/main.py` | `problem-statement/problem-statement.md` |
+| `claude-agent-sdk/main.py` | `problem-statement/problem-statement.json` |
 | `research/sdk-evolution-log.md` | CLI research output files |
 
 ## Tech Stack
@@ -106,11 +118,12 @@ Each iteration:
 ```
 ralph.sh                          — Bash loop entry point
 prompt.md                         — Loop prompt (triggers /self-evolving-workflow)
-problem-statement/problem-statement.md                — Research problem definition
+problem-statement/problem-statement.json                — Research problem definition
 .claude/commands/
   research-claude-code-cli.md     — CLI research (ground truth)
   compare-research.md             — Comparison command
-  self-evolving-workflow.md       — Full orchestrator (evolves SDK)
+  self-evolving-workflow.md       — Thin orchestrator (delegates to sub-commands)
+  self-evolving-state.yaml        — Loop state machine
 .claude/agents/
   claude-code-cli/claude-code-cli-games-revenue-researcher.md          — CLI agent definition 🔴 Red (never modified)
   research-compare.md             — Comparison agent 🔵 Blue
@@ -127,4 +140,4 @@ research/
 
 ## Changing the Research Problem
 
-Edit [`problem-statement/problem-statement.md`](problem-statement/problem-statement.md). Both agents read this file dynamically.
+Edit [`problem-statement/problem-statement.json`](problem-statement/problem-statement.json). Both agents read this file dynamically.

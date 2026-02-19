@@ -111,3 +111,18 @@ Remove the shared/ folder. The research-compare agent should compare the MD file
 
 # 32
 Rename prompt folder in the root to user-prompts and also the md file to user-prompts.md.
+
+# 33
+Make problem statement instead of a text to a concise JSON format. It contains three keys: game, start_year, and end_year. Make this from problem_statement.md to problem_statement.json and update the workflow.
+
+# 34
+In the README, can you create me the SVG diagram that shows how our Claude CLI system is working? When the user invokes the research code CLI command, what happens is: 1. It reads the problem directory. 2. Similarly, it calls the research agent. 3. What the research agent does.
+
+# 35
+Can you also make the diagram for the self-evolving workflow?
+
+# 36
+Currently what are the tasks that are duplicated I mean the tasks that are performed by the research command as well as the self-evolving command or the Claude Agent SDK.
+
+# 37
+What I want is the self-evolving workflow to perform two tasks: 1. Execute the research cloud CLI command, and it's the responsibility of that command to do end-to-end research and create the MD files in the specific research folder. The self-evolving workflow shouldn't be responsible for reading the problem statement or creating the research directive or anything. It should only maintain the research workflow state (rename to self-evolving state). 2. Hit the API of the cloud agent SDK, and the Claude Agent SDK should be responsible end-to-end — creating search folder if not exists, and basically be a replica of how Claude CLI is working. Ideally it uses the same research command and same research agent to produce the output. The self-evolving command should use the compare research command. Basically self-evolving workflow is just a basic command that invokes other commands and does nothing else. There is no fallback strategy. The complete workflow should be contained inside these individual files.

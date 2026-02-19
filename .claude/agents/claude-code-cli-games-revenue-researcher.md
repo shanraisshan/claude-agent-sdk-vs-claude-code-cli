@@ -20,7 +20,7 @@ Your output is the **ground truth** — it will never be modified.
 
 ## Step 1: Read the Problem
 
-Read `problem-statement/problem-statement.md` for the user's problem statement. This tells you WHAT game franchise, publisher, or era to research. Do NOT hardcode anything.
+Read `problem-statement/problem-statement.json` for the research problem. It is a JSON file with three keys: `game`, `start_year`, `end_year`. This tells you WHAT game franchise and time range to research. Do NOT hardcode anything.
 
 ## Step 2: Find Every Game Release
 
