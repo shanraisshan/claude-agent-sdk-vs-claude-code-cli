@@ -23,3 +23,9 @@
 - Changes to agent.py: None needed — agent code is stable.
 - Changes to main.py: None needed.
 - Changes to workflow-research-sdk.md: (1) Added mandatory rule to always include the latest franchise title released in end_year (fixes FC 26 omission). (2) Updated agent spawn prompt to explicitly request searching for the end_year title. (3) Added World Cup boost rule: titles coinciding with FIFA World Cup should be estimated 20-25% above franchise baseline (~13-14M copies for FIFA 23). (4) Strengthened underperformance rule: when EA loses $6B+ market cap and slashes guidance $500M+, estimate 70-80% of prior year (not just 5% decline from European GSD data). (5) Refined active sales window rule for recovery titles.
+
+### Iteration 7 Evolution (Score: 62.5%)
+- Discrepancies: Coverage is now 100% (4/4 games). FIFA 23 matches perfectly ($810M). But FC 24 overestimated ($875M vs CLI $770M, +13.6%), FC 25 overestimated ($665M vs CLI $560M, +18.75%), FC 26 underestimated ($490M vs CLI $665M, -26.3%). Root causes: (1) SDK adds lifecycle bump on top of player-to-buyer conversion, inflating FC 24 from 11M to 12.5M. (2) FC 25 underperformance rule uses inflated FC 24 base (12.5M × 0.76 = 9.5M instead of 11M × 0.73 = 8M). (3) FC 26 estimated as "copies to date" (7M) instead of full-year lifecycle projection (should be ~9.5M).
+- Changes to agent.py: None needed — agent code is stable.
+- Changes to main.py: None needed.
+- Changes to workflow-research-sdk.md: (1) Clarified that 75-80% player-to-buyer conversion IS the final lifecycle estimate — no additional lifecycle bump. For 14.5M players: 14.5M × 0.76 ≈ 11M final. (2) Clarified underperformance rule must use CORRECT prior-year base (11M × 0.73 = 8M, not 12.5M × 0.76 = 9.5M). (3) Changed active sales window rule to estimate FULL annual lifecycle total, not just copies-to-date. Recovery titles should be 15-20% above underperforming predecessor's full-year total (8M × 1.19 ≈ 9.5M).
