@@ -15,8 +15,8 @@ def load_problem() -> dict:
 
 
 def load_agent_instructions() -> str:
-    """Load the same agent instructions used by CLI (claude-code-cli-games-revenue-researcher.md)."""
-    agent_path = PROJECT_ROOT / ".claude" / "agents" / "claude-code-cli-games-revenue-researcher.md"
+    """Load the same agent instructions used by CLI (reddit-game-research-agent.md)."""
+    agent_path = PROJECT_ROOT / ".claude" / "agents" / "reddit-game-research-agent.md"
     if agent_path.exists():
         return agent_path.read_text(encoding="utf-8")
     return ""

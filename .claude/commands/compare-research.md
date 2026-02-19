@@ -1,6 +1,6 @@
 # Compare Research
 
-You are the research comparator. Your ONLY job is to compare the CLI output (ground truth) against the SDK output for a given iteration and write a comparison report. You do NOT generate any research and you do NOT modify any agent code.
+You are the research comparator. Compare the CLI output (ground truth) against the SDK output for a given iteration and write a comparison report.
 
 **Important:** The CLI output is the **ground truth** (100% correct). The comparison measures how close the SDK output is to matching the CLI output.
 
@@ -22,46 +22,86 @@ You are the research comparator. Your ONLY job is to compare the CLI output (gro
 
 ---
 
-## STEP 3: RUN COMPARISON
+## STEP 3: READ & PARSE
 
-1. Read `.claude/agents/research-compare.md` for comparison instructions
-2. Use the Task tool to spawn a comparator subagent (subagent_type: "general-purpose"):
-   - Tell it: "You are the Research Comparator. Compare iteration {iteration} outputs. The CLI output is the ground truth — measure how close the SDK output is to it."
-   - Include the **full contents** of research-compare.md instructions
-   - Tell it to read:
-     - CLI output (ground truth): `research/research-{iteration}/claude-code-cli/research-{iteration}.md`
-     - SDK output: `research/research-{iteration}/claude-agent-sdk/research-{iteration}.md`
-   - Tell it to write comparison to `research/research-{iteration}/comparison-{iteration}.md`
-3. Wait for completion
-4. Verify `research/research-{iteration}/comparison-{iteration}.md` exists
+1. Read CLI research file: `research/research-{iteration}/claude-code-cli/research-{iteration}.md`
+2. Read SDK research file: `research/research-{iteration}/claude-agent-sdk/research-{iteration}.md`
+3. Parse the JSON blocks from both MD files
+4. If either MD file has no parseable JSON block, report 0% similarity and skip to Step 5
 
 ---
 
-## STEP 4: COMMIT COMPARISON
+## STEP 4: SCORE
 
-1. Stage the comparison file:
-   ```
-   git add research/research-{iteration}/comparison-{iteration}.md
-   ```
-2. Commit with message:
-   ```
-   comparison({iteration}): comparison report generated
-   ```
+### Coverage Score (50% of total)
+
+1. **Normalize game names** — convert to lowercase, strip extra whitespace, match common variants (e.g. "FIFA 98" = "FIFA: Road to World Cup 98", "EA FC 24" = "EA Sports FC 24")
+2. **Count matched items**: games from the CLI output that also appear in the SDK output
+3. **Total items**: total games in the CLI output (ground truth)
+4. **Coverage Score** = (matched items / total CLI items) * 100
+
+### Value Accuracy Score (50% of total)
+
+For each matched game:
+1. Compare `estimatedRevenue` values: CLI (ground truth) vs SDK
+2. Calculate percent difference: `|cli - sdk| / cli * 100`
+3. A game is "value-matched" if percent difference <= 10%
+4. **Value Accuracy Score** = (value-matched games / total matched games) * 100
+
+### Final Similarity Score
+
+```
+similarity = (coverageScore * 0.5) + (valueAccuracyScore * 0.5)
+```
 
 ---
 
-## STEP 5: REPORT
+## STEP 5: WRITE COMPARISON REPORT
 
-1. Read `research/research-{iteration}/comparison-{iteration}.md` and parse the similarity score from the JSON block
-2. Output: `COMPARISON_COMPLETE iteration={iteration} similarity={score}%`
+Write to `research/research-{iteration}/comparison-{iteration}.md`:
+
+```markdown
+# Comparison Report - Iteration {iteration}
+
+## Summary
+- **Similarity Score**: {score}%
+- **Coverage Score**: {coverageScore}%
+- **Value Accuracy Score**: {valueAccuracyScore}%
+- **Converged**: {yes/no}
+
+## Coverage
+- CLI found (ground truth): {n} games
+- SDK found: {n} games
+- Matched: {n} games
+
+### Missing from SDK
+- {list of games in CLI but not in SDK}
+
+### Extra in SDK
+- {list of games in SDK but not in CLI}
+
+## Value Discrepancies
+| Game | CLI Revenue (Truth) | SDK Revenue | Difference |
+|------|-------------------|-------------|------------|
+| ... | ... | ... | ...% |
+
+## Raw Comparison Data
+```json
+{comparison JSON}
+```
+```
 
 ---
 
-## Critical Rules
+## STEP 6: REPORT
 
-- CLI output is the **ground truth** — never suggest changes to it
-- Do NOT generate any research — only compare existing outputs
-- Do NOT trigger the CLI or SDK agents
-- Do NOT modify agent files, SDK code, or evolution hints — that is handled by self-evolving-workflow
-- If either input file is missing, report the error and stop
-- Always include the full ComparisonResult JSON in the comparison report
+Output: `COMPARISON_COMPLETE iteration={iteration} similarity={score}%`
+
+---
+
+## Rules
+
+- CLI output is the **ground truth** — the score measures how close SDK is to CLI
+- Be thorough in name normalization — match common abbreviations and alternate titles
+- If a game appears multiple times in one output, use the first occurrence
+- Do NOT modify `research/self-evolving-state.yaml` — the workflow-self-evolving-loop manages state

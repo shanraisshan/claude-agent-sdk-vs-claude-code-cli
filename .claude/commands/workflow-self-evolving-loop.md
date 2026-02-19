@@ -2,7 +2,7 @@
 
 You are a thin orchestrator for a self-evolving system. Your ONLY jobs are: manage state, delegate to sub-commands, call the SDK API, evaluate results, and evolve the SDK code if needed.
 
-**Key principle:** You do NOT contain any research or comparison logic. You delegate those to `/research-claude-code-cli` and `/compare-research`. If something fails, it fails — no fallbacks.
+**Key principle:** You do NOT contain any research or comparison logic. You delegate those to `/workflow-research-cli` and `/compare-research`. If something fails, it fails — no fallbacks.
 
 ---
 
@@ -25,7 +25,7 @@ You are a thin orchestrator for a self-evolving system. Your ONLY jobs are: mana
 
 Spawn a subagent (subagent_type: "general-purpose") with this prompt:
 
-> Read the file `.claude/commands/research-claude-code-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+> Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
 
 Wait for the subagent to complete. Its output should contain `CLI_RESEARCH_COMPLETE`.
 If it does not, this phase has failed — stop and output `CONTINUING_RESEARCH`.
@@ -70,7 +70,7 @@ If the output contains `COMPARE_ERROR`, this phase has failed — stop and outpu
 2. **If similarity < 90:** set `converged = false`, then evolve:
    a. Read `research/research-{iteration}/comparison-{iteration}.md` for discrepancies
    b. Read `claude-agent-sdk/agent.py` and `claude-agent-sdk/main.py`
-   c. Read `.claude/agents/claude-code-cli-games-revenue-researcher.md` to understand CLI approach
+   c. Read `.claude/agents/reddit-game-research-agent.md` to understand CLI approach
    d. Modify SDK code to address discrepancies (improve prompts, queries, output formatting)
    e. Update `research/sdk-evolution-log.md`:
       ```
@@ -117,7 +117,7 @@ If the output contains `COMPARE_ERROR`, this phase has failed — stop and outpu
 
 ## Critical Rules
 
-- **Delegate, don't duplicate** — CLI research logic lives in `/research-claude-code-cli`, comparison logic lives in `/compare-research`. Never inline their logic here.
+- **Delegate, don't duplicate** — CLI research logic lives in `/workflow-research-cli`, comparison logic lives in `/compare-research`. Never inline their logic here.
 - **CLI output is ground truth** — never modify CLI agent files or CLI output
 - **SDK evolves** — only `claude-agent-sdk/agent.py` and `claude-agent-sdk/main.py` are modified
 - **No fallbacks** — if the SDK API fails, fix the code or stop. Never mock with a subagent.

@@ -8,12 +8,11 @@ The **Claude Code CLI** produces ground-truth research output. The **Claude Agen
 
 1. A research problem is defined in [`problem-statement/problem-statement.json`](problem-statement/problem-statement.json)
 2. The **CLI agent** (Claude Code CLI + Reddit MCP) produces the **ground truth** output
-3. The **SDK agent** (FastAPI + Claude Agent SDK) independently produces its output — uses the same agent definition and Reddit MCP as CLI
+3. The **SDK agent** (FastAPI + Claude Agent SDK) independently produces its output
 4. A comparator measures how close the SDK output is to the CLI ground truth
-5. If < 90% similarity, the self-evolving process **modifies the SDK code** (`agent.py`, `main.py`) to improve its output
+5. If < 90% similarity, the self-evolving process **modifies the SDK code** (`agent.py`, `main.py`)
 6. If the SDK API **fails**, the process **fixes the code** — no mocking or fallbacks
 7. Loop repeats until SDK matches CLI at 90%+ similarity
-8. Every step is committed to git
 
 ## CLI Research Flow
 
@@ -24,16 +23,16 @@ The **Claude Code CLI** produces ground-truth research output. The **Claude Agen
 ## Self-Evolving Workflow
 
 <p align="center">
-  <img src="docs/self-evolving-workflow.svg" alt="Self-Evolving Workflow" width="960"/>
+  <img src="docs/workflow-self-evolving-loop.svg" alt="Self-Evolving Workflow" width="960"/>
 </p>
 
 ## Three Commands
 
 | Command | Purpose |
 |---------|---------|
-| `/research-claude-code-cli` | CLI research only (ground truth) — never modified |
+| `/workflow-research-cli` | Reads problem, spawns Reddit research agent for raw data, synthesizes final report |
 | `/compare-research` | Compare CLI (truth) vs SDK output — scores similarity |
-| `/self-evolving-workflow` | Thin orchestrator — delegates to sub-commands, hits SDK API, evolves SDK |
+| `/workflow-self-evolving-loop` | Thin orchestrator — delegates to sub-commands, hits SDK API, evolves SDK |
 
 ## Prerequisites
 
@@ -57,7 +56,7 @@ cd claude-agent-sdk && python3 -m venv venv && source venv/bin/activate && pip i
 ### CLI Research Only (Ground Truth)
 
 ```bash
-claude --dangerously-skip-permissions -p "Execute /research-claude-code-cli" --output-format text
+claude --dangerously-skip-permissions -p "Execute /workflow-research-cli" --output-format text
 ```
 
 ### SDK Research Only (Max subscription)
@@ -101,41 +100,35 @@ Each iteration:
 
 | Evolves (SDK) | Never Changes (CLI) |
 |---------------|-------------------|
-| `claude-agent-sdk/agent.py` | `.claude/agents/claude-code-cli-games-revenue-researcher.md` |
+| `claude-agent-sdk/agent.py` | `.claude/agents/reddit-game-research-agent.md` |
 | `claude-agent-sdk/main.py` | `problem-statement/problem-statement.json` |
 | `research/sdk-evolution-log.md` | CLI research output files |
-
-## Tech Stack
-
-| Component | Technology | Auth |
-|-----------|-----------|------|
-| CLI Agent | Claude Code CLI + Reddit MCP | Max subscription |
-| SDK Agent | `claude-agent-sdk` package + FastAPI | Max subscription (via Agent SDK) |
-| Comparator | Claude Code subagent | Max subscription |
 
 ## Project Structure
 
 ```
 ralph.sh                          — Bash loop entry point
-prompt.md                         — Loop prompt (triggers /self-evolving-workflow)
-problem-statement/problem-statement.json                — Research problem definition
+prompt.md                         — Loop prompt (triggers /workflow-self-evolving-loop)
+problem-statement/
+  problem-statement.json          — Research problem definition
 .claude/commands/
-  research-claude-code-cli.md     — CLI research (ground truth)
+  workflow-research-cli.md     — CLI research orchestrator (reads problem, spawns agent, synthesizes report)
   compare-research.md             — Comparison command
-  self-evolving-workflow.md       — Thin orchestrator (delegates to sub-commands)
-  self-evolving-state.yaml        — Loop state machine
+  workflow-self-evolving-loop.md       — Thin orchestrator (delegates to sub-commands)
 .claude/agents/
-  claude-code-cli/claude-code-cli-games-revenue-researcher.md          — CLI agent definition 🔴 Red (never modified)
-  research-compare.md             — Comparison agent 🔵 Blue
+  reddit-game-research-agent.md  — Reddit research agent 🔴 (never modified)
 claude-agent-sdk/
   main.py                         — POST /research-claude-agent-sdk
   agent.py                        — SDK agent (Claude Agent SDK, Max sub)
 research/
+  self-evolving-state.yaml        — State machine
+  research-iterations.yaml        — Score history
+  research-status.json            — Status for ralph.sh
+  sdk-evolution-log.md            — Log of SDK changes
   research-{n}/                   — Per-iteration outputs
     claude-code-cli/              — CLI outputs (ground truth)
     claude-agent-sdk/             — SDK outputs (evolving)
     comparison-{n}.md             — Comparison report
-  sdk-evolution-log.md            — Log of SDK changes
 ```
 
 ## Changing the Research Problem

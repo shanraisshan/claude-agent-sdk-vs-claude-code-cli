@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 780" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
@@ -15,121 +15,93 @@
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="720" rx="12" fill="#f8fafc"/>
+  <rect width="900" height="780" rx="12" fill="#f8fafc"/>
 
   <!-- Title -->
-  <text x="450" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">/research-claude-code-cli — Workflow</text>
+  <text x="450" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">/workflow-research-cli — Workflow</text>
 
-  <!-- Step 1: User invokes command -->
+  <!-- User invokes command -->
   <rect x="300" y="65" width="300" height="50" rx="25" fill="#1e293b" filter="url(#shadow)"/>
-  <text x="450" y="95" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">User invokes /research-claude-code-cli</text>
+  <text x="450" y="95" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">User invokes /workflow-research-cli</text>
 
-  <!-- Arrow 1→2 -->
-  <line x1="450" y1="115" x2="450" y2="145" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrow -->
+  <line x1="450" y1="115" x2="450" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Step 2: Read Problem + State (side by side) -->
+  <!-- Step 1: Read State & Problem -->
   <g filter="url(#shadow)">
-    <rect x="80" y="150" width="320" height="70" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-    <rect x="80" y="150" width="320" height="28" rx="8" fill="#f1f5f9"/>
-    <rect x="80" y="170" width="320" height="8" fill="#f1f5f9"/>
-    <text x="100" y="170" font-size="11" font-weight="700" fill="#475569">STEP 1</text>
-    <text x="240" y="195" text-anchor="middle" font-size="13" fill="#334155">Read problem-statement.json</text>
-    <text x="240" y="212" text-anchor="middle" font-size="11" fill="#94a3b8">{ game, start_year, end_year }</text>
+    <rect x="150" y="155" width="600" height="65" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="150" y="155" width="600" height="26" rx="8" fill="#f1f5f9"/>
+    <rect x="150" y="173" width="600" height="8" fill="#f1f5f9"/>
+    <text x="170" y="173" font-size="11" font-weight="700" fill="#475569">STEP 1 — READ STATE &amp; PROBLEM</text>
+    <text x="450" y="198" text-anchor="middle" font-size="13" fill="#334155">self-evolving-state.yaml → iteration number</text>
+    <text x="450" y="214" text-anchor="middle" font-size="11" fill="#94a3b8">problem-statement.json → { game, start_year, end_year }</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="450" y1="220" x2="450" y2="255" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Spawn Reddit Research Agent -->
+  <g filter="url(#shadow)">
+    <rect x="225" y="260" width="450" height="50" rx="8" fill="#dc2626"/>
+    <text x="450" y="281" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">STEP 2 — SPAWN REDDIT RESEARCH AGENT</text>
+    <text x="450" y="299" text-anchor="middle" font-size="12" fill="#fff">Passes: game, year range, iteration, output path</text>
+  </g>
+
+  <!-- Arrow to agent box -->
+  <line x1="450" y1="310" x2="450" y2="340" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+
+  <!-- Agent box -->
+  <rect x="100" y="345" width="700" height="130" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5" stroke-dasharray="6 3" filter="url(#shadow)"/>
+  <text x="120" y="368" font-size="11" font-weight="700" fill="#dc2626">INSIDE REDDIT RESEARCH AGENT (reddit-game-research-agent)</text>
+
+  <g filter="url(#shadow)">
+    <rect x="130" y="380" width="260" height="70" rx="8" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="260" y="403" text-anchor="middle" font-size="12" font-weight="600" fill="#dc2626">Search Reddit</text>
+    <text x="260" y="421" text-anchor="middle" font-size="10" fill="#64748b">Find every game title in franchise</text>
+    <text x="260" y="435" text-anchor="middle" font-size="10" fill="#64748b">Find copies sold for each title</text>
+  </g>
+
+  <line x1="390" y1="415" x2="430" y2="415" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="435" y="380" width="340" height="70" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+    <text x="605" y="403" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">reddit-data-{n}.md</text>
+    <text x="605" y="421" text-anchor="middle" font-size="10" fill="#856404">Raw Reddit posts, search queries,</text>
+    <text x="605" y="435" text-anchor="middle" font-size="10" fill="#856404">per-game copy sales data from Reddit</text>
+  </g>
+
+  <!-- Arrow from agent to Step 3 -->
+  <line x1="450" y1="475" x2="450" y2="510" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Synthesize Report -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="515" width="700" height="130" rx="10" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="100" y="515" width="700" height="26" rx="10" fill="#e0f2fe"/>
+    <rect x="100" y="533" width="700" height="8" fill="#e0f2fe"/>
+    <text x="120" y="533" font-size="11" font-weight="700" fill="#0369a1">STEP 3 — SYNTHESIZE RESEARCH REPORT</text>
+    <text x="450" y="560" text-anchor="middle" font-size="12" fill="#0c4a6e">Read reddit-data-{n}.md → Build revenue table + JSON</text>
+    <text x="450" y="578" text-anchor="middle" font-size="11" fill="#64748b">Revenue = copies sold x retail price (no microtransactions)</text>
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="500" y="150" width="320" height="70" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-    <rect x="500" y="150" width="320" height="28" rx="8" fill="#f1f5f9"/>
-    <rect x="500" y="170" width="320" height="8" fill="#f1f5f9"/>
-    <text x="520" y="170" font-size="11" font-weight="700" fill="#475569">STEP 1</text>
-    <text x="660" y="195" text-anchor="middle" font-size="13" fill="#334155">Read workflow-state.yaml</text>
-    <text x="660" y="212" text-anchor="middle" font-size="11" fill="#94a3b8">Determine iteration number</text>
+    <rect x="300" y="600" width="300" height="35" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+    <text x="450" y="623" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">research-{n}.md (revenue table + JSON)</text>
   </g>
 
-  <!-- Arrows from step 2 to step 3 -->
-  <line x1="240" y1="220" x2="240" y2="250" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="660" y1="220" x2="660" y2="250" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="240" y1="260" x2="450" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="660" y1="260" x2="450" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrow to Step 4 -->
+  <line x1="450" y1="645" x2="450" y2="680" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Step 3: Spawn Research Agent -->
+  <!-- Step 4: Report -->
   <g filter="url(#shadow)">
-    <rect x="200" y="280" width="500" height="55" rx="8" fill="#dc2626" />
-    <text x="450" y="303" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">STEP 2 — SPAWN SUBAGENT</text>
-    <text x="450" y="323" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">Games Revenue Researcher Agent</text>
-  </g>
-
-  <!-- Arrow to agent internals -->
-  <line x1="450" y1="335" x2="450" y2="365" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
-
-  <!-- Agent box (big) -->
-  <rect x="60" y="370" width="780" height="210" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5" stroke-dasharray="6 3" filter="url(#shadow)"/>
-  <text x="80" y="393" font-size="11" font-weight="700" fill="#dc2626">INSIDE THE RESEARCH AGENT</text>
-
-  <!-- Sub-step A: Search Reddit -->
-  <g filter="url(#shadow)">
-    <rect x="90" y="405" width="230" height="80" rx="8" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
-    <text x="205" y="428" text-anchor="middle" font-size="12" font-weight="600" fill="#dc2626">Search Reddit (MCP)</text>
-    <text x="205" y="446" text-anchor="middle" font-size="10" fill="#64748b">r/FIFA, r/EASportsFC, r/gaming</text>
-    <text x="205" y="460" text-anchor="middle" font-size="10" fill="#64748b">r/Games, r/truegaming, r/pcgaming</text>
-    <text x="205" y="474" text-anchor="middle" font-size="10" fill="#64748b">Find every title + revenue data</text>
-  </g>
-
-  <!-- Arrow A→B -->
-  <line x1="320" y1="445" x2="350" y2="445" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
-
-  <!-- Sub-step B: Build revenue map -->
-  <g filter="url(#shadow)">
-    <rect x="355" y="405" width="220" height="80" rx="8" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
-    <text x="465" y="428" text-anchor="middle" font-size="12" font-weight="600" fill="#dc2626">Map Revenue</text>
-    <text x="465" y="446" text-anchor="middle" font-size="10" fill="#64748b">Base sales + microtransactions</text>
-    <text x="465" y="460" text-anchor="middle" font-size="10" fill="#64748b">DLC + Ultimate Team + mobile</text>
-    <text x="465" y="474" text-anchor="middle" font-size="10" fill="#64748b">Estimate where data is sparse</text>
-  </g>
-
-  <!-- Arrow B→C -->
-  <line x1="575" y1="445" x2="605" y2="445" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
-
-  <!-- Sub-step C: Calculate total -->
-  <g filter="url(#shadow)">
-    <rect x="610" y="405" width="200" height="80" rx="8" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
-    <text x="710" y="428" text-anchor="middle" font-size="12" font-weight="600" fill="#dc2626">Calculate Total</text>
-    <text x="710" y="446" text-anchor="middle" font-size="10" fill="#64748b">Sum all title revenues</text>
-    <text x="710" y="460" text-anchor="middle" font-size="10" fill="#64748b">Grand total franchise revenue</text>
-    <text x="710" y="474" text-anchor="middle" font-size="10" fill="#64748b">Assign confidence levels</text>
-  </g>
-
-  <!-- Write outputs -->
-  <g filter="url(#shadow)">
-    <rect x="165" y="500" width="260" height="50" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-    <text x="295" y="520" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">reddit-data-{n}.md</text>
-    <text x="295" y="536" text-anchor="middle" font-size="10" fill="#856404">Raw Reddit posts + search queries</text>
-  </g>
-
-  <g filter="url(#shadow)">
-    <rect x="475" y="500" width="260" height="50" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-    <text x="605" y="520" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">research-{n}.md</text>
-    <text x="605" y="536" text-anchor="middle" font-size="10" fill="#856404">Revenue table + JSON data block</text>
-  </g>
-
-  <!-- Arrows from calculate to outputs -->
-  <line x1="350" y1="485" x2="295" y2="498" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="560" y1="485" x2="605" y2="498" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Arrow from agent box to commit -->
-  <line x1="450" y1="580" x2="450" y2="610" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Step 4: Git Commit -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="615" width="400" height="50" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-    <text x="450" y="636" text-anchor="middle" font-size="11" font-weight="700" fill="#16a34a">STEP 3 — GIT COMMIT</text>
-    <text x="450" y="654" text-anchor="middle" font-size="12" fill="#166534">cli-research({n}): CLI agent research complete (ground truth)</text>
+    <rect x="250" y="685" width="400" height="50" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="450" y="706" text-anchor="middle" font-size="11" font-weight="700" fill="#16a34a">STEP 4 — REPORT</text>
+    <text x="450" y="724" text-anchor="middle" font-size="12" fill="#166534">Verify both output files exist</text>
   </g>
 
   <!-- Arrow to done -->
-  <line x1="450" y1="665" x2="450" y2="690" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="450" y1="735" x2="450" y2="755" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
 
   <!-- Done -->
-  <rect x="330" y="690" width="240" height="30" rx="15" fill="#16a34a" filter="url(#shadow)"/>
-  <text x="450" y="710" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">CLI_RESEARCH_COMPLETE</text>
+  <rect x="330" y="752" width="240" height="30" rx="15" fill="#16a34a" filter="url(#shadow)"/>
+  <text x="450" y="772" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">CLI_RESEARCH_COMPLETE</text>
 </svg>

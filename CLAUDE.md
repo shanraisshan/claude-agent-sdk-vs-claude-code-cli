@@ -27,17 +27,17 @@ Always check the last heading number in `user-prompts/user-prompts.md` and incre
 
 | Command | Purpose |
 |---------|---------|
-| `/research-claude-code-cli` | Generates CLI research (ground truth). Never modified by the self-evolving process. |
+| `/workflow-research-cli` | Reads problem, spawns Reddit research agent for raw data, synthesizes final report |
 | `/compare-research` | Compares CLI output (truth) vs SDK output. Measures how close SDK is to CLI. |
-| `/self-evolving-workflow` | Thin orchestrator — delegates to `/research-claude-code-cli` and `/compare-research`, hits SDK API, and evolves SDK code if < 90%. |
+| `/workflow-self-evolving-loop` | Thin orchestrator — delegates to `/workflow-research-cli` and `/compare-research`, hits SDK API, and evolves SDK code if < 90%. |
 
 ### Components
 
-- **Ralph Wiggum Loop**: `ralph.sh` spawns fresh `claude -p` each iteration, triggers `/self-evolving-workflow`
+- **Ralph Wiggum Loop**: `ralph.sh` spawns fresh `claude -p` each iteration, triggers `/workflow-self-evolving-loop`
 - **Research Problem**: `problem-statement/problem-statement.json` — single source of truth for what to research
-- **CLI Agent (🔴 Red)**: `.claude/agents/claude-code-cli-games-revenue-researcher.md` — produces ground truth output (never modified)
-- **SDK Agent**: `claude-agent-sdk/` — FastAPI Python app using **Claude Agent SDK** (`claude-agent-sdk` package). Runs on Max subscription (no API key needed). Evolves each iteration. Uses the same agent definition as CLI (`code-cli-researcher.md`)
-- **Comparator (🔵 Blue)**: `.claude/agents/research-compare.md` — measures SDK closeness to CLI
+- **Reddit Research Agent (🔴 Red)**: `.claude/agents/reddit-game-research-agent.md` — searches Reddit for game lists and copy sales data, writes raw data to `reddit-data-{n}.md` (never modified)
+- **SDK Agent**: `claude-agent-sdk/` — FastAPI Python app using **Claude Agent SDK** (`claude-agent-sdk` package). Runs on Max subscription (no API key needed). Evolves each iteration.
+- **Comparator**: `/compare-research` command — measures SDK closeness to CLI (scoring logic inline, no separate agent)
 - **State**: `research/self-evolving-state.yaml` — resumable state machine
 
 ### What Evolves
@@ -48,7 +48,7 @@ Always check the last heading number in `user-prompts/user-prompts.md` and incre
 
 ### What NEVER Changes
 
-- `.claude/agents/claude-code-cli-games-revenue-researcher.md` — CLI agent definition (ground truth)
+- `.claude/agents/reddit-game-research-agent.md` — CLI agent definition (ground truth)
 - `problem-statement/problem-statement.json` — research problem definition
 - CLI research output files
 
@@ -56,27 +56,27 @@ Always check the last heading number in `user-prompts/user-prompts.md` and incre
 
 ```
 ralph.sh                                    → Bash loop entry point
-prompt.md                                   → Loop prompt (triggers /self-evolving-workflow)
-problem-statement/problem-statement.json                          → Research problem definition
+prompt.md                                   → Loop prompt (triggers /workflow-self-evolving-loop)
+problem-statement/
+  problem-statement.json                    → Research problem definition
 .claude/commands/
-  research-claude-code-cli.md               → CLI research command (ground truth)
+  workflow-research-cli.md               → CLI research orchestrator (reads problem, spawns agent, synthesizes report)
   compare-research.md                       → Comparison command
-  self-evolving-workflow.md                 → Thin orchestrator (delegates to sub-commands, evolves SDK)
+  workflow-self-evolving-loop.md                 → Thin orchestrator (delegates to sub-commands, evolves SDK)
 .claude/agents/
-  claude-code-cli-games-revenue-researcher.md → CLI research agent 🔴 Red (never modified)
-  research-compare.md                        → Comparison agent 🔵 Blue
+  reddit-game-research-agent.md → Reddit research agent 🔴 Red (never modified)
 claude-agent-sdk/                           → FastAPI Python app (EVOLVES each iteration)
   main.py                                   → POST /research-claude-agent-sdk
   agent.py                                  → SDK agent (Claude Agent SDK, Max subscription)
 research/
-  research-{n}/                             → Per-iteration folder
-    claude-code-cli/                        → CLI outputs (ground truth)
-    claude-agent-sdk/                       → SDK outputs (evolving)
-    comparison-{n}.md                       → Comparison report
   self-evolving-state.yaml                  → State machine
   research-iterations.yaml                  → Score history
   research-status.json                      → Status for ralph.sh
   sdk-evolution-log.md                      → Log of SDK changes per iteration
+  research-{n}/                             → Per-iteration folder
+    claude-code-cli/                        → CLI outputs (ground truth)
+    claude-agent-sdk/                       → SDK outputs (evolving)
+    comparison-{n}.md                       → Comparison report
 user-prompts/user-prompts.md                → All user prompts
 plans/                                      → Implementation plans
 ```
@@ -88,7 +88,7 @@ plans/                                      → Implementation plans
 ### Option 1: CLI Research Only (Ground Truth)
 
 ```bash
-claude --dangerously-skip-permissions -p "Execute /research-claude-code-cli" --output-format text
+claude --dangerously-skip-permissions -p "Execute /workflow-research-cli" --output-format text
 ```
 
 ### Option 2: SDK Research Only (uses Max subscription)
@@ -128,7 +128,7 @@ Each iteration: CLI research (truth) → SDK research → compare → evolve SDK
 ## Self-Evolving Loop
 
 1. `ralph.sh` spawns fresh Claude instance each iteration
-2. `/self-evolving-workflow` orchestrates all steps
+2. `/workflow-self-evolving-loop` orchestrates all steps
 3. CLI agent produces ground truth using Reddit MCP
 4. SDK API is called — if it **fails**, the workflow **fixes the code** (no fallbacks/mocks)
 5. Comparator measures how close SDK is to CLI

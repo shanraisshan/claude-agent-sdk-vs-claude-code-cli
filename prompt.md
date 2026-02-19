@@ -1,9 +1,9 @@
 # Self-Evolving Loop Prompt
 
-Execute `/self-evolving-workflow` to run one complete iteration.
+Execute `/workflow-self-evolving-loop` to run one complete iteration.
 
 This orchestrates the full autonomous workflow:
-1. Generates CLI research (ground truth) via `/research-claude-code-cli`
+1. Generates CLI research (ground truth) via `/workflow-research-cli`
 2. Triggers SDK research via HTTP (localhost:8000/research-claude-agent-sdk)
 3. If SDK fails, fixes the FastAPI code and retries
 4. Compares both outputs via `/compare-research` (CLI = ground truth)

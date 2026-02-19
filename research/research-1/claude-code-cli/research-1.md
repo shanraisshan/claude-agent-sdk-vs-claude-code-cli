@@ -1,110 +1,65 @@
-# FIFA / EA Sports FC Franchise Revenue Research (1993-2026)
+# FIFA Franchise Revenue Research Report — Iteration 1
 
-## Research Summary
-
-The FIFA video game franchise (now EA Sports FC) is the best-selling sports video game franchise in history, with over 325 million copies sold across all titles. The franchise launched in 1993 with "FIFA International Soccer" and has released annual editions ever since, rebranding to "EA Sports FC" starting in 2023 after EA's licensing deal with FIFA expired.
-
-Revenue comes from two major streams:
-1. **Base game sales** (copies sold x retail price)
-2. **Microtransactions / Ultimate Team** (FIFA Points, card packs) -- introduced with FIFA 09 and becoming the dominant revenue stream by ~2016
-
-Key data points from Reddit research:
-- EA Ultimate Team revenue across all franchises reached $6 billion cumulative from 2015-2020 (Reddit: r/Games, 549 upvotes)
-- FIFA FUT alone generated ~$1.5 billion in FY2020 (Reddit: r/fuckepic, 852 upvotes; r/gaming, 34 upvotes)
-- Ultimate Team transactions surpassed base game sales revenue by 2019 (Reddit: r/Games, 5,322 upvotes)
-- FIFA reportedly wanted $1 billion every 4 years for the name license (Reddit: r/soccer, 4,300 upvotes)
-- EA FY25 total company revenue was $7.46 billion with record EA SPORTS net bookings (Reddit: r/PocketQuantResearch)
-- EA was acquired for $55 billion in 2025, with FIFA/FC as the crown jewel franchise (Reddit: r/playstation, 1,450 upvotes)
+**Date:** 2026-02-19
+**Source:** Reddit MCP (17 search queries, 17 posts analyzed)
+**Problem:** Find all FIFA games released from 1990 to 2026 and calculate revenue from copy sales (physical + digital only).
 
 ---
 
 ## A. Revenue Table
 
-| # | Title | Year | Revenue (USD) | Confidence |
-|---|-------|------|---------------|------------|
-| 1 | FIFA International Soccer | 1993 | $50,000,000 | Low |
-| 2 | FIFA Soccer 95 | 1994 | $40,000,000 | Low |
-| 3 | FIFA Soccer 96 | 1995 | $75,000,000 | Low |
-| 4 | FIFA 97 | 1996 | $90,000,000 | Low |
-| 5 | FIFA: Road to World Cup 98 | 1997 | $200,000,000 | Medium |
-| 6 | FIFA 99 | 1998 | $150,000,000 | Low |
-| 7 | FIFA 2000 | 1999 | $140,000,000 | Low |
-| 8 | FIFA 2001 | 2000 | $160,000,000 | Low |
-| 9 | FIFA Football 2002 | 2001 | $180,000,000 | Low |
-| 10 | FIFA Football 2003 | 2002 | $200,000,000 | Low |
-| 11 | FIFA Football 2004 | 2003 | $220,000,000 | Low |
-| 12 | FIFA Football 2005 | 2004 | $250,000,000 | Medium |
-| 13 | FIFA 06 | 2005 | $280,000,000 | Medium |
-| 14 | FIFA 07 | 2006 | $300,000,000 | Medium |
-| 15 | FIFA 08 | 2007 | $350,000,000 | Medium |
-| 16 | FIFA 09 | 2008 | $400,000,000 | Medium |
-| 17 | FIFA 10 | 2009 | $450,000,000 | Medium |
-| 18 | FIFA 11 | 2010 | $500,000,000 | Medium |
-| 19 | FIFA 12 | 2011 | $600,000,000 | Medium |
-| 20 | FIFA 13 | 2012 | $750,000,000 | Medium |
-| 21 | FIFA 14 | 2013 | $900,000,000 | Medium |
-| 22 | FIFA 15 | 2014 | $1,100,000,000 | Medium |
-| 23 | FIFA 16 | 2015 | $1,300,000,000 | Medium |
-| 24 | FIFA 17 | 2016 | $1,600,000,000 | High |
-| 25 | FIFA 18 | 2017 | $1,800,000,000 | High |
-| 26 | FIFA 19 | 2018 | $1,900,000,000 | High |
-| 27 | FIFA 20 | 2019 | $2,000,000,000 | High |
-| 28 | FIFA 21 | 2020 | $2,200,000,000 | High |
-| 29 | FIFA 22 | 2021 | $2,400,000,000 | High |
-| 30 | FIFA 23 | 2022 | $2,600,000,000 | High |
-| 31 | EA Sports FC 24 | 2023 | $2,500,000,000 | Medium |
-| 32 | EA Sports FC 25 | 2024 | $2,200,000,000 | Medium |
-| 33 | FIFA Online (various) | 2006-2026 | $1,500,000,000 | Low |
-| 34 | FIFA Mobile / EA FC Mobile | 2016-2026 | $2,000,000,000 | Low |
-| 35 | FIFA Street (2005) | 2005 | $60,000,000 | Low |
-| 36 | FIFA Street 2 (2006) | 2006 | $40,000,000 | Low |
-| 37 | FIFA Street 3 (2008) | 2008 | $30,000,000 | Low |
-| 38 | 2006 FIFA World Cup | 2006 | $120,000,000 | Medium |
-| 39 | 2010 FIFA World Cup South Africa | 2010 | $150,000,000 | Medium |
-| 40 | 2014 FIFA World Cup Brazil | 2014 | $130,000,000 | Medium |
-| 41 | UEFA Euro 2008 | 2008 | $50,000,000 | Low |
-| 42 | UEFA Euro 2012 (DLC) | 2012 | $30,000,000 | Low |
-| 43 | EA Sports FC 26 | 2025 | $2,300,000,000 | Low |
-| | **TOTAL** | | **$35,185,000,000** | |
+Revenue calculated as: copies sold × average retail price at time of release. Only copy sales (physical + digital). No microtransactions, DLC, loot boxes, or in-app purchases.
 
----
+**Retail price assumptions based on era:**
+- 1993–1995: $50 (16-bit era)
+- 1996–2005: $50 (PS1/PS2 era)
+- 2006–2012: $60 (HD era)
+- 2013–2025: $60–$70 (PS4/PS5 era, $70 from ~2023)
 
-## Revenue Methodology and Notes
+**Note:** Reddit provided specific sales data for only 4 titles (FIFA 12, 13, 18, 19). For all other titles, estimates are based on franchise trajectory, UK market extrapolation (UK ≈ 8–10% of global sales for FIFA), and the commonly cited ~325M total franchise figure. These estimates are marked as "low" confidence.
 
-### Pre-Microtransaction Era (1993-2008)
+| # | Title | Year | Copies Sold | Revenue (USD) | Confidence |
+|---|-------|------|-------------|---------------|------------|
+| 1 | FIFA International Soccer | 1993 | 1,500,000 | $75,000,000 | low |
+| 2 | FIFA Soccer 95 | 1994 | 1,000,000 | $50,000,000 | low |
+| 3 | FIFA Soccer 96 | 1995 | 2,000,000 | $100,000,000 | low |
+| 4 | FIFA 97 | 1996 | 2,500,000 | $125,000,000 | low |
+| 5 | FIFA: Road to World Cup 98 | 1997 | 4,000,000 | $200,000,000 | low |
+| 6 | FIFA 99 | 1998 | 3,500,000 | $175,000,000 | low |
+| 7 | FIFA 2000 | 1999 | 3,500,000 | $175,000,000 | low |
+| 8 | FIFA 2001 | 2000 | 4,000,000 | $200,000,000 | low |
+| 9 | FIFA Football 2002 | 2001 | 5,000,000 | $250,000,000 | low |
+| 10 | FIFA Football 2003 | 2002 | 5,500,000 | $275,000,000 | low |
+| 11 | FIFA Football 2004 | 2003 | 6,000,000 | $300,000,000 | low |
+| 12 | FIFA Football 2005 | 2004 | 6,500,000 | $325,000,000 | low |
+| 13 | FIFA 06 | 2005 | 7,000,000 | $350,000,000 | low |
+| 14 | FIFA 07 | 2006 | 8,000,000 | $480,000,000 | low |
+| 15 | FIFA 08 | 2007 | 9,000,000 | $540,000,000 | low |
+| 16 | FIFA 09 | 2008 | 10,000,000 | $600,000,000 | low |
+| 17 | FIFA 10 | 2009 | 10,000,000 | $600,000,000 | low |
+| 18 | FIFA 11 | 2010 | 11,000,000 | $660,000,000 | low |
+| 19 | FIFA 12 | 2011 | 10,000,000 | $600,000,000 | medium |
+| 20 | FIFA 13 | 2012 | 14,500,000 | $870,000,000 | high |
+| 21 | FIFA 14 | 2013 | 14,000,000 | $840,000,000 | low |
+| 22 | FIFA 15 | 2014 | 15,000,000 | $900,000,000 | low |
+| 23 | FIFA 16 | 2015 | 16,000,000 | $960,000,000 | low |
+| 24 | FIFA 17 | 2016 | 17,000,000 | $1,020,000,000 | low |
+| 25 | FIFA 18 | 2017 | 24,000,000 | $1,440,000,000 | medium |
+| 26 | FIFA 19 | 2018 | 22,000,000 | $1,320,000,000 | medium |
+| 27 | FIFA 20 | 2019 | 20,000,000 | $1,200,000,000 | low |
+| 28 | FIFA 21 | 2020 | 20,000,000 | $1,200,000,000 | low |
+| 29 | FIFA 22 | 2021 | 18,000,000 | $1,080,000,000 | low |
+| 30 | FIFA 23 | 2022 | 17,000,000 | $1,190,000,000 | low |
+| 31 | EA Sports FC 24 | 2023 | 14,000,000 | $980,000,000 | low |
+| 32 | EA Sports FC 25 | 2024 | 12,000,000 | $840,000,000 | low |
+| 33 | EA Sports FC 26 | 2025 | 10,000,000 | $700,000,000 | low |
+| **TOTAL** | | | **325,500,000** | **$20,470,000,000** | |
 
-Revenue estimates for early FIFA titles are based on:
-- **FIFA International Soccer (1993):** Sold approximately 500,000 copies at launch. As the first major football video game, it was a hit on Sega Genesis/Mega Drive. Estimated ~1M total copies at ~$50 avg price.
-- **FIFA 96-98:** The franchise exploded in popularity with FIFA 98 (Road to World Cup) being a massive cultural phenomenon, especially in Europe. FIFA 98 sold approximately 4 million copies.
-- **FIFA 2000-2005:** Steady growth period. Annual sales of 3-5 million copies at $40-50 average price point across multiple platforms.
-- **FIFA 06-08:** The franchise solidified as the dominant football game, outselling Pro Evolution Soccer. Annual sales reached 6-8 million copies.
-
-### FUT / Microtransaction Era (2009-Present)
-
-- **FIFA 09 introduced Ultimate Team** as paid DLC, then free-to-access from FIFA 10 onward.
-- **FIFA 12-13:** FUT adoption surged. EA began reporting "extra content" revenue separately. By FIFA 13, microtransactions contributed an estimated $200-300M.
-- **FIFA 15-16:** FUT revenue crossed $500M-$800M annually across all UT titles, with FIFA being ~70% of that.
-- **FIFA 17-19:** EA reported Ultimate Team revenue of ~$800M-$1.2B annually (all UT titles). FIFA's share was approximately $600M-$900M, plus base game sales of $700M-$900M.
-- **FIFA 20 (FY2020):** Reddit confirms $1.49-1.5 billion in FIFA lootbox/FUT revenue alone. Base game sales estimated at $500-600M. Total ~$2B.
-- **FIFA 21-23:** Peak era. FUT revenue grew to $1.5-1.8B per year. Base game sales of $600-800M. FIFA 23 was the final FIFA-branded game.
-- **EA Sports FC 24 (2023):** Successful transition despite name change. EA reported strong performance.
-- **EA Sports FC 25 (2024):** Underperformed per EA's own guidance revision (Reddit: r/stocks, 315 upvotes). Revenue lowered.
-- **EA Sports FC 26 (2025):** Projected based on recovery and 2026 World Cup year boost.
-
-### Spin-offs and Mobile
-
-- **FIFA Street series (2005, 2006, 2008):** Arcade-style football games. Moderate sales of 1-2M copies each.
-- **FIFA World Cup tie-in games (2006, 2010, 2014):** Released for major World Cup tournaments. Sold 2-3M copies each.
-- **UEFA Euro 2008 and 2012:** Standalone/DLC Euro tournament games.
-- **FIFA Online (2006-present):** Free-to-play PC game primarily for Asian markets (China, South Korea). Massive playerbase with microtransaction revenue. FIFA Online 3 and 4 were particularly successful in China via Tencent partnership.
-- **FIFA Mobile (2016-present, now EA FC Mobile):** Mobile game with significant revenue, particularly in Asia. Generates ~$200-300M per year from in-app purchases.
-
-### Key Revenue Data Points from Reddit
-
-1. **$6 billion cumulative Ultimate Team revenue (2015-2020)** across FIFA, Madden, and NHL (Reddit: r/Games). FIFA represents ~70% = ~$4.2B from FUT alone in this 5-year period.
-2. **$1.5 billion FIFA FUT revenue in FY2020** (Reddit: r/fuckepic). This is the single-year FUT revenue for FIFA alone.
-3. **EA FY25 revenue $7.46 billion total** (Reddit: r/PocketQuantResearch). EA Sports FC is the single largest franchise within EA.
-4. **EA acquired for $55 billion** (Reddit: r/playstation). The FIFA/FC franchise is estimated to represent 30-40% of EA's total value.
+### Key Data Points from Reddit (high/medium confidence):
+- **FIFA 12:** Implied >10M copies (r/Games post 11780i) → estimated 10M
+- **FIFA 13:** 14.5M copies per EA Q4 FY13 official results (r/Games post 1dvvz0) → **highest confidence**
+- **FIFA 18:** 2.7M in UK alone (r/EASportsFC post ac4ccd) → UK ≈ ~10% of global → ~24M global estimate
+- **FIFA 19:** 2.5M in UK alone (r/EASportsFC post ac4ccd) → UK ≈ ~10% of global → ~22M global estimate
 
 ---
 
@@ -116,462 +71,369 @@ Revenue estimates for early FIFA titles are based on:
     {
       "name": "FIFA International Soccer",
       "year": 1993,
-      "platform": "Sega Genesis, SNES, MS-DOS, Amiga, Game Boy, Game Gear, Master System, 3DO",
+      "platform": "Sega Genesis, SNES, DOS, Game Boy, 3DO, Amiga",
       "publisher": "EA Sports",
-      "estimatedRevenue": 50000000,
-      "revenueSource": "Base game sales (~1M copies x $50 avg)",
+      "copiesSold": 1500000,
+      "estimatedRevenue": 75000000,
+      "revenueSource": "No Reddit data; estimated from early franchise trajectory",
       "confidence": "low"
     },
     {
       "name": "FIFA Soccer 95",
       "year": 1994,
-      "platform": "Sega Genesis, SNES, MS-DOS, Game Boy, Game Gear",
+      "platform": "Sega Genesis, SNES, DOS, Game Boy",
       "publisher": "EA Sports",
-      "estimatedRevenue": 40000000,
-      "revenueSource": "Base game sales (~800K copies x $50 avg)",
+      "copiesSold": 1000000,
+      "estimatedRevenue": 50000000,
+      "revenueSource": "No Reddit data; estimated",
       "confidence": "low"
     },
     {
       "name": "FIFA Soccer 96",
       "year": 1995,
-      "platform": "Sega Genesis, SNES, PS1, Saturn, MS-DOS, Game Boy",
+      "platform": "PlayStation, Sega Genesis, SNES, DOS, Saturn",
       "publisher": "EA Sports",
-      "estimatedRevenue": 75000000,
-      "revenueSource": "Base game sales (~1.5M copies x $50 avg). First FIFA on PlayStation.",
+      "copiesSold": 2000000,
+      "estimatedRevenue": 100000000,
+      "revenueSource": "No Reddit data; estimated (first PS1 entry boosted sales)",
       "confidence": "low"
     },
     {
       "name": "FIFA 97",
       "year": 1996,
-      "platform": "PS1, Saturn, SNES, Sega Genesis, MS-DOS, Game Boy",
+      "platform": "PlayStation, Saturn, DOS, Windows, SNES, Genesis",
       "publisher": "EA Sports",
-      "estimatedRevenue": 90000000,
-      "revenueSource": "Base game sales (~1.8M copies x $50 avg). Indoor football mode added.",
+      "copiesSold": 2500000,
+      "estimatedRevenue": 125000000,
+      "revenueSource": "No Reddit data; estimated",
       "confidence": "low"
     },
     {
       "name": "FIFA: Road to World Cup 98",
       "year": 1997,
-      "platform": "PS1, N64, Saturn, SNES, Sega Genesis, PC, Game Boy",
+      "platform": "PlayStation, N64, Windows, Saturn, Game Boy",
       "publisher": "EA Sports",
+      "copiesSold": 4000000,
       "estimatedRevenue": 200000000,
-      "revenueSource": "Base game sales (~4M copies x $50 avg). World Cup tie-in boosted sales significantly.",
-      "confidence": "medium"
+      "revenueSource": "No Reddit data; estimated (World Cup year boost)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 99",
       "year": 1998,
-      "platform": "PS1, N64, PC, Game Boy Color",
+      "platform": "PlayStation, N64, Windows, Game Boy Color",
       "publisher": "EA Sports",
-      "estimatedRevenue": 150000000,
-      "revenueSource": "Base game sales (~3M copies x $50 avg)",
+      "copiesSold": 3500000,
+      "estimatedRevenue": 175000000,
+      "revenueSource": "No Reddit data; estimated",
       "confidence": "low"
     },
     {
       "name": "FIFA 2000",
       "year": 1999,
-      "platform": "PS1, PC, Game Boy Color",
+      "platform": "PlayStation, Windows, Game Boy Color",
       "publisher": "EA Sports",
-      "estimatedRevenue": 140000000,
-      "revenueSource": "Base game sales (~2.8M copies x $50 avg)",
+      "copiesSold": 3500000,
+      "estimatedRevenue": 175000000,
+      "revenueSource": "No Reddit data; estimated",
       "confidence": "low"
     },
     {
       "name": "FIFA 2001",
       "year": 2000,
-      "platform": "PS1, PS2, PC",
+      "platform": "PlayStation, PS2, Windows, GBA",
       "publisher": "EA Sports",
-      "estimatedRevenue": 160000000,
-      "revenueSource": "Base game sales (~3.2M copies x $50 avg). PS2 launch era.",
+      "copiesSold": 4000000,
+      "estimatedRevenue": 200000000,
+      "revenueSource": "No Reddit data; estimated (first PS2 entry)",
       "confidence": "low"
     },
     {
       "name": "FIFA Football 2002",
       "year": 2001,
-      "platform": "PS1, PS2, PC, GameCube, Xbox",
+      "platform": "PS2, Xbox, GameCube, PS1, Windows, GBA",
       "publisher": "EA Sports",
-      "estimatedRevenue": 180000000,
-      "revenueSource": "Base game sales (~3.6M copies x $50 avg). 2002 World Cup anticipation.",
+      "copiesSold": 5000000,
+      "estimatedRevenue": 250000000,
+      "revenueSource": "No Reddit data; estimated (World Cup 2002 proximity)",
       "confidence": "low"
     },
     {
       "name": "FIFA Football 2003",
       "year": 2002,
-      "platform": "PS2, PC, GameCube, Xbox, PS1, GBA",
+      "platform": "PS2, Xbox, GameCube, PS1, Windows, GBA",
       "publisher": "EA Sports",
-      "estimatedRevenue": 200000000,
-      "revenueSource": "Base game sales (~4M copies x $50 avg)",
+      "copiesSold": 5500000,
+      "estimatedRevenue": 275000000,
+      "revenueSource": "No Reddit data; estimated",
       "confidence": "low"
     },
     {
       "name": "FIFA Football 2004",
       "year": 2003,
-      "platform": "PS2, PC, GameCube, Xbox, PS1, GBA",
+      "platform": "PS2, Xbox, GameCube, PS1, Windows, GBA",
       "publisher": "EA Sports",
-      "estimatedRevenue": 220000000,
-      "revenueSource": "Base game sales (~4.4M copies x $50 avg)",
+      "copiesSold": 6000000,
+      "estimatedRevenue": 300000000,
+      "revenueSource": "No Reddit data; estimated",
       "confidence": "low"
     },
     {
       "name": "FIFA Football 2005",
       "year": 2004,
-      "platform": "PS2, PC, GameCube, Xbox, PSP, DS, GBA",
+      "platform": "PS2, Xbox, GameCube, Windows, PSP, DS, GBA",
       "publisher": "EA Sports",
-      "estimatedRevenue": 250000000,
-      "revenueSource": "Base game sales (~5M copies x $50 avg). Career mode improvements drove sales.",
-      "confidence": "medium"
+      "copiesSold": 6500000,
+      "estimatedRevenue": 325000000,
+      "revenueSource": "No Reddit data; estimated",
+      "confidence": "low"
     },
     {
       "name": "FIFA 06",
       "year": 2005,
-      "platform": "PS2, Xbox, Xbox 360, PC, PSP, DS, GBA, GameCube, Mobile",
+      "platform": "PS2, Xbox 360, Xbox, GameCube, Windows, PSP, DS, GBA",
       "publisher": "EA Sports",
-      "estimatedRevenue": 280000000,
-      "revenueSource": "Base game sales (~5.6M copies x $50 avg). Next-gen console launch year.",
-      "confidence": "medium"
+      "copiesSold": 7000000,
+      "estimatedRevenue": 350000000,
+      "revenueSource": "No Reddit data; estimated (first Xbox 360 entry)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 07",
       "year": 2006,
-      "platform": "PS2, Xbox 360, PC, PSP, DS, Wii, GBA",
+      "platform": "PS2, Xbox 360, Wii, Windows, PSP, DS, GBA",
       "publisher": "EA Sports",
-      "estimatedRevenue": 300000000,
-      "revenueSource": "Base game sales (~6M copies x $50 avg)",
-      "confidence": "medium"
+      "copiesSold": 8000000,
+      "estimatedRevenue": 480000000,
+      "revenueSource": "No Reddit data; estimated (World Cup 2006 year)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 08",
       "year": 2007,
-      "platform": "PS2, PS3, Xbox 360, PC, PSP, DS, Wii",
+      "platform": "PS3, PS2, Xbox 360, Wii, Windows, PSP, DS",
       "publisher": "EA Sports",
-      "estimatedRevenue": 350000000,
-      "revenueSource": "Base game sales (~7M copies x $50 avg). First on PS3.",
-      "confidence": "medium"
+      "copiesSold": 9000000,
+      "estimatedRevenue": 540000000,
+      "revenueSource": "No Reddit data; estimated (first PS3 entry)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 09",
       "year": 2008,
-      "platform": "PS2, PS3, Xbox 360, PC, PSP, DS, Wii",
+      "platform": "PS3, PS2, Xbox 360, Wii, Windows, PSP, DS",
       "publisher": "EA Sports",
-      "estimatedRevenue": 400000000,
-      "revenueSource": "Base game sales (~8M copies x $50 avg). Introduced Ultimate Team as paid DLC.",
-      "confidence": "medium"
+      "copiesSold": 10000000,
+      "estimatedRevenue": 600000000,
+      "revenueSource": "No Reddit data; estimated",
+      "confidence": "low"
     },
     {
       "name": "FIFA 10",
       "year": 2009,
-      "platform": "PS2, PS3, Xbox 360, PC, PSP, DS, Wii",
+      "platform": "PS3, PS2, Xbox 360, Wii, Windows, PSP",
       "publisher": "EA Sports",
-      "estimatedRevenue": 450000000,
-      "revenueSource": "Base game sales (~8.5M copies) + early FUT microtransactions (~$25M)",
-      "confidence": "medium"
+      "copiesSold": 10000000,
+      "estimatedRevenue": 600000000,
+      "revenueSource": "No Reddit data; estimated",
+      "confidence": "low"
     },
     {
       "name": "FIFA 11",
       "year": 2010,
-      "platform": "PS2, PS3, Xbox 360, PC, PSP, DS, Wii, 3DS",
+      "platform": "PS3, PS2, Xbox 360, Wii, Windows, PSP, 3DS",
       "publisher": "EA Sports",
-      "estimatedRevenue": 500000000,
-      "revenueSource": "Base game sales (~9M copies) + FUT revenue (~$50M). Sold 2.6M in first week.",
-      "confidence": "medium"
+      "copiesSold": 11000000,
+      "estimatedRevenue": 660000000,
+      "revenueSource": "No Reddit data; estimated (World Cup 2010 year)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 12",
       "year": 2011,
-      "platform": "PS2, PS3, Xbox 360, PC, PSP, 3DS, Wii, Vita",
+      "platform": "PS3, PS2, Xbox 360, Wii, Windows, PSP, 3DS, Vita",
       "publisher": "EA Sports",
+      "copiesSold": 10000000,
       "estimatedRevenue": 600000000,
-      "revenueSource": "Base game sales (~10M copies) + FUT revenue (~$100M). Impact Engine introduced.",
+      "revenueSource": "Reddit r/Games post 11780i: 'Like FIFA 12, its likely to sell more than 10 million copies'",
       "confidence": "medium"
     },
     {
       "name": "FIFA 13",
       "year": 2012,
-      "platform": "PS2, PS3, Xbox 360, PC, PSP, 3DS, Wii, Wii U, Vita",
+      "platform": "PS3, PS2, Xbox 360, Wii, Wii U, Windows, PSP, 3DS, Vita",
       "publisher": "EA Sports",
-      "estimatedRevenue": 750000000,
-      "revenueSource": "Base game sales (~12M copies) + FUT revenue (~$200M). Best-selling sports game of 2012.",
-      "confidence": "medium"
+      "copiesSold": 14500000,
+      "estimatedRevenue": 870000000,
+      "revenueSource": "Reddit r/Games post 1dvvz0: EA Q4 FY13 official results: FIFA 13 - 14.5M copies",
+      "confidence": "high"
     },
     {
       "name": "FIFA 14",
       "year": 2013,
-      "platform": "PS3, PS4, Xbox 360, Xbox One, PC, PSP, 3DS, Wii, Vita",
+      "platform": "PS4, PS3, PS2, Xbox One, Xbox 360, Windows, PSP, 3DS, Vita",
       "publisher": "EA Sports",
-      "estimatedRevenue": 900000000,
-      "revenueSource": "Base game sales (~13M copies) + FUT revenue (~$350M). PS4/Xbox One launch title.",
-      "confidence": "medium"
+      "copiesSold": 14000000,
+      "estimatedRevenue": 840000000,
+      "revenueSource": "No Reddit data; estimated similar to FIFA 13 (cross-gen launch)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 15",
       "year": 2014,
-      "platform": "PS3, PS4, Xbox 360, Xbox One, PC, 3DS, Vita",
+      "platform": "PS4, PS3, Xbox One, Xbox 360, Windows, 3DS, Vita",
       "publisher": "EA Sports",
-      "estimatedRevenue": 1100000000,
-      "revenueSource": "Base game sales (~14M copies) + FUT revenue (~$500M). FUT became massive.",
-      "confidence": "medium"
+      "copiesSold": 15000000,
+      "estimatedRevenue": 900000000,
+      "revenueSource": "No Reddit data; estimated (World Cup 2014 boost, growing PS4/XB1 install base)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 16",
       "year": 2015,
-      "platform": "PS3, PS4, Xbox 360, Xbox One, PC",
+      "platform": "PS4, PS3, Xbox One, Xbox 360, Windows",
       "publisher": "EA Sports",
-      "estimatedRevenue": 1300000000,
-      "revenueSource": "Base game sales (~15M copies) + FUT revenue (~$650M). First to include women's teams.",
-      "confidence": "medium"
+      "copiesSold": 16000000,
+      "estimatedRevenue": 960000000,
+      "revenueSource": "No Reddit data; estimated (franchise at peak growth period)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 17",
       "year": 2016,
-      "platform": "PS3, PS4, Xbox 360, Xbox One, PC, Switch",
+      "platform": "PS4, PS3, Xbox One, Xbox 360, Windows",
       "publisher": "EA Sports",
-      "estimatedRevenue": 1600000000,
-      "revenueSource": "Base game sales (~15M copies, ~$800M) + FUT revenue (~$800M). Frostbite engine, The Journey story mode.",
-      "confidence": "high"
+      "copiesSold": 17000000,
+      "estimatedRevenue": 1020000000,
+      "revenueSource": "No Reddit data; estimated (Frostbite engine debut, The Journey mode)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 18",
       "year": 2017,
-      "platform": "PS3, PS4, Xbox 360, Xbox One, PC, Switch",
+      "platform": "PS4, PS3, Xbox One, Xbox 360, Windows, Switch",
       "publisher": "EA Sports",
-      "estimatedRevenue": 1800000000,
-      "revenueSource": "Base game sales (~16M copies, ~$850M) + FUT revenue (~$950M). Ronaldo cover.",
-      "confidence": "high"
+      "copiesSold": 24000000,
+      "estimatedRevenue": 1440000000,
+      "revenueSource": "Reddit r/EASportsFC post ac4ccd: 2.7M UK copies (phys+digital); UK ~10% of global → ~24M global",
+      "confidence": "medium"
     },
     {
       "name": "FIFA 19",
       "year": 2018,
-      "platform": "PS3, PS4, Xbox 360, Xbox One, PC, Switch",
+      "platform": "PS4, PS3, Xbox One, Xbox 360, Windows, Switch",
       "publisher": "EA Sports",
-      "estimatedRevenue": 1900000000,
-      "revenueSource": "Base game sales (~15M copies, ~$800M) + FUT revenue (~$1.1B). Champions League license added.",
-      "confidence": "high"
+      "copiesSold": 22000000,
+      "estimatedRevenue": 1320000000,
+      "revenueSource": "Reddit r/EASportsFC post ac4ccd: 2.5M UK copies (phys+digital); UK ~10% of global → ~22M global",
+      "confidence": "medium"
     },
     {
       "name": "FIFA 20",
       "year": 2019,
-      "platform": "PS4, Xbox One, PC, Switch",
+      "platform": "PS4, Xbox One, Windows, Switch",
       "publisher": "EA Sports",
-      "estimatedRevenue": 2000000000,
-      "revenueSource": "Base game sales (~14M copies, ~$700M) + FUT revenue (~$1.3B). Volta Football introduced. Reddit confirms $1.49B FUT revenue.",
-      "confidence": "high"
+      "copiesSold": 20000000,
+      "estimatedRevenue": 1200000000,
+      "revenueSource": "No Reddit data; estimated (slight decline trend from FIFA 19)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 21",
       "year": 2020,
-      "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch, Stadia",
+      "platform": "PS5, PS4, Xbox Series X/S, Xbox One, Windows, Switch",
       "publisher": "EA Sports",
-      "estimatedRevenue": 2200000000,
-      "revenueSource": "Base game sales (~14M copies, ~$700M) + FUT revenue (~$1.5B). COVID boosted engagement. Reddit confirms $1.5B FUT revenue for FY.",
-      "confidence": "high"
+      "copiesSold": 20000000,
+      "estimatedRevenue": 1200000000,
+      "revenueSource": "No Reddit data; estimated (COVID boost to gaming, cross-gen launch)",
+      "confidence": "low"
     },
     {
       "name": "FIFA 22",
       "year": 2021,
-      "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch, Stadia",
+      "platform": "PS5, PS4, Xbox Series X/S, Xbox One, Windows, Switch, Stadia",
       "publisher": "EA Sports",
-      "estimatedRevenue": 2400000000,
-      "revenueSource": "Base game sales (~15M copies, ~$750M) + FUT revenue (~$1.65B). HyperMotion technology.",
-      "confidence": "high"
+      "copiesSold": 18000000,
+      "estimatedRevenue": 1080000000,
+      "revenueSource": "No Reddit data; estimated",
+      "confidence": "low"
     },
     {
       "name": "FIFA 23",
       "year": 2022,
-      "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch",
+      "platform": "PS5, PS4, Xbox Series X/S, Xbox One, Windows, Switch",
       "publisher": "EA Sports",
-      "estimatedRevenue": 2600000000,
-      "revenueSource": "Base game sales (~16M copies, ~$800M) + FUT revenue (~$1.8B). Final FIFA-branded game. World Cup 2022 content boosted engagement.",
-      "confidence": "high"
+      "copiesSold": 17000000,
+      "estimatedRevenue": 1190000000,
+      "revenueSource": "No Reddit total; UK #1 per VGChartz (r/GameGazette post 12rmslr). $70 price point.",
+      "confidence": "low"
     },
     {
       "name": "EA Sports FC 24",
       "year": 2023,
-      "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch",
+      "platform": "PS5, PS4, Xbox Series X/S, Xbox One, Windows, Switch",
       "publisher": "EA Sports",
-      "estimatedRevenue": 2500000000,
-      "revenueSource": "Base game sales (~14M copies, ~$750M) + FUT revenue (~$1.75B). First non-FIFA branded title. Successful transition.",
-      "confidence": "medium"
+      "copiesSold": 14000000,
+      "estimatedRevenue": 980000000,
+      "revenueSource": "No Reddit data; estimated (rebrand impact, $70 price)",
+      "confidence": "low"
     },
     {
       "name": "EA Sports FC 25",
       "year": 2024,
-      "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch",
+      "platform": "PS5, PS4, Xbox Series X/S, Xbox One, Windows, Switch",
       "publisher": "EA Sports",
-      "estimatedRevenue": 2200000000,
-      "revenueSource": "Base game sales (~12M copies, ~$650M) + FUT revenue (~$1.55B). Reddit confirms underperformance vs guidance (r/stocks). FC Rush mode added.",
-      "confidence": "medium"
+      "copiesSold": 12000000,
+      "estimatedRevenue": 840000000,
+      "revenueSource": "No Reddit data; estimated (continued post-rebrand decline per community sentiment)",
+      "confidence": "low"
     },
     {
       "name": "EA Sports FC 26",
       "year": 2025,
-      "platform": "PS5, Xbox Series X/S, PC, Switch 2",
+      "platform": "PS5, Xbox Series X/S, Windows, Switch 2",
       "publisher": "EA Sports",
-      "estimatedRevenue": 2300000000,
-      "revenueSource": "Projected: Base game sales (~13M copies, ~$700M) + FUT revenue (~$1.6B). 2026 World Cup hype expected to boost sales.",
-      "confidence": "low"
-    },
-    {
-      "name": "FIFA Online (1, 2, 3, 4)",
-      "year": 2006,
-      "platform": "PC (Asia-focused: China, South Korea, Southeast Asia)",
-      "publisher": "EA Sports / Nexon / Tencent / Garena",
-      "estimatedRevenue": 1500000000,
-      "revenueSource": "Cumulative F2P microtransaction revenue 2006-2026. FIFA Online 3 (Nexon) and FIFA Online 4 (Tencent/EA) are major revenue generators in China/Korea. Estimated $100-200M/year at peak.",
-      "confidence": "low"
-    },
-    {
-      "name": "FIFA Mobile / EA Sports FC Mobile",
-      "year": 2016,
-      "platform": "iOS, Android",
-      "publisher": "EA Sports",
-      "estimatedRevenue": 2000000000,
-      "revenueSource": "Cumulative mobile game revenue 2016-2026. F2P with in-app purchases. Estimated $200-300M/year. Significant Asian market revenue.",
-      "confidence": "low"
-    },
-    {
-      "name": "FIFA Street",
-      "year": 2005,
-      "platform": "PS2, Xbox, GameCube",
-      "publisher": "EA Sports BIG",
-      "estimatedRevenue": 60000000,
-      "revenueSource": "Base game sales (~1.2M copies x $50 avg)",
-      "confidence": "low"
-    },
-    {
-      "name": "FIFA Street 2",
-      "year": 2006,
-      "platform": "PS2, Xbox, GameCube, PSP, DS",
-      "publisher": "EA Sports BIG",
-      "estimatedRevenue": 40000000,
-      "revenueSource": "Base game sales (~800K copies x $50 avg)",
-      "confidence": "low"
-    },
-    {
-      "name": "FIFA Street 3",
-      "year": 2008,
-      "platform": "PS3, Xbox 360, DS",
-      "publisher": "EA Sports BIG",
-      "estimatedRevenue": 30000000,
-      "revenueSource": "Base game sales (~500K copies x $60 avg)",
-      "confidence": "low"
-    },
-    {
-      "name": "2006 FIFA World Cup",
-      "year": 2006,
-      "platform": "PS2, Xbox, Xbox 360, PC, PSP, DS, GBA",
-      "publisher": "EA Sports",
-      "estimatedRevenue": 120000000,
-      "revenueSource": "Base game sales (~2.4M copies x $50 avg). World Cup tie-in game.",
-      "confidence": "medium"
-    },
-    {
-      "name": "2010 FIFA World Cup South Africa",
-      "year": 2010,
-      "platform": "PS3, Xbox 360, Wii, PSP",
-      "publisher": "EA Sports",
-      "estimatedRevenue": 150000000,
-      "revenueSource": "Base game sales (~2.5M copies x $60 avg). World Cup tie-in game.",
-      "confidence": "medium"
-    },
-    {
-      "name": "2014 FIFA World Cup Brazil",
-      "year": 2014,
-      "platform": "PS3, Xbox 360",
-      "publisher": "EA Sports",
-      "estimatedRevenue": 130000000,
-      "revenueSource": "Base game sales (~2.2M copies x $60 avg). Limited to last-gen consoles only.",
-      "confidence": "medium"
-    },
-    {
-      "name": "UEFA Euro 2008",
-      "year": 2008,
-      "platform": "PS3, Xbox 360, PC, PSP",
-      "publisher": "EA Sports",
-      "estimatedRevenue": 50000000,
-      "revenueSource": "Base game sales (~1M copies x $50 avg)",
-      "confidence": "low"
-    },
-    {
-      "name": "UEFA Euro 2012 (DLC for FIFA 12)",
-      "year": 2012,
-      "platform": "PS3, Xbox 360, PC",
-      "publisher": "EA Sports",
-      "estimatedRevenue": 30000000,
-      "revenueSource": "DLC sales (~2M downloads x $15 avg)",
+      "copiesSold": 10000000,
+      "estimatedRevenue": 700000000,
+      "revenueSource": "Reddit: outsold by Ghost of Yotei in UK launch week (r/gaming 1nzc677); top seller Black Friday Europe (r/Games 1pfo1ph)",
       "confidence": "low"
     }
   ],
-  "totalRevenue": 35185000000,
-  "totalGamesFound": 43,
+  "totalRevenue": 20470000000,
+  "totalGamesFound": 33,
   "searchQueries": [
-    "FIFA complete list every game released (r/FIFA)",
-    "FIFA franchise revenue sales billion (r/gaming)",
-    "FIFA Ultimate Team revenue earnings (r/Games)",
-    "EA earnings report FIFA revenue billion (r/FIFA)",
-    "FIFA copies sold million sales history (all Reddit)",
-    "EA Sports FIFA annual revenue earnings report (all Reddit)",
-    "FIFA sold million copies each year (all Reddit)",
-    "FIFA 23 OR FIFA 22 OR FIFA 21 sales revenue million (all Reddit)",
-    "EA ultimate team revenue 1 billion year (all Reddit)",
-    "FIFA franchise total revenue 20 billion 30 billion (all Reddit)",
-    "investors view EA FIFA revenue (r/EASportsFC)",
-    "EA FIFA ultimate team revenue billion per year microtransaction (all Reddit)",
-    "FIFA International Soccer OR FIFA 94 OR FIFA 95 OR FIFA 96 sales (all Reddit)",
-    "EA Sports FC 25 OR EA FC 25 sales revenue (all Reddit)",
-    "FIFA mobile revenue OR sales (all Reddit)",
-    "EA sports FIFA copies sold total franchise 325 million (all Reddit)",
-    "EA fiscal year 2025 revenue net bookings sports FC (all Reddit)",
-    "FIFA game all time OR highest selling OR best selling sport game (all Reddit)",
-    "FIFA 14 OR FIFA 15 OR FIFA 16 million sold copies (all Reddit)",
-    "EA FIFA FUT revenue breakdown year by year (all Reddit)",
-    "EA Saudi Arabia acquisition 55 billion (all Reddit)",
-    "EA Sports FC sales revenue million decline (all Reddit)"
+    "FIFA complete game list every release history",
+    "FIFA copies sold million sales figures",
+    "FIFA best selling game UK NPD 2016",
+    "FIFA 23 copies sold million",
+    "\"FIFA\" million sold copies",
+    "EA Sports FC FIFA sales revenue best selling",
+    "FIFA 19 sales in the UK are down on FIFA 18",
+    "FIFA series total sales 325 million 300 million",
+    "FIFA International Soccer 1993 1994 FIFA 95 96 97 98 99 sales",
+    "VGChartz FIFA sales data",
+    "EA Sports FC 24 25 26 sales copies sold million",
+    "FIFA 2001 2002 2003 2004 2005 World Cup game sales",
+    "EA annual report FIFA units sold earnings",
+    "FIFA game every year release list nostalgia history",
+    "FIFA 10 11 12 sales million NPD chart",
+    "FIFA 20 sales EA quarterly results million",
+    "EA Sports FC 24 sales disappointing decline player count"
   ],
-  "sources": [
-    "https://reddit.com/r/Games/comments/ci1zqh/ultimate_team_transactions_now_make_more_money/",
-    "https://reddit.com/r/Games/comments/gp282o/ea_net_revenue_from_ultimate_team_reaches_6bn/",
-    "https://reddit.com/r/gaming/comments/jo57hn/mfw_ea_reports_149_billion_of_fifa_lootbox_revenue/",
-    "https://reddit.com/r/fuckepic/comments/hbwp80/epic_miss_out_on_highest_grossing/",
-    "https://reddit.com/r/EASportsFC/comments/evoyrx/the_investors_view_of_ea_and_fifa/",
-    "https://reddit.com/r/technology/comments/uo5bxz/ea_sports_officially_ends_fifa_partnership_after/",
-    "https://reddit.com/r/soccer/comments/q7tr8y/fifa_reportedly_wants_to_charge_ea/",
-    "https://reddit.com/r/Games/comments/m2p83f/ea_investigating_allegations_of_employee_selling/",
-    "https://reddit.com/r/PocketQuantResearch/ (EA 8K FY25 earnings analysis)",
-    "https://reddit.com/r/stocks/comments/1i7tlu8/ea_shares_drop_7_after_company_lowers_guidance/",
-    "https://reddit.com/r/playstation/comments/ (EA $55B acquisition)",
-    "https://reddit.com/r/Games/comments/ (EA Q3 revenue $1.88B)",
-    "https://reddit.com/r/gaming/comments/9eol4v/ea_is_refusing_to_remove_loot_boxes_from_fifa_18/",
-    "https://reddit.com/r/Games/comments/91q9kw/fifa_player_uses_gdpr_to_find_out_everything_ea/",
-    "https://reddit.com/r/EASportsFC/comments/1cqyggg/ (EA revenue and community)",
-    "https://reddit.com/r/Games/comments/ (EA FC 25 revenue fall)"
-  ],
-  "redditPostsAnalyzed": 47
+  "redditPostsAnalyzed": 17
 }
 ```
 
 ---
 
-## Grand Total Franchise Revenue: $35.19 Billion (USD)
+## Data Quality Notes
 
-### Revenue Breakdown by Era
+- **High confidence (1 title):** FIFA 13 — 14.5M copies from EA's official FY13 quarterly report posted to r/Games
+- **Medium confidence (3 titles):** FIFA 12 (>10M implied), FIFA 18 (2.7M UK extrapolated), FIFA 19 (2.5M UK extrapolated)
+- **Low confidence (29 titles):** Estimated based on franchise growth trajectory, era pricing, and the commonly cited ~325M total franchise sales figure
+- **Spin-offs excluded from main table:** World Cup games (5), FIFA Street (4), UEFA games (3), FIFA Online series — no Reddit sales data available for any spin-offs
+- **Revenue is copy sales only** — excludes FIFA Ultimate Team microtransactions (which EA has reported as generating billions annually since ~2015)
 
-| Era | Period | Revenue | % of Total |
-|-----|--------|---------|------------|
-| Early / Pre-3D Era | 1993-1997 | $455M | 1.3% |
-| PS1/PS2 Era | 1998-2004 | $1.30B | 3.7% |
-| HD Console Era (Pre-FUT) | 2005-2008 | $1.38B | 3.9% |
-| Early FUT Era | 2009-2013 | $3.20B | 9.1% |
-| FUT Growth Era | 2014-2016 | $3.50B | 9.9% |
-| Peak FUT Era | 2017-2022 | $12.90B | 36.7% |
-| EA Sports FC Era | 2023-2025 | $7.00B | 19.9% |
-| Spin-offs (Street, World Cup, Euro) | Various | $0.69B | 2.0% |
-| FIFA Online (Asia F2P) | 2006-2026 | $1.50B | 4.3% |
-| FIFA Mobile | 2016-2026 | $2.00B | 5.7% |
-| **Subtotal: Base Game Sales** | 1993-2025 | **~$13.5B** | **38%** |
-| **Subtotal: FUT/Microtransactions** | 2009-2025 | **~$17.5B** | **50%** |
-| **Subtotal: Mobile + Online F2P** | 2006-2025 | **~$3.5B** | **10%** |
-| **Subtotal: Spin-offs** | Various | **~$0.69B** | **2%** |
+---
 
-### Key Insight
-
-The FIFA/EA Sports FC franchise has generated approximately **$35.19 billion** in total revenue from 1993 to 2026 (projected). The single largest revenue driver is Ultimate Team microtransactions, which alone account for approximately half of all franchise revenue despite only existing since 2009. The franchise's peak earning period was 2017-2023, when annual revenue consistently exceeded $1.5 billion from FUT alone.
+*CLI Research Report — Iteration 1*
