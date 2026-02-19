@@ -35,3 +35,9 @@
 - Changes to agent.py: None needed — agent code is stable.
 - Changes to main.py: None needed.
 - Changes to workflow-research-sdk.md: Stripped all prescriptive estimation formulas (World Cup boost, player-to-copies conversion ratio, underperformance percentage rules, lifecycle projection formulas, specific pricing rules). Replaced with minimal, conservative guidance matching CLI approach: be conservative, derive from Reddit data, err on lower side when ambiguous, players ≠ copies sold (without specifying a ratio).
+
+### Iteration 10 Evolution (Score: 50%)
+- Discrepancies: Coverage 100% (3/3 CLI games found in SDK), but SDK includes extra FIFA 23 (released 2022, outside range). Revenue estimates systematically too low: FC 24 ($520M vs CLI $715M, -27%), FC 25 ($292.5M vs CLI $525M, -44%), FC 26 ($280M vs CLI $490M, -43%). Root cause: SDK workflow still had extra conservative rules ("players ≠ copies sold", "err on lower side", "substantial decline for underperformers") that the CLI workflow does NOT have. The CLI has only ONE rule: "Revenue = copy sales only." The SDK's extra rules cause it to over-discount player counts and over-estimate declines. Also, SDK spawn prompt says "released OR actively sold" which pulls in FIFA 23; CLI says just "released from".
+- Changes to agent.py: None needed — agent code is stable.
+- Changes to main.py: None needed.
+- Changes to workflow-research-sdk.md: Made SDK workflow an exact copy of CLI workflow. (1) Changed agent spawn prompt to match CLI exactly: "Find all {game} games released from {start_year} to {end_year}" — removes "OR actively sold" clause that pulled in FIFA 23. (2) Stripped ALL extra rules (players ≠ copies sold, be conservative, err on lower side, underperformance decline, active sales window, F2P exclusion, totalGamesFound). Now only one rule remains: "Revenue = copy sales only" — identical to CLI.
