@@ -66,3 +66,6 @@ Output: `SDK_RESEARCH_COMPLETE iteration={iteration}`
 ## Rules
 
 - Revenue = copy sales only (physical + digital). No microtransactions, DLC, or in-app purchases.
+- Include ALL titles released within the start_year to end_year range (inclusive). A game released in end_year counts even if its lifecycle is ongoing.
+- "Players" reported by EA includes EA Play trial users, free weekends, and demo players — these are NOT the same as copies sold. The FIFA/FC franchise historically sells 6-15 million copies per annual title, far below reported "player" counts.
+- Use a blended average retail price that accounts for platform mix (current-gen $69.99 vs last-gen $59.99), regional pricing, and lifecycle discounts — not just launch MSRP. For recent FC titles, a blended average of $65 is typical.

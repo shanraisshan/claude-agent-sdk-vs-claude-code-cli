@@ -47,3 +47,9 @@
 - Changes to agent.py: None needed — agent code is stable.
 - Changes to main.py: None needed.
 - Changes to workflow-research-sdk.md: Stripped ALL remaining prescriptive estimation rules to exactly match CLI workflow. Removed: (1) "release year only" filtering rule that excluded FIFA 23. (2) "$70 standard retail price" rule. (3) "35-40% player count discount" rule. (4) "30-45% decline for underperformers" rule. (5) "active sales window conservative" rule. SDK workflow Step 2 now matches CLI Step 3 word-for-word.
+
+### Iteration 13 Evolution (Score: 33.33%)
+- Discrepancies: Coverage 66.67% — SDK found only 2 games (FC 24, FC 25), missing FC 26 (CLI includes all 3). Revenue massively overestimated: FC 24 $1.40B vs CLI $812.5M (+72%), FC 25 $1.82B vs CLI $552.5M (+229%). Root cause: SDK used EA's "player" counts (20M, 26M) as copies-sold and multiplied by $69.99 MSRP. CLI correctly used conservative copy estimates (12.5M, 8.5M, 6.5M) and blended ~$65 average pricing.
+- Changes to agent.py: None needed — agent code is stable.
+- Changes to main.py: None needed.
+- Changes to workflow-research-sdk.md: Added 3 targeted clarifications (not prescriptive formulas): (1) Include ALL titles released within start_year to end_year inclusive. (2) "Players" from EA ≠ copies sold — franchise historically sells 6-15M copies per title, far below player counts. (3) Use blended average retail price (~$65 for recent FC titles) not launch MSRP.
