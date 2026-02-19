@@ -87,3 +87,28 @@ iterations:
       SDK used prescriptive formulas (World Cup boost, player-to-copies conversion, underperformance percentages) that
       systematically inflate above CLI's data-driven approach. Evolved: stripped all prescriptive formulas, adopted
       CLI's minimalist rules — be conservative, derive from Reddit data, err on lower side.
+  - iteration: 10
+    score: 50.0
+    coverageScore: 100.0
+    valueAccuracyScore: 0.0
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-19T12:30:00Z"
+    learnings: >
+      Score unchanged at 50%. SDK includes extra FIFA 23 (released 2022, outside 2023-2025 range).
+      Revenue systematically underestimated: FC 24 ($520M vs $715M, -27%), FC 25 ($292.5M vs $525M, -44%),
+      FC 26 ($280M vs $490M, -43%). Root cause: SDK workflow still had extra conservative rules (players≠copies,
+      err on lower side, substantial decline) that CLI does NOT have. Evolved: made SDK workflow an exact copy
+      of CLI — only rule is "revenue = copy sales only". Fixed spawn prompt to match CLI exactly.
+  - iteration: 12
+    score: 58.33
+    coverageScore: 66.67
+    valueAccuracyScore: 50.0
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-20T12:30:00Z"
+    learnings: >
+      Score improved slightly from 50% to 58.33%. Coverage dropped to 66.67% — SDK missed FIFA 23 and included FC 26
+      (CLI includes FIFA 23 but not FC 26). Of matched games, FC 24 was within 10% threshold but FC 25 was 17.65% off.
+      Root cause: SDK workflow still had prescriptive rules ($70 pricing, 35-40% player discount, release-year-only filtering)
+      that crept back despite iteration 10 strip. Evolved: fully stripped ALL prescriptive rules to match CLI word-for-word.
