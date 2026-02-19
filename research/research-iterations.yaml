@@ -29,3 +29,14 @@ iterations:
       SDK now finds correct 3 games (100% coverage). FC 24 and FC 25 revenue within 10% tolerance.
       FC 26 underestimated at $335M vs CLI $455M (26% gap) due to overly conservative active-sales-window rule and $67 pricing.
       Evolved rules: estimate from franchise trajectory, use $70 for current-gen-only titles.
+  - iteration: 5
+    score: 37.5
+    coverageScore: 75.0
+    valueAccuracyScore: 0.0
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-19T21:30:00Z"
+    learnings: >
+      Regression from 83.33% to 37.5%. Problem statement changed from 1990-2026 to 2023-2025, revealing new issues.
+      SDK missed FIFA 23 (actively sold in 2023 but released 2022). SDK used $62 blended price instead of $70.
+      SDK used 65% player-to-purchaser ratio (too low). Evolved: include actively-sold games, use $70 default, 75-80% ratio.
