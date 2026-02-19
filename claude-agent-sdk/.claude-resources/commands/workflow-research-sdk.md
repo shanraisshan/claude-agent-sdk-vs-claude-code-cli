@@ -18,8 +18,8 @@ Wait for the subagent to complete.
 
 ## STEP 2: SYNTHESIZE RESEARCH REPORT
 
-Read research/research-{iteration}/claude-agent-sdk/reddit-data-{iteration}.md (the raw Reddit data).
-Using the data, build a final research report and write it to research/research-{iteration}/claude-agent-sdk/research-{iteration}.md
+1. Read research/research-{iteration}/claude-agent-sdk/reddit-data-{iteration}.md (the raw Reddit data)
+2. Using the data, build a final research report and write it to research/research-{iteration}/claude-agent-sdk/research-{iteration}.md
 
 The research report must contain:
 

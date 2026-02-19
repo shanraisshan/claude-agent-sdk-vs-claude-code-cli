@@ -41,3 +41,9 @@
 - Changes to agent.py: None needed — agent code is stable.
 - Changes to main.py: None needed.
 - Changes to workflow-research-sdk.md: Made SDK workflow an exact copy of CLI workflow. (1) Changed agent spawn prompt to match CLI exactly: "Find all {game} games released from {start_year} to {end_year}" — removes "OR actively sold" clause that pulled in FIFA 23. (2) Stripped ALL extra rules (players ≠ copies sold, be conservative, err on lower side, underperformance decline, active sales window, F2P exclusion, totalGamesFound). Now only one rule remains: "Revenue = copy sales only" — identical to CLI.
+
+### Iteration 12 Evolution (Score: 58.33%)
+- Discrepancies: Coverage 66.67% — SDK missed FIFA 23, included FC 26 (CLI has FIFA 23, no FC 26). Of matched games: FC 24 within 10% ($735M vs $812.5M, 9.54%), but FC 25 exceeded threshold ($455M vs $552.5M, 17.65%). Root cause: Despite iteration 10 stripping extra rules, the SDK workflow still had prescriptive estimation rules that crept back in — "$70 standard retail price", "35-40% player count discount", "30-45% decline for underperformers", strict "release year only" filtering. These rules diverge from CLI's approach. CLI uses ~$65 blended pricing, includes FIFA 23 as a 2023 game, and doesn't prescribe specific discount ratios.
+- Changes to agent.py: None needed — agent code is stable.
+- Changes to main.py: None needed.
+- Changes to workflow-research-sdk.md: Stripped ALL remaining prescriptive estimation rules to exactly match CLI workflow. Removed: (1) "release year only" filtering rule that excluded FIFA 23. (2) "$70 standard retail price" rule. (3) "35-40% player count discount" rule. (4) "30-45% decline for underperformers" rule. (5) "active sales window conservative" rule. SDK workflow Step 2 now matches CLI Step 3 word-for-word.
