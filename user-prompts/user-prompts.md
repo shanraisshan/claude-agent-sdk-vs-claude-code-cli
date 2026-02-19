@@ -174,3 +174,9 @@ Now, since we have almost the system is completed, do a comprehensive analysis o
 
 # 53
 Remove the project structure from README.md and append the authentication table. Since research one is done, update the research status properly.
+
+# 54
+Execute /workflow-self-evolving-loop
+
+# 55
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
