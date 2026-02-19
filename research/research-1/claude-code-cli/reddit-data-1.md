@@ -1,233 +1,139 @@
-# Reddit Raw Data - FIFA/EA Sports FC Research (Iteration 1)
+# Reddit Data Archive - FIFA Franchise Revenue Research (Iteration 1)
 
 ## Search Queries Used
 
-1. `complete list FIFA games every release history` - subreddits: EASportsFC, gaming, Games
-2. `FIFA Ultimate Team revenue billions EA financial report` - subreddits: gaming, Games, pcgaming
-3. `FIFA Street series games list` - subreddits: gaming, Games
-4. `EA Sports FC 25 FC 26 sales revenue` - subreddits: EASportsFC, Games, gaming
-5. `FIFA game sales numbers copies sold history` - all subreddits
-6. `EA Ultimate Team FUT revenue 1.6 billion earnings report` - all subreddits
-7. `FIFA Mobile revenue earnings billions` - subreddits: EASportsFC, gaming, Games
-8. `FIFA Online free to play China Korea revenue` - all subreddits
-9. `EA Sports FC 24 sales disappointing revenue numbers` - subreddits: EASportsFC, Games, gaming
-10. `EA live services revenue FIFA FUT 1.62 billion 1.71 billion annual` - subreddits: EASportsFC, gaming, Games
-11. `FIFA International Soccer 1993 1994 Sega Genesis first game history` - subreddits: gaming, retrogaming
-12. `FIFA franchise total revenue 7 billion lifetime earnings EA` - subreddits: gaming, Games, pcgaming
-13. `FIFA 23 last FIFA game sales record copies sold` - subreddits: EASportsFC, gaming, Games
-14. `EA sold 55 billion acquisition PIF Silver Lake` - subreddits: gaming, Games, EASportsFC
+1. `FIFA complete list every game released` (r/FIFA) - Subreddit private (403)
+2. `FIFA franchise revenue sales billion` (r/gaming) - 10 results
+3. `FIFA Ultimate Team revenue earnings` (r/Games) - 10 results
+4. `EA earnings report FIFA revenue billion` (r/FIFA) - Subreddit private (403)
+5. `FIFA copies sold million sales history` (all Reddit) - 10 results
+6. `EA Sports FIFA annual revenue earnings report` (all Reddit) - 10 results
+7. `FIFA sold million copies each year` (all Reddit) - 10 results
+8. `"FIFA 23" OR "FIFA 22" OR "FIFA 21" sales revenue million` (all Reddit) - 10 results
+9. `EA ultimate team revenue 1 billion year` (all Reddit) - 10 results
+10. `FIFA franchise total revenue 20 billion 30 billion` (all Reddit) - 10 results
+11. `investors view EA FIFA revenue` (r/EASportsFC) - 5 results
+12. `EA FIFA ultimate team revenue billion per year microtransaction` (all Reddit) - 10 results
+13. `"FIFA International Soccer" OR "FIFA 94" OR "FIFA 95" OR "FIFA 96" sales` (all Reddit) - No FIFA-specific results
+14. `EA Sports FC 25 OR "EA FC 25" sales revenue` (all Reddit) - 10 results
+15. `"FIFA mobile" revenue OR sales` (all Reddit) - 10 results
+16. `EA sports FIFA "copies sold" total franchise 325 million` (all Reddit) - No results
+17. `EA fiscal year 2025 revenue net bookings sports FC` (all Reddit) - 5 results
+18. `FIFA game "all time" OR "highest selling" OR "best selling" sport game` (all Reddit) - 10 results
+19. `"FIFA 14" OR "FIFA 15" OR "FIFA 16" million sold copies` (all Reddit) - No FIFA-specific results
+20. `EA FIFA FUT revenue breakdown year by year` (all Reddit) - 10 results
+21. `EA Saudi Arabia acquisition 55 billion` (all Reddit) - 5 results
+22. `"EA Sports FC" sales revenue million decline` (all Reddit) - 10 results
 
 ---
 
-## Key Reddit Posts Collected
+## Key Reddit Posts Analyzed
 
 ### Post 1: "Ultimate team transactions now make more money than FIFA itself."
 - **Subreddit:** r/Games
-- **ID:** ci1zqh
-- **Score:** 5,319
-- **Date:** 2019-07-26
-- **URL:** https://metro.co.uk/2019/07/25/ultimate-team-microtransactions-now-make-money-fifa-10461286/
-- **Key Data:** As of 2019, Ultimate Team microtransactions generated more revenue than FIFA game sales themselves.
-- **Top Comment (1,729 upvotes):** "Thats exactly whats wrong with Gaming. Who are these scrubs who pay for that shit?"
+- **Score:** 5,322
+- **URL:** https://reddit.com/r/Games/comments/ci1zqh/ultimate_team_transactions_now_make_more_money/
+- **Key Data:** Confirms Ultimate Team microtransaction revenue exceeds base game sales revenue (as of 2019).
+- **Top Comments:**
+  - (1727 score): "Thats exactly whats wrong with Gaming. Who are these scrubs who pay for that shit?"
+  - (664 score): "How does it work? You have to buy the best players?"
+  - (296 score): "This is insane... makes perfect sense why EA are fighting so hard to keep these mechanics legal in every country."
+  - (259 score): "Fifa has been amazing cash cow for ea, earning billions upon billions, still nothing of it shows into game, same lazy copy paste work every year"
 
-### Post 2: "EA's Ultimate Team micro-transactions raked in $3000 USD/minute last year"
-- **Subreddit:** r/pcgaming
-- **ID:** nn5de9
-- **Score:** 175
-- **Date:** 2021-05-28
-- **URL:** https://www.eurogamer.net/articles/2021-05-27-ea-made-usd1-62bn-from-ultimate-team-in-its-last-financial-year
-- **Key Data:** EA made $1.62 billion from Ultimate Team in FY2021. That's approximately $3,000 per minute.
-
-### Post 3: "[Discussion] FYI: Last quarter alone EA earned $679m through live services (e.g. FUT) across all games. Almost 2.2 BILLION last fiscal year."
-- **Subreddit:** r/EASportsFC
-- **ID:** 8urupy
-- **Score:** 60
-- **Date:** 2018-06-29
-- **Key Data:** EA earned $679M in a single quarter from live services (FUT being the primary driver). Annual live services revenue was ~$2.2 billion for FY2018.
-
-### Post 4: "Mfw EA reports $1.49 billion of Fifa lootbox revenue."
-- **Subreddit:** r/gaming
-- **ID:** jo57hn
-- **Score:** 35
-- **Date:** 2020-11-04
-- **Key Data:** EA reported $1.49 billion in FIFA lootbox (FUT pack) revenue for the fiscal year ending around 2020.
-
-### Post 5: "150ms input delay measured on FC26 Online (25ms ping)"
-- **Subreddit:** r/EASportsFC
-- **ID:** 1olq87u
-- **Score:** 1,060
-- **Date:** 2025-11-01 (approx)
-- **Key Quote from post:** "despite almost 2 billion in revenue that we, players, generate" - links to EA Q3 FY25 results showing ~$2B revenue from EA Sports FC franchise.
-- **Source cited:** https://www.ea.com/news/electronic-arts-reports-q3-fy25-results
-
-### Post 6: "EA lost $6 billion in market value, following FC 25 & Dragon Age underperformance news"
+### Post 2: "EA net revenue from Ultimate Team reaches $6bn (from 2015 and across all franchises)"
 - **Subreddit:** r/Games
-- **ID:** 1i8x6am
-- **Score:** 1,954
-- **Date:** 2025-01-24
-- **URL:** https://www.videogameschronicle.com/news/ea-lost-6-billion-in-market-value-following-fc-25-dragon-age-underperformance-news/
-- **Key Data:** FC 25 underperformed expectations, contributing to $6B market value loss. Comments note: "EAFC deserves to have flopped they were taking the piss the last few years"
-- **Comment:** "Most of this is because of FC doing badly. They've made a shit ton of money from that game and it has helped them through other flops."
+- **Score:** 549
+- **URL:** https://reddit.com/r/Games/comments/gp282o/ea_net_revenue_from_ultimate_team_reaches_6bn/
+- **Key Data:** EA Ultimate Team (across FIFA, Madden, NHL) reached $6 billion cumulative revenue from 2015 to May 2020 (5 years). FIFA accounts for the majority (~70-80%).
 
-### Post 7: "EA Sports FC 26 | Official Reveal Trailer"
+### Post 3: "Mfw EA reports $1.49 billion of Fifa lootbox revenue."
+- **Subreddit:** r/gaming
+- **Score:** 34
+- **URL:** https://reddit.com/r/gaming/comments/jo57hn/mfw_ea_reports_149_billion_of_fifa_lootbox_revenue/
+- **Key Data:** EA reported $1.49 billion in FIFA lootbox revenue in FY2020.
+
+### Post 4: "Epic miss out on highest grossing non-F2P video game franchise as EA chooses Steam again"
+- **Subreddit:** r/fuckepic
+- **Score:** 852
+- **URL:** https://reddit.com/r/fuckepic/comments/hbwp80/
+- **Key Data:** "Ultimate Team revenue ($1.5 billion alone in the most recent fiscal year)" -- referring to FY2020.
+
+### Post 5: "The Investors View of EA and FIFA."
 - **Subreddit:** r/EASportsFC
-- **ID:** 1m1hki0
-- **Score:** 750
-- **Date:** 2025-07-16 (approx)
-- **Key Data:** Confirms FC 26 was released/revealed in 2025.
+- **Score:** 289
+- **URL:** https://reddit.com/r/EASportsFC/comments/evoyrx/the_investors_view_of_ea_and_fifa/
+- **Key Data:** Detailed analysis of how investors view Ultimate Team as the primary profit center. Discusses resource allocation from sports teams to Apex Legends. Notes that Volta (FIFA 20) was seen as a threat to FUT monetization by investors.
 
-### Post 8: "FIFA to be called 'EA Sports FC' from Summer 2023!"
-- **Subreddit:** r/EASportsFC
-- **ID:** umlupi
-- **Score:** 1,454
-- **Date:** 2022-05-10
-- **URL:** https://www.ea.com/en-gb/news/ea-sports-fc
-- **Key Data:** EA announced rebrand from FIFA to EA Sports FC, effective from 2023. FIFA 23 was the last game with the FIFA name.
+### Post 6: "EA Sports officially ends FIFA partnership after 30 years of games"
+- **Subreddit:** r/technology
+- **Score:** 24,577
+- **URL:** https://reddit.com/r/technology/comments/uo5bxz/ea_sports_officially_ends_fifa_partnership_after/
+- **Key Data:** EA ends FIFA licensing deal after 30 years. Rebrands to EA Sports FC starting with FC 24 (2023).
 
-### Post 9: "EA's potential FIFA rebrand reportedly stems from FIFA asking for $1 billion for naming rights"
+### Post 7: "FIFA Reportedly Wants To Charge EA $1 Billion Every Four Years For Name"
+- **Subreddit:** r/soccer
+- **Score:** 4,300
+- **URL:** https://reddit.com/r/soccer/comments/q7tr8y/
+- **Key Data:** FIFA wanted to charge EA $1 billion every 4 years (up from ~$150M/4 years) for the name license, which led to the split.
+
+### Post 8: "EA investigating allegations of employee selling rare FIFA Ultimate Team cards"
 - **Subreddit:** r/Games
-- **ID:** q7tnmc
-- **Score:** 4,913
-- **Date:** 2021-10-14
-- **URL:** https://dotesports.com/news/eas-potential-fifa-rebrand-reportedly-stems-from-fifa-asking-for-1-billion-for-naming-rights
-- **Key Data:** FIFA organization wanted $1 billion per World Cup cycle (every 4 years) for naming rights, prompting EA to rebrand.
+- **Score:** 6,132
+- **URL:** https://reddit.com/r/Games/comments/m2p83f/
+- **Key Data:** "EA Gate" scandal in 2021, shows the massive value of rare FUT cards.
 
-### Post 10: "EA pulls its FIFA games from digital storefronts such as Steam"
-- **Subreddit:** r/gaming
-- **ID:** 16to3kb
-- **Score:** 6,159
-- **Date:** 2023-09-27
-- **URL:** https://www.engadget.com/ea-pulls-its-fifa-games-from-digital-storefronts-such-as-steam-141312879.html
-- **Key Data:** Previous FIFA titles were removed from Steam coinciding with EA Sports FC 24 launch.
+### Post 9: "EA 8K - Net Income Drops 12% Despite Record Net Bookings for Sports Titles"
+- **Subreddit:** r/PocketQuantResearch
+- **Score:** 1
+- **Key Financial Data:**
+  - FY25 Net Revenue: $7.46 billion (entire EA, down 1% YoY)
+  - FY25 Net Bookings: $7.36 billion
+  - Record performance in EA SPORTS with surging player monetization in EA SPORTS FC (double-digit YoY growth)
+  - EA's American Football Franchise: Over $1 billion in annual net bookings
 
-### Post 11: "Ea sports officially sold for $55 billion"
-- **Subreddit:** r/EASportsFC
-- **ID:** 1ntgp6o
-- **Score:** 468
-- **Date:** 2025-09-29
-- **URL:** https://news.ea.com/press-releases/press-releases-details/2025/EA-Announces-Agreement-to-be-Acquired-by-PIF-Silver-Lake-and-Affinity-Partners-for-55-Billion/default.aspx
-- **Key Data:** EA (the whole company) was acquired for $55 billion by PIF, Silver Lake, and Affinity Partners. The FC/FIFA franchise was a key asset driving this valuation.
-- **Top Comment (378 upvotes):** "55 fucking billion???? How much were they making from MTx, damn..."
+### Post 10: "EA shares drop 7% after company lowers guidance due to weakness in soccer, other games"
+- **Subreddit:** r/stocks
+- **Score:** 315
+- **Key Financial Data:**
+  - EA Q3 FY25 (ending Dec 2024): ~$1.88 billion revenue, net bookings ~$2.215 billion
+  - FC 25 underperformed expectations
+  - EA lowered full-year bookings guidance from $2.4-2.55B to $2.215B for Q3
 
-### Post 12: "How can a company which generates 5 billion in revenue not fix the servers?"
-- **Subreddit:** r/EASportsFC
-- **ID:** tdpr28
-- **Score:** 82
-- **Date:** 2022-03-14
-- **Key Data:** Community references EA generating ~$5 billion in total annual revenue (across all titles).
+### Post 11: "EA has officially been acquired for $55 billion"
+- **Subreddit:** r/GamingFoodle, r/playstation, r/TwoBestFriendsPlay
+- **Score:** Various (893, 1450, 487)
+- **Key Data:** EA acquired for $55 billion by Saudi PIF, Silver Lake, and Affinity Partners (2025). Deal expected to close by 2027. $210 per share.
 
-### Post 13: "71% of EA's revenue is coming from live service games."
-- **Subreddit:** r/pcgaming
-- **ID:** un2dll
-- **Score:** 2,102
-- **Date:** 2022-05-11
-- **Key Data:** 71% of EA's revenue came from live services (primarily FUT) as of 2022.
-
-### Post 14: "$70 for FIFA 23, and Free-to-Play Card Pack Model on top of that. Yikes!"
-- **Subreddit:** r/Steam
-- **ID:** wq8ecl
-- **Score:** 3,274
-- **Date:** 2022-08-17
-- **Key Data:** FIFA 23 priced at $70 with FUT microtransaction model on top.
-
-### Post 15: "EA Sports FC 26 | Kroos ICON reveal"
-- **Subreddit:** r/EASportsFC
-- **ID:** 1mnzaep
-- **Score:** 678
-- **Date:** 2025-06-11 (approx)
-- **Key Data:** FC 26 marketing/content reveals ongoing in 2025.
-
-### Post 16: "FC26 Advert Pop Up On FC25 Is An L"
-- **Subreddit:** r/EASportsFC
-- **ID:** 1mpxqp5
-- **Score:** 1,304
-- **Date:** 2025-08-13 (approx)
-- **Key Data:** FC 26 advertisements appearing in FC 25, player paid 70 GBP for FC 25.
-
-### Post 17: "'Really, Really Good': Ghost of Yotei Beats EA Sports FC 26, Super Mario Galaxy in UK Physical Sales"
-- **Subreddit:** r/gaming
-- **ID:** 1nzc677
-- **Score:** 1,238
-- **Date:** 2025-10-06 (approx)
-- **URL:** https://www.pushsquare.com/news/2025/10/really-really-good-ghost-of-yotei-beats-ea-sports-fc-26-super-mario-galaxy-in-uk-physical-sales
-- **Key Data:** FC 26 was outsold in UK physical sales by Ghost of Yotei.
-
-### Post 18: "Battlefield 6 sold more copies across Europe at launch than Call of Duty: Black Ops 6. It even beat launch sales of EA Sports FC 26"
-- **Subreddit:** r/gaming
-- **ID:** 1o9atzm
-- **Score:** 895
-- **Date:** 2025-10-22 (approx)
-- **Key Data:** BF6 outsold FC 26 at European launch. Indicates FC sales declining.
-
-### Post 19: "Best Selling Video Game Franchises Ever"
-- **Subreddit:** r/gaming
-- **ID:** 1pqlorv
-- **Score:** 3,550
-- **Date:** 2025-12-19 (approx)
-- **Key Data:** FIFA franchise listed among best-selling franchises. Comments note that tracking separates FIFA from EA Sports FC despite being the same studio/game.
-- **Comment (273 upvotes):** "Feels weird tracking Fifa and not including EA Sports FC after they let the naming rights lapse. It's still the same studio, making the same game..."
-
-### Post 20: "FC 26 is the worst football game of all Fifa series. EA is a disgrace."
-- **Subreddit:** r/EASportsFC
-- **ID:** 1p9xn9n
-- **Score:** 137
-- **Date:** 2025-11-29 (approx)
-- **Key Quote:** "I've been playing Fifa since 1994."
-- **Key Data:** Confirms the franchise dates back to 1994 from a long-time player's perspective.
-
-### Post 21: "Austrian court rules that FIFA Ultimate Team envelopes are a form of gambling"
-- **Subreddit:** r/gaming
-- **ID:** 11iw18f
-- **Score:** 140
-- **Date:** 2023-03-05
-- **Key Data:** Legal ruling classifying FUT packs as gambling. Sony ordered to issue refunds.
-
-### Post 22: "EA tells employees worried about layoffs after $55 billion buyout..."
-- **Subreddit:** r/gaming
-- **ID:** 1nusd24
-- **Score:** 2,462
-- **Date:** 2025-09-30
-- **Key Data:** EA going private with $55B buyout including $20B in debt.
-
-### Post 23: "FIFA Reportedly Wants To Charge EA $1 Billion Every Four Years For Name"
-- **Subreddit:** r/EASportsFC
-- **ID:** q7o5ug
-- **Score:** 1,011
-- **Date:** 2021-10-13
-- **Key Data:** FIFA organization demanding $1B per 4-year cycle. EA was previously paying ~$150M per cycle.
-
-### Post 24: "Hogwarts Legacy is Europe's fastest-selling game (that isn't FIFA) for a generation"
+### Post 12: "Electronic Arts saw revenue fall to $1.88 billion in its third quarter"
 - **Subreddit:** r/Games
-- **ID:** 11ky1mc
-- **Score:** 5,085
-- **Date:** 2023-03-07
-- **Key Data:** FIFA consistently was Europe's fastest-selling game for a generation (implied multiple years of dominance).
+- **Score:** 257
+- **Key Data:** EA Q3 revenue $1.88B, down from $1.94B YoY, partly due to weakness in EA Sports FC.
 
-### Post 25: "PS5, EA Sports FC 26 and Hogwarts Legacy come out top during Europe's Black Friday"
+### Post 13: "EA is refusing to remove loot boxes from FIFA 18"
+- **Subreddit:** r/gaming
+- **Score:** 743
+- **Key Data:** Belgium's loot box ruling in 2018; EA fought to keep FIFA points legal.
+
+### Post 14: "FIFA player uses GDPR to find out everything EA has on him"
 - **Subreddit:** r/Games
-- **ID:** 1pfo1ph
-- **Score:** 223
-- **Date:** 2025-12-06 (approx)
-- **Key Data:** FC 26 was a Black Friday top seller in Europe despite earlier reports of softer launch.
+- **Score:** 1,392
+- **Key Data:** Player spent over $10,000 in two years on Ultimate Team packs.
+
+### Post 15: Various FIFA Mobile posts
+- **Subreddits:** r/FUTMobile, r/EASportsFCMobile
+- **Key Data:** FIFA Mobile is a significant revenue generator, particularly in Asian markets.
 
 ---
 
-## Revenue Data Points Summary (from Reddit sources)
+## Total Reddit Posts Analyzed: 47
 
-| Year/Period | Data Point | Source Post |
-|------------|-----------|-------------|
-| FY2018 | EA live services revenue ~$2.2B total (FUT being primary driver) | Post 3 (8urupy) |
-| FY2019 | Ultimate Team revenue exceeded FIFA base game sales for first time | Post 1 (ci1zqh) |
-| FY2020 | FIFA lootbox revenue $1.49B | Post 4 (jo57hn) |
-| FY2021 | Ultimate Team revenue $1.62B ($3000/min) | Post 2 (nn5de9) |
-| FY2022 | 71% of EA revenue from live services | Post 13 (un2dll) |
-| FY2022 | EA total revenue ~$5B+ | Post 12 (tdpr28) |
-| FY2025 Q3 | EA Sports FC generating "almost 2 billion in revenue" | Post 5 (1olq87u) |
-| 2025 | EA acquired for $55B (FC franchise as key asset) | Posts 11, 22 |
-| 2025 | FC 25 underperformed, caused $6B market cap loss | Post 6 |
-| 2021 | FIFA org wanted $1B per 4 years for naming rights (EA was paying ~$150M) | Posts 9, 23 |
+## Key Revenue Data Points Extracted from Reddit
 
----
-
-## Total Reddit Posts Analyzed: 25+
-## Total Search Queries: 14
+1. **FUT Revenue FY2020:** $1.49-1.5 billion (from EA earnings report discussions)
+2. **Ultimate Team Cumulative (2015-2020):** $6 billion across all EA sports titles
+3. **FIFA Name License Cost:** Was ~$150M/4 years, FIFA wanted $1B/4 years
+4. **EA FY25 Total Revenue:** $7.46 billion (all EA products)
+5. **EA Sports FC double-digit growth** in player monetization (FY25)
+6. **EA Acquisition Price:** $55 billion (2025) -- shows total company value with FIFA/FC as crown jewel
+7. **EA FC 25 underperformed** expectations (Q3 FY25)
+8. **30 years of FIFA games** (1993-2023 under FIFA name, then EA Sports FC)
