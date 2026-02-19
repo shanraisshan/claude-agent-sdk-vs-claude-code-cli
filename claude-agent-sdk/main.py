@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from agent import run_research_agent
+from agent import _run_research
 from pathlib import Path
 
 app = FastAPI(
@@ -24,7 +24,7 @@ class ResearchResponse(BaseModel):
 @app.post("/research-claude-agent-sdk", response_model=ResearchResponse)
 async def research_claude_agent_sdk(request: ResearchRequest):
     try:
-        result = run_research_agent(request.iteration)
+        result = await _run_research(request.iteration)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

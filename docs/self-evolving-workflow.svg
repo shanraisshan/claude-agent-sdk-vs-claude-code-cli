@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1300" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1340" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
@@ -24,15 +24,15 @@
   </defs>
 
   <!-- Background -->
-  <rect width="960" height="1300" rx="12" fill="#f8fafc"/>
+  <rect width="960" height="1340" rx="12" fill="#f8fafc"/>
 
   <!-- Title -->
-  <text x="480" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">/workflow-self-evolving-loop — Full Orchestrator</text>
-  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">Spawned by ralph.sh each iteration  |  Evolves SDK until 90%+ match with CLI</text>
+  <text x="480" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">/workflow-self-evolving-loop</text>
+  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">ralph.sh spawns fresh claude -p each iteration  |  Evolves SDK until 90%+ match</text>
 
   <!-- ========== PHASE 1: INITIALIZE ========== -->
   <rect x="30" y="78" width="900" height="95" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" filter="url(#shadow)"/>
-  <text x="50" y="100" font-size="12" font-weight="700" fill="#475569">PHASE 1 — INITIALIZE</text>
+  <text x="50" y="100" font-size="12" font-weight="700" fill="#475569">PHASE 1 — INITIALIZE STATE</text>
 
   <g filter="url(#shadow)">
     <rect x="50" y="110" width="250" height="50" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
@@ -56,7 +56,7 @@
     <text x="775" y="150" text-anchor="middle" font-size="10" fill="#94a3b8">phase: GENERATE_CLI</text>
   </g>
 
-  <!-- Arrow Phase 1 → Phase 2 -->
+  <!-- Arrow Phase 1 to Phase 2 -->
   <line x1="480" y1="173" x2="480" y2="198" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ========== PHASE 2: CLI RESEARCH ========== -->
@@ -64,88 +64,86 @@
   <text x="50" y="225" font-size="12" font-weight="700" fill="#dc2626">PHASE 2 — CLI RESEARCH (Ground Truth)</text>
 
   <g filter="url(#shadow)">
-    <rect x="50" y="240" width="280" height="55" rx="8" fill="#dc2626"/>
-    <text x="190" y="261" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">Delegate /workflow-research-cli</text>
-    <text x="190" y="279" text-anchor="middle" font-size="11" fill="#fff">Reddit agent + synthesize report</text>
+    <rect x="50" y="240" width="320" height="55" rx="8" fill="#dc2626"/>
+    <text x="210" y="261" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">Delegate /workflow-research-cli</text>
+    <text x="210" y="279" text-anchor="middle" font-size="11" fill="#fff">Task tool &#8594; reddit-game-research-agent</text>
   </g>
 
-  <line x1="330" y1="267" x2="380" y2="267" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <line x1="370" y1="267" x2="410" y2="267" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
 
   <g filter="url(#shadow)">
-    <rect x="385" y="240" width="220" height="55" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-    <text x="495" y="260" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">Outputs (ground truth)</text>
-    <text x="495" y="276" text-anchor="middle" font-size="10" fill="#856404">reddit-data-{n}.md</text>
-    <text x="495" y="290" text-anchor="middle" font-size="10" fill="#856404">research-{n}.md</text>
+    <rect x="415" y="240" width="230" height="55" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+    <text x="530" y="260" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">Outputs (ground truth)</text>
+    <text x="530" y="276" text-anchor="middle" font-size="10" fill="#856404">reddit-data-{n}.md</text>
+    <text x="530" y="290" text-anchor="middle" font-size="10" fill="#856404">research-{n}.md</text>
   </g>
 
-  <line x1="605" y1="267" x2="655" y2="267" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="645" y1="267" x2="685" y2="267" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- Git commit CLI -->
   <g filter="url(#shadow)">
-    <rect x="660" y="247" width="250" height="40" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
-    <text x="785" y="272" text-anchor="middle" font-size="11" fill="#166534">git commit: cli-research({n})</text>
+    <rect x="690" y="250" width="220" height="36" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="800" y="273" text-anchor="middle" font-size="11" fill="#166534">git commit: cli-research({n})</text>
   </g>
 
-  <!-- Arrow Phase 2 → Phase 3 -->
+  <!-- Arrow Phase 2 to Phase 3 -->
   <line x1="480" y1="343" x2="480" y2="368" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ========== PHASE 3: SDK RESEARCH ========== -->
   <rect x="30" y="373" width="900" height="225" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1" filter="url(#shadow)"/>
-  <text x="50" y="395" font-size="12" font-weight="700" fill="#2563eb">PHASE 3 — SDK RESEARCH</text>
+  <text x="50" y="395" font-size="12" font-weight="700" fill="#2563eb">PHASE 3 — SDK RESEARCH (Mimics CLI Architecture)</text>
 
-  <!-- Curl call -->
   <g filter="url(#shadow)">
-    <rect x="50" y="408" width="310" height="50" rx="8" fill="#2563eb"/>
-    <text x="205" y="429" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">POST /research-claude-agent-sdk</text>
-    <text x="205" y="446" text-anchor="middle" font-size="10" fill="#bfdbfe">curl localhost:8000 { iteration: n }</text>
+    <rect x="50" y="408" width="340" height="55" rx="8" fill="#2563eb"/>
+    <text x="220" y="429" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">POST /research-claude-agent-sdk</text>
+    <text x="220" y="446" text-anchor="middle" font-size="10" fill="#bfdbfe">agent.py: Task tool &#8594; AgentDefinition</text>
   </g>
 
   <!-- Decision diamond -->
-  <line x1="360" y1="433" x2="415" y2="433" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="390" y1="435" x2="430" y2="435" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
 
   <g filter="url(#shadow)">
-    <rect x="420" y="408" width="130" height="50" rx="25" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
-    <text x="485" y="429" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">HTTP 200?</text>
-    <text x="485" y="445" text-anchor="middle" font-size="10" fill="#3b82f6">Success check</text>
+    <rect x="435" y="410" width="130" height="50" rx="25" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+    <text x="500" y="431" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">HTTP 200?</text>
+    <text x="500" y="447" text-anchor="middle" font-size="10" fill="#3b82f6">Success check</text>
   </g>
 
   <!-- YES path -->
-  <line x1="550" y1="433" x2="605" y2="433" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"/>
-  <text x="575" y="425" font-size="10" font-weight="700" fill="#16a34a">YES</text>
+  <line x1="565" y1="435" x2="620" y2="435" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <text x="590" y="427" font-size="10" font-weight="700" fill="#16a34a">YES</text>
 
   <g filter="url(#shadow)">
-    <rect x="610" y="408" width="310" height="50" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-    <text x="765" y="428" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">SDK Outputs written</text>
-    <text x="765" y="444" text-anchor="middle" font-size="10" fill="#856404">research-{n}.md + reddit-data-{n}.md</text>
+    <rect x="625" y="410" width="285" height="50" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+    <text x="767" y="430" text-anchor="middle" font-size="11" font-weight="600" fill="#856404">SDK Outputs written</text>
+    <text x="767" y="446" text-anchor="middle" font-size="10" fill="#856404">research-{n}.md + reddit-data-{n}.md</text>
   </g>
 
   <!-- NO path -->
-  <line x1="485" y1="458" x2="485" y2="480" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
-  <text x="500" y="474" font-size="10" font-weight="700" fill="#dc2626">NO</text>
+  <line x1="500" y1="460" x2="500" y2="485" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <text x="515" y="478" font-size="10" font-weight="700" fill="#dc2626">NO</text>
 
   <!-- Fix code box -->
   <g filter="url(#shadow)">
-    <rect x="170" y="485" width="630" height="100" rx="8" fill="#fef2f2" stroke="#f87171" stroke-width="1.5" stroke-dasharray="6 3"/>
-    <text x="485" y="507" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">SELF-HEAL: Fix the SDK Code (no fallbacks)</text>
+    <rect x="170" y="490" width="630" height="95" rx="8" fill="#fef2f2" stroke="#f87171" stroke-width="1.5" stroke-dasharray="6 3"/>
+    <text x="485" y="512" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">SELF-HEAL: Fix SDK Code (no fallbacks)</text>
 
-    <rect x="190" y="518" width="180" height="40" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
-    <text x="280" y="535" text-anchor="middle" font-size="10" font-weight="600" fill="#dc2626">Read agent.py + main.py</text>
-    <text x="280" y="549" text-anchor="middle" font-size="10" fill="#94a3b8">Analyze error</text>
+    <rect x="190" y="522" width="180" height="40" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="280" y="539" text-anchor="middle" font-size="10" font-weight="600" fill="#dc2626">Read agent.py + main.py</text>
+    <text x="280" y="553" text-anchor="middle" font-size="10" fill="#94a3b8">Analyze error</text>
 
-    <line x1="370" y1="538" x2="400" y2="538" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+    <line x1="370" y1="542" x2="400" y2="542" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
 
-    <rect x="405" y="518" width="170" height="40" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
-    <text x="490" y="535" text-anchor="middle" font-size="10" font-weight="600" fill="#dc2626">Edit + fix SDK code</text>
-    <text x="490" y="549" text-anchor="middle" font-size="10" fill="#94a3b8">Commit fix</text>
+    <rect x="405" y="522" width="170" height="40" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="490" y="539" text-anchor="middle" font-size="10" font-weight="600" fill="#dc2626">Edit + fix SDK code</text>
+    <text x="490" y="553" text-anchor="middle" font-size="10" fill="#94a3b8">Commit fix</text>
 
-    <line x1="575" y1="538" x2="605" y2="538" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+    <line x1="575" y1="542" x2="605" y2="542" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
 
-    <rect x="610" y="518" width="170" height="40" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
-    <text x="695" y="535" text-anchor="middle" font-size="10" font-weight="600" fill="#dc2626">Retry curl (up to 3x)</text>
-    <text x="695" y="549" text-anchor="middle" font-size="10" fill="#94a3b8">Loop until success</text>
+    <rect x="610" y="522" width="170" height="40" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="695" y="539" text-anchor="middle" font-size="10" font-weight="600" fill="#dc2626">Retry curl (up to 3x)</text>
+    <text x="695" y="553" text-anchor="middle" font-size="10" fill="#94a3b8">Loop until success</text>
   </g>
 
-  <!-- Arrow Phase 3 → Phase 4 -->
+  <!-- Arrow Phase 3 to Phase 4 -->
   <line x1="480" y1="598" x2="480" y2="623" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ========== PHASE 4: COMPARE ========== -->
@@ -174,43 +172,42 @@
     <text x="805" y="701" text-anchor="middle" font-size="10" fill="#94a3b8">similarity = X%</text>
   </g>
 
-  <!-- SDK input arrow -->
   <g filter="url(#shadow)">
     <rect x="50" y="720" width="200" height="35" rx="8" fill="#fff" stroke="#c4b5fd" stroke-width="1"/>
     <text x="150" y="742" text-anchor="middle" font-size="11" font-weight="600" fill="#7c3aed">SDK research-{n}.md</text>
   </g>
   <line x1="250" y1="737" x2="325" y2="700" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
 
-  <!-- Arrow Phase 4 → Phase 5 -->
+  <!-- Arrow Phase 4 to Phase 5 -->
   <line x1="480" y1="773" x2="480" y2="798" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ========== PHASE 5: EVALUATE & EVOLVE ========== -->
   <rect x="30" y="803" width="900" height="280" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1" filter="url(#shadow)"/>
   <text x="50" y="825" font-size="12" font-weight="700" fill="#ea580c">PHASE 5 — EVALUATE &amp; EVOLVE SDK</text>
 
-  <!-- Decision: >= 90%? -->
+  <!-- Decision -->
   <g filter="url(#shadow)">
     <rect x="355" y="838" width="250" height="50" rx="25" fill="#fed7aa" stroke="#f97316" stroke-width="2"/>
     <text x="480" y="859" text-anchor="middle" font-size="13" font-weight="700" fill="#c2410c">similarity >= 90% ?</text>
     <text x="480" y="876" text-anchor="middle" font-size="10" fill="#ea580c">Convergence check</text>
   </g>
 
-  <!-- YES path (converged) -->
+  <!-- YES path -->
   <line x1="605" y1="863" x2="665" y2="863" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
   <text x="633" y="855" font-size="11" font-weight="700" fill="#16a34a">YES</text>
 
   <g filter="url(#shadow)">
     <rect x="670" y="843" width="240" height="40" rx="20" fill="#16a34a"/>
-    <text x="790" y="868" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">CONVERGED — Stop loop</text>
+    <text x="790" y="868" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">CONVERGED &#8212; Stop loop</text>
   </g>
 
-  <!-- NO path (evolve) -->
+  <!-- NO path -->
   <line x1="480" y1="888" x2="480" y2="915" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-orange)"/>
   <text x="496" y="907" font-size="11" font-weight="700" fill="#ea580c">NO</text>
 
   <!-- Evolution box -->
   <rect x="70" y="920" width="820" height="150" rx="8" fill="#fff" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="6 3" filter="url(#shadow)"/>
-  <text x="480" y="942" text-anchor="middle" font-size="12" font-weight="700" fill="#ea580c">EVOLVE SDK CODE (agent.py + main.py)</text>
+  <text x="480" y="942" text-anchor="middle" font-size="12" font-weight="700" fill="#ea580c">EVOLVE SDK CODE (agent.py + main.py + .claude-resources/)</text>
 
   <g filter="url(#shadow)">
     <rect x="90" y="955" width="185" height="55" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
@@ -246,13 +243,12 @@
     <text x="810" y="1004" text-anchor="middle" font-size="9" fill="#94a3b8">SDK evolved</text>
   </g>
 
-  <!-- Log update -->
   <g filter="url(#shadow)">
     <rect x="310" y="1025" width="340" height="30" rx="6" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
     <text x="480" y="1045" text-anchor="middle" font-size="10" fill="#856404">Update sdk-evolution-log.md with changes + reasoning</text>
   </g>
 
-  <!-- Arrow Phase 5 → Phase 6 -->
+  <!-- Arrow Phase 5 to Phase 6 -->
   <line x1="480" y1="1083" x2="480" y2="1108" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ========== PHASE 6: UPDATE STATE ========== -->
@@ -277,20 +273,20 @@
   </g>
 
   <!-- Arrow to final output -->
-  <line x1="480" y1="1183" x2="480" y2="1208" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="1183" x2="480" y2="1213" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Final outputs side by side -->
+  <!-- Final outputs -->
   <g filter="url(#shadow)">
-    <rect x="160" y="1213" width="250" height="40" rx="20" fill="#16a34a"/>
-    <text x="285" y="1238" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">COMPLETE (converged)</text>
+    <rect x="160" y="1218" width="250" height="40" rx="20" fill="#16a34a"/>
+    <text x="285" y="1243" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">COMPLETE (converged)</text>
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="550" y="1213" width="250" height="40" rx="20" fill="#ea580c"/>
-    <text x="675" y="1238" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">CONTINUING (next iteration)</text>
+    <rect x="550" y="1218" width="250" height="40" rx="20" fill="#ea580c"/>
+    <text x="675" y="1243" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">CONTINUING (next iteration)</text>
   </g>
 
-  <!-- Loop-back arrow from CONTINUING -->
-  <path d="M 800 1233 Q 940 1233 940 670 Q 940 80 775 95" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow-orange)"/>
+  <!-- Loop-back arrow -->
+  <path d="M 800 1238 Q 940 1238 940 670 Q 940 80 775 95" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow-orange)"/>
   <text x="935" y="670" font-size="10" font-weight="700" fill="#ea580c" transform="rotate(-90 935 670)">ralph.sh spawns next iteration</text>
 </svg>

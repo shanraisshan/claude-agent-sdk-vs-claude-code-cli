@@ -5,6 +5,7 @@ from pathlib import Path
 from claude_agent_sdk import query, ClaudeAgentOptions, AgentDefinition, AssistantMessage, ResultMessage, TextBlock
 
 PROJECT_ROOT = Path(__file__).parent.parent
+SDK_ROOT = Path(__file__).parent
 
 
 def load_problem() -> dict:
@@ -12,7 +13,7 @@ def load_problem() -> dict:
     problem_path = PROJECT_ROOT / "problem-statement" / "problem-statement.json"
     if problem_path.exists():
         return json.loads(problem_path.read_text(encoding="utf-8"))
-    return {"game": "FIFA", "start_year": 1990, "end_year": 2026}
+    return {"game": "TEKKEN", "start_year": 1990, "end_year": 2026}
 
 
 def load_agent_prompt() -> str:
@@ -22,6 +23,21 @@ def load_agent_prompt() -> str:
         content = agent_path.read_text(encoding="utf-8")
         match = re.match(r"^---\n.*?\n---\n(.*)", content, re.DOTALL)
         return match.group(1).strip() if match else content
+    return ""
+
+
+def load_workflow_command(iteration: int, game: str, start_year: int, end_year: int) -> str:
+    """Load the workflow command template and interpolate variables."""
+    cmd_path = SDK_ROOT / ".claude-resources" / "commands" / "workflow-research-sdk.md"
+    if cmd_path.exists():
+        template = cmd_path.read_text(encoding="utf-8")
+        return (
+            template
+            .replace("{iteration}", str(iteration))
+            .replace("{game}", game)
+            .replace("{start_year}", str(start_year))
+            .replace("{end_year}", str(end_year))
+        )
     return ""
 
 
@@ -63,61 +79,8 @@ async def _run_research(iteration: int) -> dict:
         model="opus",
     )
 
-    # System prompt mirrors the CLI's workflow-research-cli.md command
-    system_prompt = f"""You are the CLI research orchestrator (SDK version). You follow the exact same workflow as the CLI /workflow-research-cli command.
-
-## STEP 1: SPAWN THE REDDIT RESEARCH AGENT
-
-Use the Task tool to spawn the reddit-game-research-agent subagent with this prompt:
-
-> You are the Reddit Research Agent. Your iteration number is {iteration}.
-> Research the following: Find all {game} games released from {start_year} to {end_year}, and find how many copies each title sold (physical + digital sales only, no in-app purchases).
-> Write your output to: research/research-{iteration}/claude-agent-sdk/reddit-data-{iteration}.md
-
-Wait for the subagent to complete.
-
-## STEP 2: SYNTHESIZE RESEARCH REPORT
-
-Read research/research-{iteration}/claude-agent-sdk/reddit-data-{iteration}.md (the raw Reddit data).
-Using the data, build a final research report and write it to research/research-{iteration}/claude-agent-sdk/research-{iteration}.md
-
-The research report must contain:
-
-**A. Revenue Table**
-
-Calculate revenue as: copies sold x average retail price at time of release. Only count copy sales (physical + digital). Do NOT include microtransactions, DLC, loot boxes, or in-app purchases.
-
-| # | Title | Year | Copies Sold | Revenue (USD) | Confidence |
-|---|-------|------|-------------|---------------|------------|
-| 1 | ... | ... | ... | ... | ... |
-| **TOTAL** | | | | **$X.XX B** | |
-
-**B. JSON Data Block**
-
-```json
-{{
-  "games": [
-    {{
-      "name": "string",
-      "year": "number",
-      "platform": "string",
-      "publisher": "string",
-      "copiesSold": "number",
-      "estimatedRevenue": "number (USD)",
-      "revenueSource": "string (Reddit source summary)",
-      "confidence": "low | medium | high"
-    }}
-  ],
-  "totalRevenue": "number (USD)",
-  "totalGamesFound": "number",
-  "searchQueries": ["array of search queries used"],
-  "redditPostsAnalyzed": "number"
-}}
-```
-
-## STEP 3: REPORT
-
-Output: SDK_RESEARCH_COMPLETE iteration={iteration}"""
+    # Load the workflow command from file (mirrors CLI's .claude/commands/workflow-research-cli.md)
+    system_prompt = load_workflow_command(iteration, game, start_year, end_year)
 
     prompt = f"Execute the research workflow for iteration {iteration}. Spawn the reddit-game-research-agent subagent first, then synthesize the report."
 
