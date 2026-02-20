@@ -47,7 +47,7 @@ The SDK replicates the CLI's architecture 1:1. Every CLI concept has a direct SD
 | **Subagent spawning** | `Task tool` with `subagent_type: reddit-game-research-agent` | `Task tool` with `agents: {"reddit-game-research-agent": ...}` | Both use Task tool to spawn. SDK registers via `ClaudeAgentOptions.agents` | ✅ 100% |
 | **2-step workflow** | Step 2: spawn agent → `reddit-data-{n}.md`, Step 3: synthesize → `research-{n}.md` | Step 1: spawn agent → `reddit-data-{n}.md`, Step 2: synthesize → `research-{n}.md` | Same 2-step pattern: raw data collection then synthesis | ✅ 100% |
 | **Permission mode** | `--dangerously-skip-permissions` | `permission_mode="bypassPermissions"` | Both bypass permission prompts for autonomous operation | ✅ 100% |
-| **Workflow command** | `.claude/commands/workflow-research-cli.md` | `.claude-resources/commands/workflow-research-sdk.md` | Both are markdown files with step-by-step instructions. SDK loads its as `system_prompt` | ~90% |
+| **Workflow command** | `.claude/commands/workflow-research-cli.md` | `.claude-resources/commands/workflow-research-sdk.md` | Both are markdown files with step-by-step instructions. SDK loads its as `system_prompt`. SDK version has additional estimation rules added by self-evolving process (conservative copy-sales guidance, exclude F2P titles) | ~80% |
 | **Output location** | `research/research-{n}/claude-code-cli/` | `research/research-{n}/claude-agent-sdk/` | Parallel directories under the same `research/` root — only subfolder name differs | ~90% |
 | **Entry point** | `claude -p "Execute /workflow-research-cli"` | `POST /research-claude-agent-sdk` | CLI command vs HTTP endpoint — different trigger mechanism, same result | ~80% |
 
@@ -140,6 +140,10 @@ Each iteration:
 | **Cost** | Included in Max plan | Included in Max plan |
 
 Both agents are powered by your **Claude Max subscription** — no API key, no pay-per-token billing.
+
+## Conclusion: Findings After 15 Iterations
+
+Over 15 iterations the system achieved 90%+ convergence exactly once (iteration 8 hit 100%), but immediately regressed to 50% and never recovered — oscillating between 33% and 83% for the remaining iterations. The core finding is that **the problem is not the architecture** (CLI and SDK are structurally identical — same model, same Reddit MCP tools, same agent definition) **but the inherent non-determinism of LLM-driven estimation from ambiguous source data**. Both agents query Reddit live each run, and because EA never publicly discloses unit sales, the same Reddit posts support wildly different revenue interpretations — the CLI's own estimates for FC 24 ranged from $595M to $1.05B across iterations (a 76% spread), meaning the "ground truth" itself is a moving target. The self-evolving process repeatedly fell into a pendulum trap: adding prescriptive rules (player-to-copies ratios, pricing formulas) caused systematic overestimation, stripping them caused underestimation, and re-adding them restarted the cycle. **Sustained convergence on subjective estimation tasks is not achievable with current LLMs** — the model produces different numerical judgments each invocation even with identical prompts and tools, making 90%+ similarity across independent runs a matter of luck rather than engineering. For this class of problem (estimating undisclosed figures from indirect evidence), deterministic convergence would require either pinning the source data (cached Reddit snapshots) or switching to a factual research problem where ground truth exists in the data itself rather than requiring LLM judgment.
 
 ## Changing the Research Problem
 

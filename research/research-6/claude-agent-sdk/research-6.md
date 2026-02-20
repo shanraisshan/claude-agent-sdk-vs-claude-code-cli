@@ -1,59 +1,93 @@
-# Research Report: FIFA / EA Sports FC Game Sales (2023-2025)
-## Iteration 6 -- Claude Agent SDK
+# Research Report: FIFA / EA Sports FC Copy Sales & Revenue (2023–2025)
+## Iteration 6 — Claude Agent SDK
 
 ---
 
 ## Executive Summary
 
-Three premium FIFA/EA Sports FC titles were actively sold during the 2023-2025 period: **FIFA 23** (released Sept 2022, active through Sept 2023), **EA Sports FC 24** (released Sept 2023, active through Sept 2024), and **EA Sports FC 25** (released Sept 2024, active through 2025). EA does not publicly disclose exact unit sales for individual titles. Estimates below are derived from Reddit-sourced GSD (European retail tracking) relative percentage data, franchise trajectory analysis, and qualitative sales descriptions. The franchise showed a declining sales trajectory: FIFA 23 was a record-breaking high boosted by the 2022 FIFA World Cup, FC 24 declined ~10% at launch, and FC 25 declined a further ~5% while being labeled as "underperforming" by EA.
+Three premium FIFA/EA Sports FC titles were actively sold during 2023–2025: **FIFA 23** (released Sept 2022, active through Sept 2023), **EA Sports FC 24** (released Sept 2023, active through Sept 2024), and **EA Sports FC 25** (released Sept 2024, active through 2025). EA does not publicly disclose exact unit sales. Estimates below are derived from EA's reported "player" counts (adjusted by 75–80% purchaser ratio), GSD European retail tracking comparisons, chart performance data, and EA earnings commentary sourced from 21 Reddit posts across 22 search queries.
+
+**Total estimated copy-sale revenue: $3.18 billion across 48 million copies.**
+
+---
+
+## Methodology
+
+EA does not publicly disclose unit (copy) sales for FIFA/EA Sports FC titles. They report "players" — a deliberately inflated metric that includes EA Play subscribers, Xbox Game Pass users, PS Plus trial recipients, and free weekend participants. No Reddit post in any of the 22 searches conducted contained a verified "X million copies sold" figure for any title in scope.
+
+**Estimation approach:**
+1. Applied the **75–80% purchaser ratio** (midpoint 78%) to EA's reported "player" counts per research rules.
+2. Used **European GSD** (Games Sales Data) retail tracking for relative year-over-year comparisons: FC 24 was ~10% below FIFA 23 at launch; FC 25 was ~5% below FC 24.
+3. Cross-referenced **Steam peak concurrent data**, **chart positions** (Circana/NPD US, GSD Europe, UK boxed), and **EA earnings call commentary**.
+4. Applied a **first-month-to-lifetime multiplier of ~1.4x** for annual sports titles that are replaced after 12 months (accounting for holiday sales, football tournament boosts, and long-tail purchases).
+5. For FC 25, applied the **"lower end" rule** given EA slashed its fiscal year forecast, lost $6B in market value, and the game was described as an underperformer.
+6. **Pricing:** $60 for FIFA 23 (released Sept 2022, pre-$70 standard); $70 for FC 24 and FC 25 (2023+ titles on current-gen consoles at $70 MSRP).
 
 ---
 
 ## A. Revenue Table
 
-Revenue = copies sold x average retail price. **Only** physical + digital copy sales. No microtransactions, DLC, loot boxes, Ultimate Team packs, or in-app purchases.
+Revenue = copies sold × average retail price. **Only** physical + digital copy sales. No microtransactions, DLC, loot boxes, Ultimate Team packs, or in-app purchases.
 
 | # | Title | Year | Copies Sold | Avg Price | Revenue (USD) | Confidence |
 |---|-------|------|-------------|-----------|---------------|------------|
-| 1 | FIFA 23 | 2022 (active 2023) | 11.0M | $60 | $660,000,000 | Medium |
-| 2 | EA Sports FC 24 | 2023 | 10.0M | $70 | $700,000,000 | Medium |
-| 3 | EA Sports FC 25 | 2024 | 9.5M | $70 | $665,000,000 | Medium |
-| **TOTAL** | | | **30.5M** | | **$2.03B** | |
+| 1 | FIFA 23 | 2022 (active 2023) | 18.0M | $60 | $1,080,000,000 | Medium |
+| 2 | EA Sports FC 24 | 2023 | 16.0M | $70 | $1,120,000,000 | Medium |
+| 3 | EA Sports FC 25 | 2024 | 14.0M | $70 | $980,000,000 | Low |
+| | **TOTAL** | | **48.0M** | | **$3.18B** | |
 
-### Estimation Methodology
+---
 
-**FIFA 23 (11.0 million copies)**
-- Record-breaking launch; described as "an absolute monster" in Reddit discussions citing European sales data.
-- Fastest-selling game in Europe; served as the benchmark that all other games (including Hogwarts Legacy) are measured against.
-- Massively boosted by the 2022 FIFA World Cup in Qatar (Nov-Dec 2022), with a free World Cup mode update driving sales and engagement into 2023.
-- The FIFA franchise has 325+ million lifetime copies sold over ~30 years (~10.8M average/year), with recent entries trending higher. FIFA 23's World Cup boost places it at the upper end.
-- Released before 2023, so priced at $60 (standard last-gen/cross-gen price point per rules).
-- **Confidence: Medium** -- No exact figure found on Reddit; estimated from franchise trajectory, qualitative "record-breaking" descriptions, and the fact that FC 24 (10% below) still dominated European charts.
+### Per-Title Estimation Rationale
 
-**EA Sports FC 24 (10.0 million copies)**
-- European launch sales were approximately **10% below FIFA 23** per GSD (Games Sales Data) tracking cited in r/pcgaming (Post 4, Oct 2023).
-- Calculation: 11.0M × 0.90 = 9.9M, rounded to 10.0M.
-- Despite the 10% decline, FC 24 was the #1 selling game in Europe in September 2023 (beating Starfield) and the #1 best-selling game in Germany for 2024.
-- Reddit commenters noted the 10% decline was "not bad at all given the complete name change" and that FC 24 was "probably doing better than FIFA 22."
-- Priced at $70 (2023+ title on current-gen consoles).
-- **Confidence: Medium** -- The 10% relative decline from FIFA 23 is sourced from GSD European tracking data cited on Reddit. Global sales may differ from European patterns, but Europe is the franchise's largest market.
+#### FIFA 23 — 18.0 million copies ($1.08B) | Confidence: Medium
 
-**EA Sports FC 25 (9.5 million copies)**
-- Sold approximately **5% fewer copies than FC 24** per GSD data cited in r/gaming (Post 7, Jan 2025).
-- Calculation: 10.0M × 0.95 = 9.5M.
-- Described as "underperforming" by EA, contributing to **$6 billion in market value loss** (Jan 2025) and **slashed fiscal year guidance** (Posts 1, 2, 3).
-- EA Q3 FY2025 revenue fell to $1.88B from $1.94B YoY, with FC weakness cited as a primary driver.
-- Per rules: titles described as "underperforming" with slashed forecasts and billions in market cap loss should use the **lower end** of estimate ranges. The 9.5M figure already reflects the measured 5% GSD decline; global decline may be steeper given the severity of EA's financial warnings.
-- Despite underperformance vs. EA's expectations, FC 25 was still the **#1 best-selling game in Europe for H1 2025**, topping all 17 tracked European countries.
-- Community reception was severely negative: "probably the least effort EA has ever put in" (517 upvotes), "deserves to have flopped" (189 upvotes).
-- Priced at $70 (2024+ title on current-gen consoles).
-- **Confidence: Medium** -- The 5% relative decline is from GSD data cited on Reddit. The "underperformance" label suggests EA's internal targets were much higher, but actual unit sales were only modestly below FC 24.
+- **Franchise peak**, boosted by the 2022 FIFA World Cup in Qatar (Nov–Dec 2022) which extended sales deep into 2023.
+- EA reported ~10.3M "players" in the first week at launch. At 78% purchaser ratio → ~8.0M first-week buyers.
+- **Highest Steam all-time peak in franchise history:** 110,757 concurrent (Jan 2023).
+- FC 24's European launch was **~10% below FIFA 23** (GSD data), establishing FIFA 23 as the high-water mark. Reverse-calculating from FC 24's ~16M estimate: 16M / 0.90 ≈ 17.8M, rounded to 18M.
+- **Top 5 US best-selling game for H1 2023** per Circana/NPD data despite being a Sept 2022 release (r/gaming, score 15,894).
+- Hogwarts Legacy was described as "Europe's fastest-selling game that isn't FIFA for a generation" — confirming FIFA 23's dominance as the European benchmark.
+- Elden Ring's achievement was qualified as "biggest non-FIFA or Call of Duty launch since RDR2" — further confirming FIFA 23's sales supremacy.
+- FIFA 23 servers shut down Sept 2023 when FC 24 launched.
+- **Confidence: Medium** — no direct copy figure; estimate derived from reverse-calculation against FC 24's GSD-anchored estimate, player counts with purchaser ratio, and franchise-peak status with World Cup tailwind.
+
+#### EA Sports FC 24 — 16.0 million copies ($1.12B) | Confidence: Medium
+
+- First title under the "EA Sports FC" rebrand; all legacy FIFA titles delisted from digital storefronts at launch.
+- **EA reported 11.3M "players" first week and 14.5M "active players" first month** (includes EA Play, Game Pass, trial users).
+- At **78% purchaser ratio:** ~8.8M first-week buyers, ~11.3M first-month buyers.
+- Applying **1.4x first-month-to-lifetime multiplier** (accounting for Euro 2024 boost, holiday sales, long tail): 11.3M × 1.4 ≈ 15.8M → rounded to **16M**.
+- European launch was **~10% below FIFA 23** per GSD data — considered "not bad at all given the complete name change."
+- EA's Nov 2023 earnings call claimed **double-digit growth in new players** and **FUT revenue up high-single digits YoY** through first 4 weeks (earnings-positive despite unit decline).
+- **Topped UK charts in June 2024** (9 months post-launch) during Euro 2024.
+- **#1 best-selling game in Germany for full year 2024** (physical + digital).
+- Added to **PS Plus Essential May 2024** (only 7 months post-launch — earlier than typical, inflating subsequent "player" counts but not copy sales).
+- Steam all-time peak: 107,109 (-3.3% vs FIFA 23).
+- Reddit commenter noted: "sizable increase in ultimate edition pre orders for fc 24 compared to 23" — suggesting strong early adoption despite overall decline.
+- **Confidence: Medium** — strongest data foundation of the three titles; anchored by EA's reported player milestones (with purchaser ratio adjustment), GSD European comparison, and chart dominance across multiple markets.
+
+#### EA Sports FC 25 — 14.0 million copies ($0.98B) | Confidence: Low
+
+- Officially described as an **underperformer** by EA; contributed to **$6B market cap loss** (Jan 2025) and **fiscal year forecast slash** (Jason Schreier report via Bloomberg).
+- European GSD data showed **~5% fewer copies than FC 24** at comparable point. From FC 24's ~16M: 16M × 0.95 = ~15.2M before lower-end adjustment.
+- **Lower-end adjustment applied:** EA slashed forecasts, lost $6B market value, and the game was universally panned. Per rules, "underperforming" titles with slashed forecasts use the lower end. Adjusted to **14M** (reflecting that global decline likely exceeded the European 5% GSD figure, consistent with EA's severe financial warnings).
+- **Worst user-rated game in franchise history** across Metacritic, Google, and Steam.
+- EA notably **did not issue any player milestone press release** for FC 25 (unlike FC 24's 11.3M/14.5M announcements) — the silence itself is a strong negative signal.
+- **EA Q3 FY2025 revenue fell to $1.88B vs $1.94B YoY**, with FC and Dragon Age cited as primary causes.
+- Despite "underperformance," was still **#1 best-selling game in all 17 tracked European countries for H1 2025** (VGChartz/GSD, July 2025) — underperformance was relative to EA's internal projections, not the broader market.
+- Steam all-time peak: 108,534 (+1.3% vs FC 24) — initial interest didn't crater, but retention/engagement declined sharply.
+- Reddit comments: "People aren't buyin the cards as much anymore" — issue was both lower copy sales AND lower Ultimate Team spending.
+- **Confidence: Low** — EA withheld milestone data; GSD covers Europe only; "underperformance" language and the severity of EA's financial response suggest a broader-than-5% global decline.
+
+---
 
 ### Pricing Notes
-- **$60** used for FIFA 23 (released Sept 2022, before the 2023+ $70 standard).
-- **$70** used for FC 24 and FC 25 (released 2023+; primary sales volume on PS5/Xbox Series X at $70 price point).
+
+- **$60** used for FIFA 23 (released Sept 2022, before the 2023+ $70 standard; $60 was the standard cross-gen price point).
+- **$70** used for FC 24 and FC 25 (released 2023+; primary sales volume on PS5/Xbox Series X at $70 MSRP).
 - FIFA Mobile / EA Sports FC Mobile are **excluded** as free-to-play titles with no copy sales.
-- Nintendo Switch "Legacy Edition" (~$40) represents a small fraction of total sales and is absorbed into the average.
+- Nintendo Switch "Legacy Edition" (~$40) represents a small fraction of total sales and is absorbed into the blended average.
 
 ---
 
@@ -67,9 +101,9 @@ Revenue = copies sold x average retail price. **Only** physical + digital copy s
       "year": 2022,
       "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Nintendo Switch",
       "publisher": "Electronic Arts",
-      "copiesSold": 11000000,
-      "estimatedRevenue": 660000000,
-      "revenueSource": "Reddit: Described as record-breaking 'absolute monster' in r/pcgaming; fastest-selling in Europe; FC 24 was 10% below it per GSD data (r/pcgaming Post 4); World Cup boost widely discussed across r/Games, r/gaming, r/EASportsFC",
+      "copiesSold": 18000000,
+      "estimatedRevenue": 1080000000,
+      "revenueSource": "Reddit: No direct copy sales disclosed by EA. Estimated from ~10.3M reported 'players' first week (78% purchaser ratio = ~8M buyers), reverse-calculation from FC 24 (GSD data: FC 24 was 10% below FIFA 23, so FIFA 23 = FC 24 / 0.9), Circana/NPD top 5 US H1 2023 chart (r/gaming, score 15,894), highest Steam peak in franchise history at 110,757 (r/EASportsFC, score 14), Hogwarts Legacy 'fastest-selling non-FIFA game' benchmark (r/Games, score 5,085), Elden Ring 'biggest non-FIFA launch since RDR2' (r/Games, score 13,910).",
       "confidence": "medium"
     },
     {
@@ -77,9 +111,9 @@ Revenue = copies sold x average retail price. **Only** physical + digital copy s
       "year": 2023,
       "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Nintendo Switch",
       "publisher": "Electronic Arts",
-      "copiesSold": 10000000,
-      "estimatedRevenue": 700000000,
-      "revenueSource": "Reddit: ~10% below FIFA 23 launch in Europe per GSD data cited in r/pcgaming (Oct 2023); #1 in Europe Sept 2023 (r/pcgaming Post 4); #1 in Germany 2024 (r/gaming Post 9)",
+      "copiesSold": 16000000,
+      "estimatedRevenue": 1120000000,
+      "revenueSource": "Reddit: EA reported 11.3M 'players' first week, 14.5M first month (includes EA Play/Game Pass trials). At 78% purchaser ratio = ~11.3M first-month buyers × 1.4 lifetime multiplier ≈ 16M. European GSD launch ~10% below FIFA 23 (r/pcgaming). Topped UK charts June 2024 during Euro 2024 (r/Games, score 273). #1 in Germany 2024. EA earnings call: double-digit new player growth, FUT revenue up high-single digits YoY (r/EASportsFC, score 585 comment). Added to PS Plus May 2024 (r/Games, score 209).",
       "confidence": "medium"
     },
     {
@@ -87,35 +121,37 @@ Revenue = copies sold x average retail price. **Only** physical + digital copy s
       "year": 2024,
       "platform": "PS4, PS5, Xbox One, Xbox Series X/S, PC, Nintendo Switch",
       "publisher": "Electronic Arts",
-      "copiesSold": 9500000,
-      "estimatedRevenue": 665000000,
-      "revenueSource": "Reddit: ~5% below FC 24 per GSD data cited in r/gaming (Jan 2025, Post 7); 'underperformance' caused $6B market cap loss (r/Games Post 1, 1956 upvotes); EA slashed fiscal year guidance (r/pcgaming Post 2); still #1 in Europe H1 2025 (r/Games Post 8)",
-      "confidence": "medium"
+      "copiesSold": 14000000,
+      "estimatedRevenue": 980000000,
+      "revenueSource": "Reddit: GSD data showed ~5% fewer European copies vs FC 24 (r/gaming). Lower-end adjustment applied: EA slashed FY forecast, lost $6B market value (r/Games, score 1,956), Jason Schreier/Bloomberg report (r/pcgaming, score 1,008). Worst user-rated game in franchise history (r/EASportsFC, score 622). EA withheld player milestone press release. EA Q3 FY25 revenue $1.88B vs $1.94B YoY (r/Games, score 262). Still #1 in all 17 European countries H1 2025 (r/Games, score 185).",
+      "confidence": "low"
     }
   ],
-  "totalRevenue": 2025000000,
+  "totalRevenue": 3180000000,
   "totalGamesFound": 3,
   "searchQueries": [
-    "FIFA 23 sales numbers copies sold",
-    "EA Sports FC 24 sales copies sold",
-    "EA Sports FC 25 sales numbers",
-    "FIFA copies sold 2023 2024 2025",
-    "EA FC sales disappointing",
-    "EA Sports FC player count million",
-    "FIFA franchise sales decline rebrand",
-    "EA FC 24 how many copies sold million",
-    "EA FC 25 sales launch disappointing underperformance",
-    "EA Sports FC revenue earnings quarterly billion",
-    "FIFA 23 best selling game UK Europe 2022 record",
-    "EA FC 24 launch first week sales Europe number one",
-    "EA earnings report FC 25 net bookings decline lower guidance",
-    "FIFA 23 best selling game 2022 2023 sales record",
-    "EA FC 24 11 million players first week rebrand success",
-    "FIFA 23 World Cup mode 30 million players record breaking",
-    "best selling video game franchise ever FIFA total sales 325 million",
-    "EA FC 25 5% less 5% fewer FC 24 GSD sales data",
-    "EA quarterly earnings FC soccer football net bookings 2024 2025",
-    "FIFA 23 World Cup boost fastest selling biggest launch ever"
+    "FIFA 23 sales copies sold million",
+    "EA Sports FC 24 sales copies sold million",
+    "EA Sports FC 25 sales copies sold players",
+    "EA FC sales numbers revenue",
+    "EA Sports FC 25 underperformance sales decline",
+    "FIFA 23 million players EA earnings",
+    "EA FC 24 flop sales numbers decline FIFA rebrand",
+    "EA Sports FC copies sold unit sales VGChartz NPD",
+    "EA FC 24 players million launch first week",
+    "FIFA 23 10 million players record",
+    "EA Sports FC 24 14.5 million 11.3 million players",
+    "EA earnings Q3 2025 FC 25 revenue decline football",
+    "FIFA 23 best selling 2022 2023 UK chart copies",
+    "EA Sports FC 24 UK chart number one best selling",
+    "EA FC 25 worst selling FIFA history sales down percentage",
+    "EA FC 26 sales launch first week copies",
+    "FIFA 23 sales figures copies sold 10 million 20 million",
+    "EA FC 24 sales down compared FIFA 23 percentage decline rebrand",
+    "EA FC 25 sales down revenue decline Q3 2025 underperformance",
+    "FIFA 23 sold copies total lifetime sales EA annual report",
+    "EA FC 24 sales down 20% UK physical boxed launch",
+    "EA Sports FC net bookings revenue FY2024 FY2025 quarterly earnings"
   ],
   "redditPostsAnalyzed": 21
 }
@@ -127,29 +163,52 @@ Revenue = copies sold x average retail price. **Only** physical + digital copy s
 
 | Post | Subreddit | Score | Key Data Point |
 |------|-----------|-------|----------------|
-| EA lost $6B in market value (FC 25 underperformance) | r/Games | 1,956 | FC 25 underperformance was "most of" the reason for $6B loss |
-| Jason Schreier: EA slashing forecast | r/pcgaming | 1,008 | EA slashed FY guidance due to FC 25 + Dragon Age |
-| EA Q3 FY2025 revenue fell to $1.88B | r/Games | 262 | Revenue down YoY, weakness attributed to FC |
-| FC 24 topped European sales (Sept 2023) | r/pcgaming | 0 | FC 24 was ~10% below FIFA 23 launch (GSD data) |
-| EA pulls FIFA games from storefronts | r/gaming | 6,162 | FIFA 23 delisted when FC 24 launched |
+| EA lost $6B in market value (FC 25 & Dragon Age) | r/Games | 1,956 | FC 25 underperformance was "most of" the reason for $6B loss |
+| Jason Schreier: EA slashing fiscal year forecast | r/pcgaming | 1,008 | EA slashed FY guidance due to FC 25 + Dragon Age |
+| EA Q3 FY2025 revenue fell to $1.88B | r/Games | 262 | Revenue down YoY, FC and Dragon Age cited as causes |
+| FC 24: 14.5M active players first month | r/M8X_GAMENEWS | 1 | 11.3M players week 1, 14.5M month 1 (includes non-purchasers) |
+| Player count down 30% from FIFA 23 (Steam) | r/EASportsFC | 585 | Steam-specific decline; EA earnings call showed double-digit new player growth |
+| FC 25 + AC Shadows top Europe H1 2025 | r/Games | 185 | FC 25 #1 in all 17 tracked European countries |
+| Ghost of Yotei beats FC 26 UK physical sales | r/gaming | 1,238 | Shows declining FC physical sales trajectory (FC 26 outside scope) |
+| FC 25 worst user-rated game in franchise history | r/EASportsFC | 622 | Lowest Metacritic, Google, and Steam ratings ever |
+| FC 26 Steam engagement numbers (all-time peaks) | r/EASportsFC | 14 | Full peak concurrent table: FIFA 23 (110,757) > FC 25 (108,534) > FC 24 (107,109) > FC 26 (95,489) |
+| Quality/Players/Viewership declining since 2023 | r/EASportsFC | 134 | EA FC net bookings still up high-single digits YoY in Q3 FY26 |
+| Top 5 best-selling games of 2023 (Circana/NPD) | r/gaming | 15,894 | FIFA 23 in top 5 US H1 2023 despite Sept 2022 release |
 | Hogwarts Legacy fastest-selling non-FIFA game | r/Games | 5,085 | FIFA benchmark dominance in Europe |
-| Sports Games (FC 25 underperformance) | r/gaming | 0 | FC 25 sold ~5% less than FC 24 (GSD data) |
-| FC 25 + AC Shadows top Europe H1 2025 | r/Games | 191 | FC 25 was #1 in all 17 tracked European countries |
-| Best-selling games 2024 Germany | r/gaming | 569 | EA Sports FC was #1 in Germany 2024 |
+| Elden Ring biggest non-FIFA/CoD launch since RDR2 | r/Games | 13,910 | Confirms FIFA's perennial sales supremacy |
+| EA pulls FIFA games from storefronts | r/gaming | 6,164 | Legacy FIFA titles delisted when FC 24 launched |
+| FC 24 topped UK charts June 2024 | r/Games | 273 | FC 24 still #1 nine months post-launch during Euro 2024 |
+| FC 24 added to PS Plus May 2024 | r/Games | 209 | Added 7 months post-launch (inflates player counts, not copy sales) |
 
 ---
 
-## D. Limitations and Caveats
+## D. Steam Peak Concurrent Player Data (Franchise Trajectory)
 
-1. **No exact unit sales disclosed by EA.** All copy-sold figures are estimates derived from relative percentage comparisons (GSD data) and franchise trajectory analysis.
-2. **GSD data is European-only.** The 10% and 5% decline figures come from European retail tracking. Global patterns may differ, though Europe is the franchise's dominant market.
-3. **"Players" ≠ copies sold.** EA reports "player" counts that include EA Play, Xbox Game Pass, PS Plus trial users. Reddit discussions frequently conflate these numbers.
-4. **Franchise baseline uncertainty.** The 11M estimate for FIFA 23 is the anchor for all subsequent calculations. If FIFA 23 actually sold 10M or 13M, all downstream estimates shift proportionally.
-5. **Revenue is copy sales only.** The FIFA/EA FC franchise generates substantial additional revenue from Ultimate Team microtransactions, which is explicitly excluded per research scope.
-6. **The "underperformance" of FC 25** was relative to EA's internal expectations, not necessarily an absolute decline. EA expected growth; they got a 5% decline. The $6B market cap loss reflects investor disappointment with the trajectory, not catastrophic sales failure.
+| Game | All-Time Peak | Date | YoY Change |
+|------|--------------|------|------------|
+| FIFA 22 | 108,168 | May 2022 | — |
+| FIFA 23 | 110,757 | Jan 2023 | +2.4% |
+| EA FC 24 | 107,109 | Jan 2024 | -3.3% |
+| EA FC 25 | 108,534 | Jan 2025 | +1.3% |
+| EA FC 26 | 95,489 | Jan 2026 | -12.0% |
+
+*Source: steamcharts.com via r/EASportsFC (score 14)*
+
+**Note:** Steam is a minority platform for FIFA/FC. Console (PS5, PS4, Xbox) represents the overwhelming majority of sales. Multiple Reddit commenters cautioned: "Please PLEASE stop using Steam stats as indicative of an overall play base."
 
 ---
 
-*Research completed on 2026-02-19 | Iteration 6 | Claude Agent SDK*
-*Raw data: research/research-6/claude-agent-sdk/reddit-data-6.md*
-*Final report: research/research-6/claude-agent-sdk/research-6.md*
+## E. Limitations and Caveats
+
+1. **No exact unit sales disclosed by EA.** All copy-sold figures are estimates. EA deliberately reports "players" (inflated with EA Play, Game Pass, PS Plus, trial users) rather than copies sold.
+2. **GSD data is European-only.** The 10% and 5% relative decline figures are from European retail tracking. Global patterns may differ, though Europe is the franchise's dominant market (FIFA/FC outsells all other franchises in Europe by a wide margin).
+3. **Purchaser ratio is an approximation.** The 75–80% rule for converting "players" to purchasers is a heuristic. The actual ratio depends on EA Play subscriber engagement, Game Pass trial rates, and regional factors.
+4. **Lifetime multiplier uncertainty.** The 1.4x first-month-to-lifetime ratio for annual sports titles is an industry approximation. Individual titles may vary based on tournament timing (World Cup, Euros), holiday positioning, and competitive landscape.
+5. **Revenue is copy sales ONLY.** EA Sports FC generates substantial additional revenue from Ultimate Team microtransactions (estimated $1.5–2B+ annually across the franchise). This is explicitly excluded from this analysis.
+6. **FC 25's "underperformance" was relative to EA's internal projections.** FC 25 was still the #1 game in all 17 European countries for H1 2025. The financial impact was EA missing its own targets, not catastrophic absolute sales failure.
+
+---
+
+*Research completed 2026-02-19 | Iteration 6 | Claude Agent SDK*
+*Raw Reddit data: research/research-6/claude-agent-sdk/reddit-data-6.md*
+*22 search queries executed | 21 Reddit posts analyzed in detail*

@@ -231,3 +231,45 @@ Execute /workflow-self-evolving-loop to run one complete iteration.
 
 # 72
 Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+
+# 73
+Execute /workflow-self-evolving-loop to run one complete iteration.
+
+# 74
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+
+# 75
+Execute `/workflow-self-evolving-loop` to run one complete iteration.
+
+# 76
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+
+# 77
+Execute `/workflow-self-evolving-loop` to run one complete iteration.
+
+# 78
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+
+# 79
+Read the file `.claude/commands/compare-research.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that.
+
+# 80
+Execute `/workflow-self-evolving-loop` to run one complete iteration.
+
+# 81
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+
+# 82
+Execute `/workflow-self-evolving-loop` to run one complete iteration.
+
+# 83
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that. Do not modify the state file.
+
+# 84
+Execute `/workflow-self-evolving-loop` to run one complete iteration.
+
+# 85
+Read the file `.claude/commands/workflow-research-cli.md` in full, then follow its instructions exactly and completely. The current iteration number is already set in `research/self-evolving-state.yaml` — use that (iteration 15). Do not modify the state file.
+
+# 86
+based on the 15 iterations, can you come up with a conclusion and write 5 lines of detail in the README on what you find from these 15 iterations? Either: Is it possible for such a problem to get the same result by CLI and Agent SDK, or the issue is within the problem that we want to research and the capabilities of the current LLM, and the behaviour of the LLM is not possible, whatever your conclusion is based on the research and the LLM capabilities? Go over the entire search for it and come up with a conclusion.

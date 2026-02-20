@@ -112,3 +112,15 @@ iterations:
       (CLI includes FIFA 23 but not FC 26). Of matched games, FC 24 was within 10% threshold but FC 25 was 17.65% off.
       Root cause: SDK workflow still had prescriptive rules ($70 pricing, 35-40% player discount, release-year-only filtering)
       that crept back despite iteration 10 strip. Evolved: fully stripped ALL prescriptive rules to match CLI word-for-word.
+  - iteration: 13
+    score: 33.33
+    coverageScore: 66.67
+    valueAccuracyScore: 0.0
+    status: CONTINUING
+    converged: false
+    timestamp: "2026-02-20T13:30:00Z"
+    learnings: >
+      Regression from 58.33% to 33.33%. SDK found only 2 games (missed FC 26). Revenue massively overestimated:
+      FC 24 $1.40B vs CLI $812.5M (+72%), FC 25 $1.82B vs CLI $552.5M (+229%). SDK used EA "player" counts
+      (20M, 26M) as copies-sold and $69.99 MSRP. CLI used conservative copy estimates and ~$65 blended pricing.
+      Evolved: added 3 targeted clarifications — inclusive year range, players≠copies (6-15M historical range), blended ~$65 pricing.

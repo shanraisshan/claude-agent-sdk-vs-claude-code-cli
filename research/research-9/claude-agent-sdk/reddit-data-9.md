@@ -1,504 +1,648 @@
-# Reddit Research Data: FIFA / EA Sports FC Sales (2023-2025)
-## Iteration 9 -- Agent: Claude Agent SDK
+# Reddit Research Data: FIFA / EA Sports FC Franchise (2023-2025)
+
+## Research Agent Iteration: 9
 ## Date: 2026-02-19
+## Franchise: FIFA / EA Sports FC
+## Year Range: 2023 - 2025
 
 ---
 
-# SECTION 1: SEARCH QUERIES AND RESULTS
+# SECTION 1: SEARCH QUERIES USED AND RESULTS
 
-## Query 1: "FIFA 23 sales numbers copies sold"
+## Query 1: "FIFA 23 copies sold sales numbers millions"
 - Subreddits: EASportsFC, gaming, Games, pcgaming
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - No direct FIFA 23 sales number posts found in these subreddits. Most results were about other game franchises (Elden Ring, Black Myth Wukong, etc.)
-  - r/FIFA subreddit was inaccessible (private or renamed to r/EASportsFC)
+- Note: r/FIFA returned an access error (private or merged into r/EASportsFC). Used r/EASportsFC as primary.
+- Results: Mostly returned general gaming sales posts (Cyberpunk 2077, Clair Obscur, etc.). Found EA FC 26 guide post confirming FC 26 exists and is active. No direct FIFA 23 unit sales posts.
 
-## Query 2: "EA Sports FC 24 sales copies sold"
+## Query 2: "EA Sports FC 24 sales copies sold millions"
 - Subreddits: EASportsFC, gaming, Games, pcgaming
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "EA SPORTS FC 26 | Official Reveal Trailer" (r/EASportsFC, score: 748, July 2025) -- FC 26 revealed
-  - Post: "Ea sports officially sold for $55 billion" (r/EASportsFC, score: 466, Sept 2025) -- EA acquisition announcement
-  - Post: "Jason Schreier: EA is slashing its forecast for the fiscal year due to the underperformance of holiday games EA Sports FC 25 and Dragon Age: The Veilguard..." (r/pcgaming, score: 1005, Jan 2025) -- KEY SALES DATA
+- Relevant Results:
+  - Post: "EA SPORTS FC 26 | Official Reveal Trailer" (r/EASportsFC, score: 746, July 2025) -- FC 26 revealed
+  - Post: "Ea sports officially sold for $55 billion" (r/EASportsFC, score: 462, Sept 2025) -- EA acquisition announcement
+  - Post: "Jason Schreier: EA is slashing its forecast..." (r/pcgaming, score: 1009, Jan 2025) -- KEY SALES DATA
 
-## Query 3: "EA Sports FC 25 sales copies sold underperforming"
+## Query 3: "EA Sports FC 25 sales copies sold millions"
 - Subreddits: EASportsFC, gaming, Games, pcgaming
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "EA lost $6 billion in market value, following FC 25 & Dragon Age underperformance news" (r/Games, score: 1961, Jan 2025) -- KEY DATA
-  - Post: "Jason Schreier: EA is slashing its forecast..." (r/pcgaming, score: 1005, Jan 2025) -- DUPLICATE from above
+- Relevant Results:
+  - Same EA acquisition and FC 26 posts plus Balatro developer mocking FC 25 microtransactions (r/pcgaming, score: 24457)
 
-## Query 4: "EA Sports FC 26 release sales 2025"
+## Query 4: "EA Sports FC 26 2025 release announcement"
 - Subreddits: EASportsFC, gaming, Games, pcgaming
-- Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "EA FC 26 PC Input Delay - Report Here [Mega-thread]" (r/EASportsFC, score: 724, Sept 2025) -- FC 26 launched Sept 2025
-  - Post: "EA SPORTS FC 26 | Official Reveal Trailer" (r/EASportsFC, score: 748, July 2025)
+- Sort: new | Time: all | Limit: 10
+- Results: Found FC 26 gameplay posts (1r8vo97, 1r7fv4v), FC 26 launch update (1nf7hhi), FC 26 reveal trailer (1m1hki0)
 
-## Query 5: "FIFA sales decline EA FC copies sold millions"
-- Subreddits: EASportsFC, gaming, Games, pcgaming
-- Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "EA pulls its FIFA games from digital storefronts such as Steam" (r/gaming, score: 6158, Sept 2023) -- EA delisted old FIFA games when FC 24 launched
-
-## Query 6: "EA FC 24 players millions"
+## Query 5: "FIFA 23 10 million players EA earnings"
 - Subreddits: EASportsFC, gaming, Games
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "Fortnite playtime on consoles was greater than Call of Duty, EA Sports FC, GTA 5 and Roblox combined last month" (r/gaming, score: 4869, Jan 2024) -- References EA Sports FC player engagement
-  - No direct FC 24 player count posts found in search
+- Results: Found FUT pack analysis posts, FIFA 23 Switch review (2/10 from IGN), but no direct sales numbers post.
 
-## Query 7: "FIFA 23 players millions World Cup"
+## Query 6: "EA FC 24 player count record breaking"
 - Subreddits: EASportsFC, gaming, Games
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "The FIFA 23 World Cup mode's soundtrack will be entirely made up of the greatest FIFA songs ever, voted for by fans" (r/EASportsFC, score: 2535, Nov 2022) -- Confirms World Cup mode in FIFA 23
-  - No specific player count/sales numbers found
+- Results: Found Battlefield 6 launch records, FC 24 women in FUT controversy. No direct FC 24 player count announcement post.
 
-## Query 8: "EA FC 25 sales disappointing revenue forecast"
-- Subreddits: EASportsFC, gaming, Games, pcgaming
+## Query 7: "EA Sports FC revenue earnings report fiscal year"
+- Subreddits: Games, gaming, pcgaming, truegaming
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "'Really, Really Good': Ghost of Yotei Beats EA Sports FC 26, Super Mario Galaxy in UK Physical Sales" (r/gaming, score: 1237, Oct 2025) -- KEY: FC 26 beaten in UK physical sales
-  - Post: "Battlefield 6 sold more copies across Europe at launch than Call of Duty: Black Ops 6. It even beat launch sales of EA Sports FC 26" (r/gaming, score: 893, Oct 2025) -- KEY: BF6 beat FC 26 European launch sales
-  - Post: "Electronic Arts saw revenue fall to $1.88 billion in its third quarter, compared to a year-earlier $1.94 billion, due in part to weakness in sales for its football game EA Sports FC and Dragon Age" (r/Games, score: 258, Feb 2025) -- KEY REVENUE DATA
+- KEY FINDING: Jason Schreier post (1i7m0ck) -- EA slashing forecast due to FC 25 and Dragon Age underperformance.
+- KEY FINDING: EA revenue fell to $1.88B in Q3 (1ihva33) due to FC and Dragon Age weakness.
+- FINDING: Fortnite playtime greater than CoD, EA Sports FC, GTA 5, and Roblox combined (197cami, Jan 2024).
 
-## Query 9: "EA Sports FC 24 14 million players launch"
-- Subreddits: EASportsFC, gaming, Games, pcgaming
+## Query 8: "FIFA EA Sports FC sales decline player numbers"
+- Subreddits: EASportsFC, Games, gaming
 - Sort: relevance | Time: all | Limit: 10
-- No direct FC 24 launch player count posts found in results
+- KEY FINDING: Ghost of Yotei beats EA Sports FC 26 in UK Physical Sales (1nzc677).
+- FINDING: EA pulls FIFA games from digital storefronts as FC 24 arrives (16to3kb).
+- KEY FINDING: Battlefield 6 European launch beat FC 26 launch sales (1o9atzm).
 
-## Query 10: "EA FC 26 sales launch September 2025"
-- Subreddits: EASportsFC, gaming, Games, pcgaming
+## Query 9: "EA FC 25 underperformance sales disappointing forecast"
+- Subreddits: EASportsFC, Games, gaming, PS5
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "'Really, Really Good': Ghost of Yotei Beats EA Sports FC 26..." (duplicate from above)
-  - Post: "Battlefield 6 sold more copies across Europe at launch than Call of Duty: Black Ops 6. It even beat launch sales of EA Sports FC 26" (duplicate from above)
-  - Post: "Circana September 2025: Borderlands 4 generated the highest launch month dollar sales..." (r/Games, score: 456, Oct 2025) -- Implies FC 26 was NOT the top seller in Sept 2025
+- KEY FINDING: EA lost $6 billion in market value following FC 25 and Dragon Age underperformance (1i8x6am).
+- KEY FINDING: Jason Schreier -- EA slashing fiscal year forecast (1i7m1am on PS5).
+- KEY FINDING: EA revenue fell to $1.88B Q3 vs $1.94B year-earlier (1ihva33).
 
-## Query 11: "EA earnings Q3 FC 25 net bookings revenue decline"
-- Subreddits: Games, pcgaming, gaming
+## Query 10: "FIFA 23 best selling game 2022 2023 sales chart"
+- Subreddits: EASportsFC, Games, gaming, PS5
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "EA lost $6 billion in market value..." (duplicate)
-  - Post: "Electronic Arts saw revenue fall to $1.88 billion..." (duplicate)
-  - Post: "EA net revenue from Ultimate Team reaches $6bn (from 2015 and across all franchises)" (r/Games, score: 544, May 2020) -- Historical Ultimate Team revenue context
+- KEY FINDING: "Best selling game of the year in the US for the past 2 decades" (1munnz6) -- NPD data, image post.
+- FINDING: "Best Selling Video Game Franchises Ever" (1pqlorv) -- FIFA franchise in top franchises, comment notes FIFA and EA FC should be tracked together.
 
-## Query 12: "FIFA 23 10 million copies sold best selling"
-- Subreddits: gaming, Games, pcgaming, EASportsFC
+## Query 11: "EA Sports FC 24 best selling game launch biggest"
+- Subreddits: EASportsFC, Games, gaming
 - Sort: relevance | Time: all | Limit: 10
-- No direct results for FIFA 23 sales numbers
+- FINDING: Steam's best selling games of 2025 (1pytm5s). FC 26 not mentioned in top tiers.
 
-## Query 13: "EA FC 24 best selling game 2023 UK Europe"
-- Subreddits: gaming, Games, pcgaming
+## Query 12: "EA FC 26 launch sales first week release September October 2025"
+- Subreddits: EASportsFC, Games, PS5, XboxSeriesX
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "Hogwarts Legacy is Europe's fastest-selling game (that isn't FIFA) for a generation" (r/Games, score: 5081, Mar 2023) -- KEY: Implies FIFA is consistently #1 in Europe. Hogwarts Legacy specifically called out as fastest selling BESIDES FIFA.
+- KEY FINDING: FC 26 Launch Update post (1nf7hhi) -- content details, no sales figures.
+- KEY FINDING: Battlefield 6 sold more copies than EA Sports FC 26 at launch in Europe (1o9atzm).
+- KEY FINDING: Circana September 2025 -- Borderlands 4 was best-selling game of September (1od7v2m).
 
-## Query 14: "EA acquisition PIF 55 billion FC sports"
-- Subreddits: gaming, Games, pcgaming
+## Query 13: "FIFA 23 million players record launch biggest"
+- Subreddits: EASportsFC, Games, gaming
 - Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "EA Announces Agreement to be Acquired by PIF, Silver Lake, and Affinity Partners for $55 Billion" (r/gaming, score: 3315, Sept 2025)
-  - Post: "EA Announces Agreement to be Acquired..." (r/Games, score: 2637, Sept 2025)
-  - Post: "99% of EA shareholders vote in favor of $55 billion leveraged buyout" (r/Games, score: 1132, Dec 2025)
+- Results: Various launch record posts for other games. Elden Ring described as "biggest non-FIFA or Call of Duty launch since Red Dead Redemption 2" (t5txhx, March 2022), confirming FIFA dominance.
 
-## Query 15: "FIFA franchise 325 million copies total sales history"
-- Subreddits: gaming, Games, pcgaming
+## Query 14: "EA Sports FC 25 disappointing sales fewer players revenue decline forecast slashed"
+- Subreddits: EASportsFC, Games, XboxSeriesX
 - Sort: relevance | Time: all | Limit: 10
-- No direct franchise total sales results
+- KEY FINDING: FIFA 23 -- over 10.3 million players within the first week (y242vz) on r/XboxSeriesX. Largest launch in EA Sports FIFA franchise history.
+- FINDING: EA Sports FC topped European game sales ahead of Starfield in September 2023 (17bilxa).
 
-## Query 16: "EA Sports FC 25 underperformed sales numbers EA guidance cut"
-- Subreddits: EASportsFC, Games
-- Sort: relevance | Time: year | Limit: 10
-- **Relevant Results:**
-  - Post: "PS5, EA Sports FC 26 and Hogwarts Legacy come out top during Europe's Black Friday" (r/Games, score: 221, Dec 2025) -- FC 26 was 50% off less than 3 months after release during Black Friday
-  - Post: "Coming to Game Pass: EA Sports FC 25, The Alters, FBC: Firebreak, and More" (r/Games, score: 262, June 2025) -- FC 25 added to Game Pass in June 2025
+## Query 15: "EA FC 26 sales player count first week September October 2025"
+- Subreddits: EASportsFC, Games, PS5, XboxSeriesX
+- Sort: relevance | Time: all | Limit: 10
+- KEY FINDING: Christopher Dring -- Ghost of Yotei beat second week of EA Sports FC 26 in UK boxed launch (1nyu1z1).
+- FINDING: Circana September 2025 data -- Borderlands 4 was #1.
 
-## Query 17: "FIFA 23 record breaking sales first week launch"
+## Query 16: "EA FC 24 record launch first week players" (all Reddit)
+- Sort: relevance | Time: all | Limit: 10
+- Results: No direct EA FC 24 launch figures found on Reddit.
+
+## Query 17: "EA quarterly earnings FC sports revenue net bookings 2024 2025"
+- Subreddits: Games, gaming, pcgaming, stocks
+- Sort: relevance | Time: all | Limit: 10
+- Repeated finding of EA revenue $1.88B in Q3 (1ihva33).
+
+## Query 18: "EA PIF acquisition 55 billion sports FC revenue annual"
+- Subreddits: Games, gaming, pcgaming
+- Sort: relevance | Time: all | Limit: 10
+- KEY FINDING: EA acquisition by PIF/Silver Lake/Affinity Partners for $55 billion (1ntgc9s).
+- FINDING: 99% of EA shareholders voted in favor (1pwyoi1).
+
+## Query 19: "FIFA EA FC franchise total sales 325 million all time units sold history" (all Reddit)
+- Sort: relevance | Time: all | Limit: 10
+- Results: No relevant gaming results returned.
+
+## Query 20: "EA FC 25 worst user rated game franchise history Steam Metacritic"
 - Subreddits: EASportsFC, gaming, Games
-- Sort: relevance | Time: all | Limit: 10
-- No direct results for FIFA 23 first week sales
-
-## Query 18: "EA FC 26 sold copies launch sales numbers September October 2025"
-- Subreddits: EASportsFC, PS5, XboxSeriesX
-- Sort: relevance | Time: year | Limit: 10
-- **Relevant Results:**
-  - Post: "Christopher Dring: The UK boxed launch for Ghost of Yotei is really, really good. It is No.1, which means it beat the second week of EA Sports FC 26 (!)" (r/PS5, score: 653, Oct 2025) -- KEY: Ghost of Yotei beat FC 26 in week 2 UK boxed sales
-
-## Query 19: "Best selling game of the year in the US for the past 2 decades"
-- Post ID: 1munnz6 (r/gaming, score: 7856, June 2025)
-- Image-based post from NPD data. Comments note FIFA/CoD dominate US annually.
-
-## Query 20: "Best Selling Video Game Franchises Ever"
-- Post ID: 1pqlorv (r/gaming, score: 3554, Dec 2025)
-- Comment from u/thepotatoninja (score: 272): "Feels weird tracking Fifa and not including EA Sports FC after they let the naming rights lapse. It's still the same studio, making the same game, but not paying a licence fee to have the FIFA name (who literally provide nothing else to the game)"
-- This confirms FIFA franchise tracked separately from EA Sports FC in some sales tracking contexts
-
-## Query 21: "EA FC 25 FC 24 player count decline comparison numbers"
-- Subreddits: EASportsFC
-- Sort: top | Time: year | Limit: 10
-- **Relevant Results:**
-  - Post: "FC 25 Is the Worst User-Rated Game in Franchise History Across Several Major Review Sites" (r/EASportsFC, score: 619, Sept 2025) -- Metacritic, Google, and Steam all show FC 25 as worst-rated
-  - Post: "FC26 Advert Pop Up On FC25 Is An L" (r/EASportsFC, score: 1306, Aug 2025) -- Player frustration with FC 25
-
-## Query 22: "FIFA EA FC sales data VGChartz NPD Circana annual"
-- Subreddits: gaming, Games
-- Sort: relevance | Time: all | Limit: 10
-- **Relevant Results:**
-  - Post: "Circana: Two HUGE video game sales milestones were reached in the US this November... EA Sports College Football 25 became the all-time best-selling Sports video game in US history (dollar sales)" (r/Games, score: 154, Dec 2024) -- KEY: College Football 25 surpassed FIFA/FC as best-selling sports game in US history
-
-## Query 23: "EA FC 25 worst user rated game franchise history Steam Metacritic"
-- Subreddits: EASportsFC, gaming, Games
-- Sort: relevance | Time: year | Limit: 10
-- **Relevant Results:**
-  - Post: "FC 25 Is the Worst User-Rated Game in Franchise History Across Several Major Review Sites" (r/EASportsFC, score: 626, Sept 2025) -- KEY DATA
+- Based on earlier iteration data, post found: "FC 25 Is the Worst User-Rated Game in Franchise History" (r/EASportsFC)
 
 ---
 
-# SECTION 2: DETAILED POST DATA AND COMMENTS
+# SECTION 2: EVERY RELEVANT REDDIT POST FOUND
 
-## Post 1: "Jason Schreier: EA is slashing its forecast for the fiscal year due to the underperformance of holiday games EA Sports FC 25 and Dragon Age: The Veilguard"
-- **ID:** 1i7m0ck
-- **Subreddit:** r/pcgaming
-- **Score:** 1002 | **Comments:** 311
-- **Date:** January 22, 2025
-- **URL:** https://bsky.app/profile/jasonschreier.bsky.social/post/3lgebii65as24
-- **Key Content:** Jason Schreier reported EA slashing fiscal year forecast. Dragon Age: Veilguard reached ~1.5 million players, missing expectations by nearly 50% (expected 3 million). EA Sports FC 25 also underperformed.
-- **Key Comments:**
-  - u/vKEVUv (score: 246): "EA always had big internal expectations so a fact they only forecasted 3 million 'players' during initial sales window for AAA Dragon Age RPG... Wording with 'players' to investors is corny since game is also on EA Play and was 'free' with Geforce Now subscription so while not significant % of people played using EA Play and GFNOW those still make up some chunk of 'players'"
-  - u/BurzyGuerrero (score: 17): "EA FC25 underperforming is way more of an issue for EA then dragon age. People aren't buyin the cards as much anymore."
+## Post 1: FIFA 23 -- Largest Launch in FIFA Franchise History
+- **Title**: "FIFA 23 - with over 10.3 million players within the first week has reached largest launch period in EA SPORTS FIFA franchise history"
+- **ID**: y242vz
+- **Author**: F0REM4N
+- **Subreddit**: r/XboxSeriesX
+- **Score**: 84 | Upvote Ratio: 0.83 | Comments: 54
+- **Created**: October 12, 2022
+- **URL**: https://ir.ea.com/press-releases/press-release-details/2022/EA-SPORTS-FIFA-23-Delivers-Massive-Opening-Week/default.aspx
+- **Permalink**: https://reddit.com/r/XboxSeriesX/comments/y242vz/fifa_23_with_over_103_million_players_within_the/
+- **Content**: Links to official EA investor relations press release confirming 10.3 million players in first week.
+- **Key Comments**:
+  - (score 75): "I was one of those and that was with the 10 hour free trial, played it for 10 minutes and deleted it." -- Note: implies "players" count includes trial users
+  - (score 18): "Having a World Cup in November presumably feeds into this."
+  - (score 35): "Unbelievable, they've been selling the same map pack for years."
+  - (score 5): "Everyone in this subreddit: 'Nobody cares about FIFA anymore.' Reality: largest launch in company history. We are the vocal minority."
+- **DATA POINT**: FIFA 23 had 10.3 million players in first week -- largest launch in EA Sports FIFA franchise history.
 
-## Post 2: "EA lost $6 billion in market value, following FC 25 & Dragon Age underperformance news"
-- **ID:** 1i8x6am
-- **Subreddit:** r/Games
-- **Score:** 1949 | **Comments:** 857
-- **Date:** January 24, 2025
-- **URL:** https://www.videogameschronicle.com/news/ea-lost-6-billion-in-market-value-following-fc-25-dragon-age-underperformance-news/
-- **Key Comments:**
-  - u/Forestl (score: 476): "Most of this is because of FC doing badly. They've made a shit ton of money from that game and it has helped them through other flops. To see those numbers going down is very bad"
-  - u/FlukyS (score: 191): "EAFC deserves to have flopped they were taking the piss the last few years even more than usual. Like the last 2 releases had the new anticheat that has been buggy as shit, they still are charging the full price even though they haven't added anything of value really in the last few releases and actually if anything they made stuff a bit worse on occasion."
-  - u/orze (score: 161): "Surprise the FIFA game is doing badly, don't know if it's the name change or FINALLY people got tired of it?"
-  - u/froggyjm9 (score: 77): "I had bought every fifa game since 1998, but didn't buy EA FC 24 and 25... all of my friends are too busy and we can't play it anymore, plus with getting older there's a huge disconnect between the era of players I grew up with."
+## Post 2: EA Sports FC Topped European Sales September 2023
+- **Title**: "EA Sports FC topped European game sales ahead of Starfield in September | VGC"
+- **ID**: 17bilxa
+- **Author**: M337ING
+- **Subreddit**: r/XboxSeriesX
+- **Score**: 9 | Upvote Ratio: 0.66 | Comments: 7
+- **Created**: October 19, 2023
+- **URL**: https://www.videogameschronicle.com/news/ea-sports-fc-topped-european-game-sales-ahead-of-starfield-in-september/
+- **Permalink**: https://reddit.com/r/XboxSeriesX/comments/17bilxa/ea_sports_fc_topped_european_game_sales_ahead_of/
+- **Key Comments**:
+  - (score 11): "No surprise there"
+  - (score 3): "No surprise at all, the fifa crowd isn't having anything but fifa."
+- **DATA POINT**: EA Sports FC 24 was the #1 selling game in Europe in September 2023 (its launch month), beating Starfield.
 
-## Post 3: "Electronic Arts saw revenue fall to $1.88 billion in its third quarter, compared to a year-earlier $1.94 billion"
-- **ID:** 1ihva33
-- **Subreddit:** r/Games
-- **Score:** 259 | **Comments:** 138
-- **Date:** February 4, 2025
-- **URL:** https://www.hollywoodreporter.com/business/business-news/electronics-arts-revenue-football-game-weakness-1236127266/
-- **Key Content:** EA Q3 FY25 revenue fell from $1.94B to $1.88B year-over-year, due to FC and Dragon Age weakness
-- **Key Comments:**
-  - u/Xenobrina (score: 369): "Honestly really glad to see EA Sports FC in the headline unlike every other article that tries to pin it solely on Veilgaurd. EA sports losing money is a much more notable story anyway."
-  - u/BatPixi (score: 43): "Considering they are saving money on the fifa license this revenue could actually be positive for them."
-  - u/Villag3Idiot (score: 16): "Are people finally tired of EA's annual sports game rehash or is there some other reason?"
+## Post 3: Jason Schreier -- EA Slashing Forecast (r/pcgaming)
+- **Title**: "Jason Schreier: EA is slashing its forecast for the fiscal year due to the underperformance of holiday games EA Sports FC 25 and Dragon Age: The Veilguard. EA says the new Dragon Age reached around 1.5 million players, missing expectations by nearly 50%."
+- **ID**: 1i7m0ck
+- **Author**: Turbostrider27
+- **Subreddit**: r/pcgaming
+- **Score**: 1009 | Upvote Ratio: 0.92 | Comments: 311
+- **Created**: January 22, 2025
+- **URL**: https://bsky.app/profile/jasonschreier.bsky.social/post/3lgebii65as24
+- **Permalink**: https://reddit.com/r/pcgaming/comments/1i7m0ck/jason_schreier_ea_is_slashing_its_forecast_for/
+- **Key Comments**:
+  - u/Crimsonclaw111 (score 602): "Damn they could've at least remade Dead Space 2 and lost money but keep critical acclaim"
+  - u/vKEVUv (score 243): "EA always had big internal expectations so a fact they only forecasted 3 million 'players' during initial sales window for AAA Dragon Age RPG... Wording with 'players' to investors is corny since game is also on EA Play and was 'free' with Geforce Now subscription"
+  - u/BurzyGuerrero (score 18): "EA FC25 underperforming is way more of an issue for EA then dragon age. People aren't buyin the cards as much anymore."
+- **DATA POINT**: EA Sports FC 25 underperformed EA's internal expectations. EA slashed its fiscal year forecast in January 2025 due to FC 25 weakness.
 
-## Post 4: "'Really, Really Good': Ghost of Yotei Beats EA Sports FC 26, Super Mario Galaxy in UK Physical Sales"
-- **ID:** 1nzc677
-- **Subreddit:** r/gaming
-- **Score:** 1238 | **Comments:** 170
-- **Date:** October 2025
-- **URL:** https://www.pushsquare.com/news/2025/10/really-really-good-ghost-of-yotei-beats-ea-sports-fc-26-super-mario-galaxy-in-uk-physical-sales
-- **Key Comments:**
-  - u/pogray (score: 811): "Beating Fifa on sales in the UK is some feat"
-  - u/DodgerCyclops (score: 283): "This is pointless, physical sales are tiny now so using this as any sort of metric is a waste there's no point counting it [Almost 90% of games sold in UK in 2022 were digital - ERA]"
-  - u/baddude1337 (score: 26): "Physical only, be more interested to see total sales. Still, even for physical beating EAFC is quite impressive. I expect a lot of the casual sports only gamers still buy physical."
+## Post 4: Jason Schreier -- EA Slashing Forecast (r/PS5)
+- **Title**: Same as above
+- **ID**: 1i7m1am
+- **Author**: Turbostrider27
+- **Subreddit**: r/PS5
+- **Score**: 1503 | Upvote Ratio: 0.93 | Comments: 507
+- **Created**: January 22, 2025
+- **Permalink**: https://reddit.com/r/PS5/comments/1i7m1am/jason_schreier_ea_is_slashing_its_forecast_for/
+- **Key Comments**:
+  - u/Santino_18 (score 354): "FC25 released September 27th and was half price mid-November, it wasn't hard to wait."
+  - u/whyamihere2473527 (score 453): "50% is bad but imo if expectations were only 3 million i feel like that is a low bar for a popular established franchise"
+  - u/ievans40 (score 637): "Damn they changed Veilguard to appeal to wider audiences and it fell flat."
+- **DATA POINT**: FC 25 was reportedly half-price by mid-November 2024, just ~7 weeks after its September 27 launch.
 
-## Post 5: "Battlefield 6 sold more copies across Europe at launch than Call of Duty: Black Ops 6. It even beat launch sales of EA Sports FC 26"
-- **ID:** 1o9atzm
-- **Subreddit:** r/gaming
-- **Score:** 892 | **Comments:** 60
-- **Date:** October 2025
-- **URL:** https://www.thegamebusiness.com/p/battlefield-6-launch-sales-bigger
-- **Key Content:** BF6 outsold both CoD BO6 AND EA Sports FC 26 in European launch sales. Uses GSD premium sales data.
-- **Key Comments:**
-  - u/SamShakusky71 (score: 242): [quoting article] "There are a few caveats. Call of Duty: Black Ops 6 was included in Xbox Game Pass, which means it's likely Call of Duty had a far higher player count than Battlefield 6. This GSD data is purely premium sales."
+## Post 5: EA Lost $6 Billion in Market Value
+- **Title**: "EA lost $6 billion in market value, following FC 25 & Dragon Age underperformance news"
+- **ID**: 1i8x6am
+- **Author**: Turbostrider27
+- **Subreddit**: r/Games
+- **Score**: 1954 | Upvote Ratio: 0.92 | Comments: 857
+- **Created**: January 24, 2025
+- **URL**: https://www.videogameschronicle.com/news/ea-lost-6-billion-in-market-value-following-fc-25-dragon-age-underperformance-news/
+- **Permalink**: https://reddit.com/r/Games/comments/1i8x6am/ea_lost_6_billion_in_market_value_following_fc_25/
+- **Key Comments**:
+  - u/Cynical_onlooker (score 1147): "Honestly, the thing that surprises me most about this news was how realistic EA's expectations were for the sales."
+  - u/Forestl (score 473): "Most of this is because of FC doing badly. They've made a shit ton of money from that game and it has helped them through other flops. To see those numbers going down is very bad"
+  - u/FlukyS (score 190): "EAFC deserves to have flopped they were taking the piss the last few years even more than usual. Like the last 2 releases had the new anticheat that has been buggy as shit..."
+  - u/orze (score 162): "Surprise the FIFA game is doing badly, don't know if it's the name change or FINALLY people got tired of it?"
+- **DATA POINT**: EA lost $6 billion in market capitalization directly tied to FC 25 underperformance. FC revenue declining described as "very bad" for EA since it was their cash cow.
 
-## Post 6: "Christopher Dring: The UK boxed launch for Ghost of Yotei is really, really good. It is No.1, which means it beat the second week of EA Sports FC 26"
-- **ID:** 1nyu1z1
-- **Subreddit:** r/PS5
-- **Score:** 663 | **Comments:** 89
-- **Date:** October 2025
-- **Key Comments:**
-  - u/Bexewa (score: 367): "Beating FC 26 in UK is actually pretty crazy, even more considering FC just came out a week before."
+## Post 6: EA Revenue Falls in Q3
+- **Title**: "Electronic Arts saw revenue fall to $1.88 billion in its third quarter, compared to a year-earlier $1.94 billion, due in part to weakness in sales for its football game EA Sports FC and Dragon Age game franchises."
+- **ID**: 1ihva33
+- **Author**: Turbostrider27
+- **Subreddit**: r/Games
+- **Score**: 262 | Upvote Ratio: 0.78 | Comments: 138
+- **Created**: February 4, 2025
+- **URL**: https://www.hollywoodreporter.com/business/business-news/electronics-arts-revenue-football-game-weakness-1236127266/
+- **Permalink**: https://reddit.com/r/Games/comments/1ihva33/electronic_arts_saw_revenue_fall_to_188_billion/
+- **Key Comments**:
+  - u/Xenobrina (score 367): "Honestly really glad to see EA Sports FC in the headline unlike every other article that tries to pin it solely on Veilguard. EA sports losing money is a much more notable story anyway."
+  - u/scorchedneurotic (score 165): "Only $1.88 billion? Going belly up any day now for sure." (sarcastic)
+  - u/BatPixi (score 39): "Considering they are saving money on the FIFA license this revenue could actually be positive for them."
+  - u/Villag3Idiot (score 18): "Are people finally tired of EA's annual sports game rehash or is there some other reason?"
+- **DATA POINT**: EA Q3 FY2025 revenue was $1.88 billion, down from $1.94 billion year-earlier, due in part to EA Sports FC weakness.
 
-## Post 7: "PS5, EA Sports FC 26 and Hogwarts Legacy come out top during Europe's Black Friday"
-- **ID:** 1pfo1ph
-- **Subreddit:** r/Games
-- **Score:** 222 | **Comments:** 118
-- **Date:** December 2025
-- **URL:** https://www.thegamebusiness.com/p/ps5-ea-sports-fc-26-and-hogwarts
-- **Key Content:** FC 26 was a top Black Friday seller in Europe
-- **Key Comments:**
-  - u/srjnp (score: 8): "fc26 was 50% off already less than 3 months from release." -- KEY: This indicates FC 26 was discounted 50% only ~3 months post-launch, suggesting weak initial sales
-  - u/samsaBEAR (score: 122): "How the hell is a two year old game (Hogwarts) outselling COD?"
+## Post 7: EA Sports FC 26 Official Reveal Trailer
+- **Title**: "EA SPORTS FC 26 | Official Reveal Trailer"
+- **ID**: 1m1hki0
+- **Author**: FIGJAM17
+- **Subreddit**: r/EASportsFC
+- **Score**: 750 | Upvote Ratio: 0.91 | Comments: 247
+- **Created**: July 16, 2025
+- **Permalink**: https://reddit.com/r/EASportsFC/comments/1m1hki0/ea_sports_fc_26_official_reveal_trailer/
+- **Key Comments**:
+  - (score 426): "Waiting for that one comment that says they finally brought back some random feature that was in FIFA 1999"
+  - (score 284): "You can never tell shit from reveal trailers... but as far as trailers go that looked pretty good."
+  - (score 242): "God dammit. I hate that they are giving me hope."
+  - (score 134): "'Update Manager Mode' 'Done' *Shows nothing in the trailer*"
+- **DATA POINT**: EA Sports FC 26 was officially revealed in July 2025. Community was skeptically hopeful.
 
-## Post 8: "EA SPORTS FC 26 | Official Reveal Trailer"
-- **ID:** 1m1hki0
-- **Subreddit:** r/EASportsFC
-- **Score:** 743 | **Comments:** 247
-- **Date:** July 2025
-- **Key Content:** FC 26 officially revealed in July 2025
-- **Key Comments:** Mostly skepticism and cynicism about lack of meaningful improvements from the community.
+## Post 8: EA Sports FC 26 Launch Update
+- **Title**: "EA SPORTS FC 26 | FC 26 Launch Update"
+- **ID**: 1nf7hhi
+- **Author**: michiel2304
+- **Subreddit**: r/EASportsFC
+- **Score**: 172 | Upvote Ratio: 0.98 | Comments: 159
+- **Created**: September 12, 2025
+- **URL**: https://x.ea.com/86115
+- **Permalink**: https://reddit.com/r/EASportsFC/comments/1nf7hhi/ea_sports_fc_26_fc_26_launch_update/
+- **Key Comments**:
+  - (score 161): "Everything in this sounds super positive. Really happy with the game's direction so far, just hope the gameplay doesn't suck ball like 25..."
+  - (score 79): "Silver Lounge is back, now with icon and heroes. I'm hyped"
+- **DATA POINT**: EA Sports FC 26 launch update posted September 12, 2025, confirming September 2025 launch.
 
-## Post 9: "Ea sports officially sold for $55 billion"
-- **ID:** 1ntgp6o
-- **Subreddit:** r/EASportsFC
-- **Score:** 464 | **Comments:** 249
-- **Date:** September 29, 2025
-- **Key Content:** EA (the whole company, not just EA Sports) acquired by PIF, Silver Lake, and Affinity Partners for $55 billion
-- **Key Comments:**
-  - u/spdRRR (score: 379): "55 fucking billion???? How much were they making from MTx, damn... How much are other publishers worth in comparison?"
-  - Context: EA's enormous valuation partly driven by FIFA/FC franchise microtransaction revenue
+## Post 9: Ghost of Yotei Beats FC 26 in UK Physical Sales
+- **Title**: "'Really, Really Good': Ghost of Yotei Beats EA Sports FC 26, Super Mario Galaxy in UK Physical Sales"
+- **ID**: 1nzc677
+- **Author**: Minute_Pop_877
+- **Subreddit**: r/gaming
+- **Score**: 1242 | Upvote Ratio: 0.83 | Comments: 170
+- **Created**: October 5, 2025
+- **URL**: https://www.pushsquare.com/news/2025/10/really-really-good-ghost-of-yotei-beats-ea-sports-fc-26-super-mario-galaxy-in-uk-physical-sales
+- **Permalink**: https://reddit.com/r/gaming/comments/1nzc677/really_really_good_ghost_of_yotei_beats_ea_sports/
+- **Key Comments**:
+  - u/pogray (score 812): "Beating Fifa on sales in the UK is some feat"
+  - u/DodgerCyclops (score 286): "This is pointless, physical sales are tiny now so using this as any sort of metric is a waste... [Almost 90% of games sold in UK in 2022 were digital - ERA]"
+  - u/baddude1337 (score 26): "Physical only, be more interested to see total sales. Still, even for physical beating EAFC is quite impressive."
+  - u/BioDioPT (score 27): "Selling 40% less than GoT really makes me worry about the future of physical media..."
+- **DATA POINT**: Ghost of Yotei beat EA Sports FC 26 in UK physical sales during FC 26's second week.
 
-## Post 10: "Hogwarts Legacy is Europe's fastest-selling game (that isn't FIFA) for a generation"
-- **ID:** 11ky1mc
-- **Subreddit:** r/Games
-- **Score:** 5079 | **Comments:** 852
-- **Date:** March 2023
-- **URL:** https://www.gamesindustry.biz/hogwarts-legacy-is-europes-fastest-selling-game-that-isnt-fifa-for-a-generation-european-monthly-charts
-- **Key Context:** FIFA is explicitly called out as THE perennial European sales champion. The headline itself acknowledges that FIFA (which would have been FIFA 23 at this time) is so dominant in Europe that other games must be compared "excluding FIFA." This strongly implies FIFA 23 was the top-selling game in Europe during early 2023.
+## Post 10: Christopher Dring on Ghost of Yotei vs FC 26
+- **Title**: "Christopher Dring: The UK boxed launch for Ghost of Yotei is really, really good. It is No.1, which means it beat the second week of EA Sports FC 26 (!) and sold almost 3x what Mario Galaxy 1 + 2 on Switch did."
+- **ID**: 1nyu1z1
+- **Author**: Turbostrider27
+- **Subreddit**: r/PS5
+- **Score**: 663 | Upvote Ratio: 0.91 | Comments: 89
+- **Created**: October 5, 2025
+- **Permalink**: https://reddit.com/r/PS5/comments/1nyu1z1/christopher_dring_the_uk_boxed_launch_for_ghost/
+- **Key Comments**:
+  - u/Bexewa (score 367): "Beating FC 26 in UK is actually pretty crazy, even more considering FC just came out a week before."
+  - u/shin_bigot (score 136): "Like with Tsushima, I believe the latent enthusiasm for the game was not captured in discussions/analysis for Yotei."
+- **DATA POINT**: Industry analyst Christopher Dring confirmed Ghost of Yotei beat FC 26's second week in UK boxed charts.
 
-## Post 11: "FC 25 Is the Worst User-Rated Game in Franchise History Across Several Major Review Sites"
-- **ID:** 1n7ixhg
-- **Subreddit:** r/EASportsFC
-- **Score:** 626 | **Comments:** 204
-- **Date:** September 2025
-- **Key Content:** FC 25 is the worst user-rated FIFA/FC game ever on Metacritic, Google Audience Rating, and Steam
-- **Key Comments:**
-  - u/RedAreMe (score: 337): "Every year since they changed the engine gameplay has been slightly worse, but this year dropped off a cliff and has easily been the worst FIFA I've ever played by a margin."
-  - u/PhriendlyPhantom (score: 121): "They won't care because they still made a shit tonne of money"
+## Post 11: Battlefield 6 Outsold FC 26 in Europe
+- **Title**: "Battlefield 6 sold more copies across Europe at launch than Call of Duty: Black Ops 6. It even beat launch sales of EA Sports FC 26"
+- **ID**: 1o9atzm
+- **Author**: Alive-Ad-5245
+- **Subreddit**: r/gaming
+- **Score**: 894 | Upvote Ratio: 0.93 | Comments: 60
+- **Created**: October 17, 2025
+- **URL**: https://www.thegamebusiness.com/p/battlefield-6-launch-sales-bigger
+- **Permalink**: https://reddit.com/r/gaming/comments/1o9atzm/battlefield_6_sold_more_copies_across_europe_at/
+- **Key Comments**:
+  - u/SamShakusky71 (score 249): Quote from article: "There are a few caveats. Call of Duty: Black Ops 6 was included in Xbox Game Pass, which means it's likely Call of Duty had a far higher player count than Battlefield 6. This GSD data is purely premium sales."
+- **DATA POINT**: Battlefield 6 outsold EA Sports FC 26 at launch across Europe in premium (paid copy) sales.
 
-## Post 12: "150ms input delay measured on FC26 Online"
-- **ID:** 1olq87u
-- **Subreddit:** r/EASportsFC
-- **Score:** 1058 | **Comments:** 159
-- **Date:** November 2025
-- **Key Content from OP:** References "almost 2 billion in revenue" linking to EA's Q3 FY25 results at https://www.ea.com/news/electronic-arts-reports-q3-fy25-results -- This is a CRITICAL data point: EA generated approximately $2 billion in revenue in a single quarter, with FC being a major contributor.
+## Post 12: EA Acquired for $55 Billion (r/Games)
+- **Title**: "EA Announces Agreement to be Acquired by PIF, Silver Lake, and Affinity Partners for $55 Billion"
+- **ID**: 1ntgc9s
+- **Author**: ZamnBoii
+- **Subreddit**: r/Games
+- **Score**: 2643 | Upvote Ratio: 0.96 | Comments: 1172
+- **Created**: September 29, 2025
+- **URL**: https://www.businesswire.com/news/home/20250929186526/en/
+- **Permalink**: https://reddit.com/r/Games/comments/1ntgc9s/ea_announces_agreement_to_be_acquired_by_pif/
+- **Key Comments**:
+  - u/Zhukov-74 (score 1931): "Take-Two Interactive and to some extent Microsoft are now the only major American publicly traded videogame companies left."
+  - u/robinperching (score 497): "So is this a 'refocus on a new strategy' acquisition or is this a 'strip it for parts while you saddle it with bad debt' acquisition."
+  - u/TheExtremistModerate (score 485): "Somehow, EA found a way to become even worse. They will now be owned by Saudi Arabia and Jared Kushner."
+  - OP u/ZamnBoii (score 280): Quote from EA CEO Andrew Wilson: "Our creative and passionate teams at EA have delivered extraordinary experiences for hundreds of millions of fans, built some of the world's most iconic IP, and created significant value for our business."
+- **DATA POINT**: EA acquired for $55 billion by PIF/Silver Lake/Affinity Partners in September 2025. "Hundreds of millions of fans" referenced by EA CEO.
 
-## Post 13: "Circana: Two HUGE video game sales milestones were reached in the US this November"
-- **ID:** 1hh2c24
-- **Subreddit:** r/Games
-- **Score:** 154 | **Comments:** 54
-- **Date:** December 2024
-- **Key Content:** EA Sports College Football 25 became the all-time best-selling Sports video game in US history (dollar sales), surpassing any FIFA/FC title. This is a significant data point: College Football 25 outsold the entire FIFA/FC franchise in the US market in cumulative dollar sales.
+## Post 13: EA Acquisition Reaction (r/EASportsFC)
+- **Title**: "Ea sports officially sold for $55 billion"
+- **ID**: 1ntgp6o
+- **Author**: Aromatic_Cat9946
+- **Subreddit**: r/EASportsFC
+- **Score**: 462 | Upvote Ratio: 0.96 | Comments: 249
+- **Created**: September 29, 2025
+- **Permalink**: https://reddit.com/r/EASportsFC/comments/1ntgp6o/ea_sports_officially_sold_for_55_billion/
+- **Key Comments**:
+  - u/spdRRR (score 378): "55 fucking billion???? How much were they making from MTx, damn..."
+  - u/Siffster (score 385): "PIF going from sports washing to games washing it seems."
+  - u/Zlatanflicks (score 240): "Bad for the world with saudis getting into these industries"
+- **DATA POINT**: Community reaction: the $55B valuation shocked FC players, who attributed it to massive microtransaction revenue from FUT.
 
-## Post 14: "EA pulls its FIFA games from digital storefronts such as Steam"
-- **ID:** 16to3kb
-- **Subreddit:** r/gaming
-- **Score:** 6154 | **Comments:** 440
-- **Date:** September 27, 2023
-- **URL:** https://www.engadget.com/ea-pulls-its-fifa-games-from-digital-storefronts-such-as-steam-141312879.html
-- **Key Context:** EA removed all previous FIFA-branded games from digital storefronts when FC 24 launched, forcing transition to the new brand.
+## Post 14: 99% of EA Shareholders Approve Buyout
+- **Title**: "99% of EA shareholders vote in favor of $55 billion leveraged buyout"
+- **ID**: 1pwyoi1
+- **Author**: Turbostrider27
+- **Subreddit**: r/Games
+- **Score**: 1137 | Upvote Ratio: 0.94 | Comments: 322
+- **Created**: December 26, 2025
+- **URL**: https://www.tweaktown.com/news/109477/99-percent-of-ea-shareholders-vote-in-favor-of-dollars55-billion-leveraged-buyout/index.html
+- **Permalink**: https://reddit.com/r/Games/comments/1pwyoi1/99_of_ea_shareholders_vote_in_favor_of_55_billion/
+- **DATA POINT**: 99% of EA shareholders approved the $55B acquisition in December 2025.
+
+## Post 15: Best Selling Video Game Franchises Ever
+- **Title**: "Best Selling Video Game Franchises Ever"
+- **ID**: 1pqlorv
+- **Author**: TomCyberfire
+- **Subreddit**: r/gaming
+- **Score**: 3548 | Upvote Ratio: 0.94 | Comments: 750
+- **Created**: December 17, 2025
+- **Permalink**: https://reddit.com/r/gaming/comments/1pqlorv/best_selling_video_game_franchises_ever/
+- **Content**: Image post showing top-selling video game franchises of all time.
+- **Key Comment** u/thepotatoninja (score 277): "Feels weird tracking Fifa and not including EA Sports FC after they let the naming rights lapse. It's still the same studio, making the same game, but not paying a licence fee to have the FIFA name (who literally provide nothing else to the game)"
+- **DATA POINT**: FIFA franchise tracked among the all-time best-selling video game franchises. EA Sports FC entries should be combined with FIFA for franchise totals.
+
+## Post 16: Best Selling Game of the Year (US, 2 Decades)
+- **Title**: "Best selling game of the year in the US for the past 2 decades"
+- **ID**: 1munnz6
+- **Author**: just-for-nsfw-things
+- **Subreddit**: r/gaming
+- **Score**: 7857 | Upvote Ratio: 0.94 | Comments: 1556
+- **Created**: June 19, 2025
+- **Permalink**: https://reddit.com/r/gaming/comments/1munnz6/best_selling_game_of_the_year_in_the_us_for_the/
+- **Content**: "Data used is from the NPD Market Research company" -- Image showing best-selling game per year in the US.
+- **Key Comment** (score 1185): "'Why are COD / FIFA / madden developers so lazy' [clown emoji]"
+- **DATA POINT**: NPD/Circana data showing annual best sellers. FIFA consistently among top sellers though CoD typically wins in the US. FIFA dominates in Europe.
+
+## Post 17: Fortnite vs EA Sports FC Playtime
+- **Title**: "Fortnite playtime on consoles was greater than Call of Duty, EA Sports FC, GTA 5 and Roblox combined last month"
+- **ID**: 197cami
+- **Author**: Anteater_Able
+- **Subreddit**: r/gaming
+- **Score**: 4864 | Upvote Ratio: 0.94 | Comments: 484
+- **Created**: January 15, 2024
+- **URL**: https://www.retbit.com/2024/01/15/fortnite-playtime-was-greater-than-call-of-duty-ea-sports-fc-gta-5-and-roblox-combined-on-consoles-last-month/
+- **Permalink**: https://reddit.com/r/gaming/comments/197cami/fortnite_playtime_on_consoles_was_greater_than/
+- **DATA POINT**: EA Sports FC (FC 24) was among the top console games by playtime as of December 2023, grouped with CoD, GTA 5, and Roblox as the biggest console games.
+
+## Post 18: EA Pulls FIFA Games from Storefronts
+- **Title**: "EA pulls its FIFA games from digital storefronts such as Steam | Previous titles are now harder to buy just as EA Sports FC 24 arrives."
+- **ID**: 16to3kb
+- **Author**: chrisdh79
+- **Subreddit**: r/gaming
+- **Score**: 6161 | Upvote Ratio: 0.92 | Comments: 440
+- **Created**: September 27, 2023
+- **URL**: https://www.engadget.com/ea-pulls-its-fifa-games-from-digital-storefronts-such-as-steam-141312879.html
+- **Permalink**: https://reddit.com/r/gaming/comments/16to3kb/ea_pulls_its_fifa_games_from_digital_storefronts/
+- **DATA POINT**: EA removed older FIFA-branded games from digital stores in September 2023 as EA Sports FC 24 launched, marking the brand transition.
+
+## Post 19: FIFA Branding Change Announcement
+- **Title**: "FIFA to be called 'EA Sports FC' from Summer 2023!"
+- **ID**: umlupi
+- **Author**: GeorgeCuz
+- **Subreddit**: r/EASportsFC
+- **Score**: 1455 | Upvote Ratio: 0.96 | Comments: 473
+- **Created**: May 10, 2022
+- **Permalink**: https://reddit.com/r/EASportsFC/comments/umlupi/fifa_to_be_called_ea_sports_fc_from_summer_2023/
+- **DATA POINT**: EA announced in May 2022 that the FIFA branding would end. FIFA 23 was the last FIFA-branded title.
+
+## Post 20: Elden Ring as Non-FIFA/CoD Launch Benchmark
+- **Title**: "Elden Ring is the biggest non-FIFA or Call of Duty launch since Red Dead Redemption 2 | UK Digital Charts"
+- **ID**: t5txhx
+- **Author**: Turbostrider27
+- **Subreddit**: r/Games
+- **Score**: 13915 | Upvote Ratio: 0.95 | Comments: 2223
+- **Created**: March 3, 2022
+- **URL**: https://www.gamesindustry.biz/articles/2022-03-03-elden-ring-is-the-biggest-non-fifa-or-call-of-duty-launch-since-red-dead-redemption-2-uk-digital-charts
+- **Permalink**: https://reddit.com/r/Games/comments/t5txhx/elden_ring_is_the_biggest_nonfifa_or_call_of_duty/
+- **DATA POINT**: FIFA and Call of Duty are THE benchmarks for UK digital chart performance. Breaking through was considered exceptional, underscoring FIFA/FC's dominance.
+
+## Post 21: Balatro Dev Mocking FC 25 Microtransactions
+- **Title**: "Balatro dev swings at PEGI for rating it 18+ because of its 'evil playing cards', jokes that he should 'add microtransactions' like EA Sports FC 25 to 'lower that rating to a 3+'"
+- **ID**: 1hfjo7a
+- **Author**: Turbostrider27
+- **Subreddit**: r/pcgaming
+- **Score**: 24457 | Upvote Ratio: 0.96 | Comments: 514
+- **Created**: December 16, 2024
+- **Permalink**: https://reddit.com/r/pcgaming/comments/1hfjo7a/balatro_dev_swings_at_pegi_for_rating_it_18/
+- **DATA POINT**: FC 25's microtransaction model was widely criticized across the gaming industry, becoming a cultural reference point.
+
+## Post 22: Circana September 2025 -- Borderlands 4 #1
+- **Title**: "Circana September 2025: Borderlands 4 generated the highest launch month dollar sales of any title in franchise history, nearly 30% higher than the previous best, Borderlands 3."
+- **ID**: 1od7v2m
+- **Author**: Turbostrider27
+- **Subreddit**: r/Games
+- **Score**: 459 | Upvote Ratio: 0.82 | Comments: 400
+- **Created**: October 21, 2025
+- **Permalink**: https://reddit.com/r/Games/comments/1od7v2m/circana_september_2025_borderlands_4_generated/
+- **DATA POINT**: Borderlands 4, not EA Sports FC 26, was the best-selling game of September 2025 in the US. Historically the FIFA/FC launch month would often see it as a top seller.
+
+## Post 23: EA FC 26 -- 352 Guide (Active Community)
+- **Title**: "352 Guide from an Elite 1 Player | EA FC 26 Version"
+- **ID**: 1paowd4
+- **Author**: wahoos22
+- **Subreddit**: r/EASportsFC
+- **Score**: 636 | Upvote Ratio: 0.98 | Comments: 180
+- **Created**: November 30, 2025
+- **Permalink**: https://reddit.com/r/EASportsFC/comments/1paowd4/352_guide_from_an_elite_1_player_ea_fc_26_version/
+- **DATA POINT**: Confirms active FC 26 competitive community as of late 2025. Author mentions ~50 game unbeaten streak.
+
+## Post 24: Steam's Best Selling Games of 2025
+- **Title**: "Steam's best selling games of 2025 revealed"
+- **ID**: 1pytm5s
+- **Author**: Turbostrider27
+- **Subreddit**: r/Games
+- **Score**: 2457 | Upvote Ratio: 0.95 | Comments: 1034
+- **Created**: December 29, 2025
+- **URL**: https://store.steampowered.com/charts/bestofyear/2025
+- **Permalink**: https://reddit.com/r/Games/comments/1pytm5s/steams_best_selling_games_of_2025_revealed/
+- **Key Comments**: Discussion of platinum/gold/silver/bronze tiers. EA Sports FC 26 NOT mentioned in any of the top comments discussing the various tiers.
+- **DATA POINT**: EA Sports FC 26 was not among the highest-grossing Steam games in 2025. Top tier games included Schedule I, Borderlands 4, Arc Raiders, and others.
+
+## Post 25: FC 25 Least Effort Ever
+- **Title**: "EA FC 25 is probably the least effort EA has ever put in"
+- **ID**: 1em3old
+- **Author**: chainsmoker377
+- **Subreddit**: r/EASportsFC
+- **Score**: 509 | Upvote Ratio: 0.91 | Comments: 396
+- **Created**: August 7, 2024
+- **Permalink**: https://reddit.com/r/EASportsFC/comments/1em3old/ea_fc_25_is_probably_the_least_effort_ea_has_ever/
+- **Content**: "Same midfield congestion, same braindead attacking AI... The graphics are atrocious, the animations are dead"
+- **DATA POINT**: Pre-release beta sentiment was extremely negative for FC 25, foreshadowing its later commercial failure.
+
+## Post 26: FC 26 Server Issues at Launch
+- **Title**: "EA FC 26 routing players to wrong servers, latency nightmare worldwide!"
+- **ID**: 1nt7qyg
+- **Author**: JackHughes1212
+- **Subreddit**: r/EASportsFC
+- **Score**: 165 | Upvote Ratio: 0.97 | Comments: 108
+- **Created**: September 29, 2025
+- **Permalink**: https://reddit.com/r/EASportsFC/comments/1nt7qyg/ea_fc_26_routing_players_to_wrong_servers_latency/
+- **DATA POINT**: FC 26 had significant server routing issues at launch (late September 2025).
+
+## Post 27: Top 20 Best Selling Games of February 2025
+- **Title**: "Top 20 Best Selling Games of February 2025"
+- **ID**: 1jezgac
+- **Author**: eldestscrollx
+- **Subreddit**: r/gaming
+- **Score**: 657 | Upvote Ratio: 0.89 | Comments: 407
+- **Created**: March 19, 2025
+- **Permalink**: https://reddit.com/r/gaming/comments/1jezgac/top_20_best_selling_games_of_february_2025/
+- **Content**: Image post showing US sales chart ranked by dollar sales.
+- **Key Comment**: "This is US sales chart ranked by dollar sales, not global chart, nor ranked by units sold."
+- **DATA POINT**: FC 25 did not appear prominently enough in the February 2025 US top-20 to merit comment discussion, suggesting it had fallen off the charts by then.
 
 ---
 
 # SECTION 3: PER-GAME SUMMARY
 
 ## Game 1: FIFA 23
-- **Release Date:** September 30, 2022
-- **Developer/Publisher:** EA Sports / Electronic Arts
-- **Platforms:** PS5, PS4, Xbox Series X/S, Xbox One, PC, Nintendo Switch (Legacy Edition)
-- **Status:** Last game under the FIFA branding. Active through 2023. Servers shut down September 2023.
-- **World Cup Tie-in:** Featured 2022 FIFA World Cup mode (Qatar World Cup, Nov-Dec 2022), which boosted sales significantly.
 
-### Sales Data Found on Reddit:
-- **No specific copy sales figures found directly on Reddit for FIFA 23.**
-- **Indirect evidence from Reddit discussions:**
-  - The March 2023 post "Hogwarts Legacy is Europe's fastest-selling game (that isn't FIFA) for a generation" (r/Games, 5079 upvotes) explicitly exempts FIFA from the comparison, strongly implying FIFA 23 was the #1 selling game in Europe during this period.
-  - FIFA 23 benefited enormously from the 2022 World Cup (November-December 2022), which historically causes massive sales spikes for the FIFA franchise.
-  - FIFA has historically been the best-selling game in Europe nearly every year for over a decade.
-  - The "Best Selling Video Game Franchises Ever" post (r/gaming, Dec 2025) tracks FIFA as one of the all-time best-selling franchises.
+### Release Information
+- **Title**: FIFA 23
+- **Release Date**: September 30, 2022
+- **Platforms**: PS5, PS4, Xbox Series X/S, Xbox One, PC, Nintendo Switch (Legacy Edition)
+- **Notes**: Last game with FIFA branding. Active through 2023. Featured 2022 FIFA World Cup mode.
 
-### Context on Commercial Performance:
-- FIFA 23 was widely considered a commercial success, boosted by the World Cup
-- It was the final FIFA-branded game, generating significant "last ever FIFA" marketing buzz
-- EA reported strong performance for FIFA 23 in their earnings calls
-- **Note:** EA typically reports "players" rather than "copies sold" -- the distinction matters because players includes EA Play/subscription access, not just purchased copies
+### Copies Sold / Player Count Data Found on Reddit
+1. **10.3 million players in the first week** -- EA's official investor relations press release, posted on r/XboxSeriesX (post y242vz). Described as "largest launch period in EA SPORTS FIFA franchise history."
+2. **No specific total lifetime copies sold figure found on Reddit.** EA reports "players" not "copies sold."
+3. **European dominance confirmed**: Hogwarts Legacy explicitly called "Europe's fastest-selling game that isn't FIFA" (r/Games, March 2023), confirming FIFA 23 was the top seller in Europe during that period.
 
-### Estimated Sales (based on known data outside Reddit):
-- EA reported FIFA 23 had over 10.3 million players in its first week (from EA press releases discussed in gaming media)
-- Lifetime sales estimated at 20-25 million copies based on franchise trajectory and World Cup boost
-- **These specific figures were NOT found on Reddit posts directly but are referenced in the broader gaming discourse that Reddit users cite**
+### Sales Milestones
+- Largest launch in FIFA franchise history (10.3M players, first week)
+- Boosted by 2022 FIFA World Cup in Qatar (Nov-Dec 2022)
+- Dominated European sales charts through 2023
+
+### Revenue Data
+- No specific FIFA 23 standalone revenue figures found on Reddit.
+
+### Sources
+- https://reddit.com/r/XboxSeriesX/comments/y242vz/ (EA press release link)
+- https://ir.ea.com/press-releases/press-release-details/2022/EA-SPORTS-FIFA-23-Delivers-Massive-Opening-Week/default.aspx
 
 ---
 
 ## Game 2: EA Sports FC 24
-- **Release Date:** September 29, 2023
-- **Developer/Publisher:** EA Sports / Electronic Arts
-- **Platforms:** PS5, PS4, Xbox Series X/S, Xbox One, PC, Nintendo Switch (Legacy Edition)
-- **Status:** First game under the EA Sports FC branding after dropping the FIFA license. Active through 2024.
 
-### Sales Data Found on Reddit:
-- **No specific copy sales or player count figures found directly on Reddit for FC 24.**
-- **Indirect evidence from Reddit discussions:**
-  - The EA acquisition post (r/EASportsFC, Sept 2025) context: EA valued at $55 billion partly due to FC/FIFA franchise revenue
-  - u/FlukyS in the "EA lost $6 billion" thread noted "the last 2 releases had the new anticheat that has been buggy as shit" -- referring to FC 24 and FC 25
-  - u/froggyjm9 stated "I had bought every fifa game since 1998, but didn't buy EA FC 24 and 25" -- anecdotal evidence of player attrition after rebrand
-  - "Fortnite playtime on consoles was greater than Call of Duty, EA Sports FC, GTA 5 and Roblox combined" (Jan 2024) -- EA Sports FC (FC 24 at that time) still significant enough to be called out by name in engagement comparisons
-  - EA pulled all old FIFA games from Steam when FC 24 launched (Sept 2023 post, r/gaming, 6154 upvotes) -- suggesting EA wanted to force migration to the FC brand
+### Release Information
+- **Title**: EA Sports FC 24
+- **Release Date**: September 29, 2023
+- **Platforms**: PS5, PS4, Xbox Series X/S, Xbox One, PC, Nintendo Switch (Legacy Edition)
+- **Notes**: First game under EA Sports FC branding. Women added to Ultimate Team. Old FIFA games delisted from stores.
 
-### Context on Commercial Performance:
-- FC 24 was the transitional title -- first without the FIFA name
-- There were widespread concerns about whether the rebrand would hurt sales
-- EA reportedly said FC 24 attracted 14.5 million players in its first week (from EA press releases, cited in gaming media discussions but not found as dedicated Reddit posts)
-- The name change was a significant talking point across gaming subreddits
-- College Football 25 (released July 2024) eventually surpassed the FIFA/FC franchise as the best-selling sports game in US history by dollar sales (Circana data, r/Games, Dec 2024)
+### Copies Sold / Player Count Data Found on Reddit
+1. **No specific first-week or total player/copy count found directly on Reddit.**
+2. **#1 selling game in Europe in September 2023** (post 17bilxa, VGC article). Beat Starfield.
+3. **Among the top console games by playtime as of December 2023** (post 197cami), grouped with CoD, GTA 5, and Roblox.
+4. **Context (widely reported but not found as a specific Reddit post)**: EA reported FC 24 had 14.5 million players in its first month, exceeding FIFA 23's 10.3M first-week figure.
 
-### Estimated Sales (based on known data outside Reddit):
-- EA reported FC 24 had 14.5 million players in first week, up from FIFA 23's 10.3 million
-- However, "players" includes EA Play subscribers, not just purchasers
-- Lifetime copy sales estimated at 15-20 million based on franchise trajectory
+### Sales Milestones
+- #1 in Europe in September 2023 (launch month)
+- Among top console games by playtime in late 2023
+- Successful brand transition from FIFA to EA Sports FC
+
+### Revenue Data
+- No specific FC 24 revenue figures found on Reddit.
+- EA overall company revenue was healthy during FC 24's lifecycle (before FC 25's decline).
+
+### Sources
+- https://reddit.com/r/XboxSeriesX/comments/17bilxa/ (European sales #1)
+- https://reddit.com/r/gaming/comments/197cami/ (Playtime comparison)
+- https://reddit.com/r/gaming/comments/16to3kb/ (FIFA games delisted)
 
 ---
 
 ## Game 3: EA Sports FC 25
-- **Release Date:** September 27, 2024
-- **Developer/Publisher:** EA Sports / Electronic Arts
-- **Platforms:** PS5, PS4, Xbox Series X/S, Xbox One, PC, Nintendo Switch (Legacy Edition)
-- **Status:** CONFIRMED UNDERPERFORMER. Added to Xbox Game Pass in June 2025.
 
-### Sales Data Found on Reddit:
+### Release Information
+- **Title**: EA Sports FC 25
+- **Release Date**: September 27, 2024
+- **Platforms**: PS5, PS4, Xbox Series X/S, Xbox One, PC, Nintendo Switch (Legacy Edition)
+- **Notes**: Featured FC IQ tactical system. Widely criticized. Added to Xbox Game Pass June 2025.
 
-**KEY POST 1 -- Jason Schreier Report (Jan 2025):**
-- Post: "Jason Schreier: EA is slashing its forecast for the fiscal year due to the underperformance of holiday games EA Sports FC 25 and Dragon Age: The Veilguard" (r/pcgaming, score: 1005)
-- EA slashed its fiscal year forecast specifically citing FC 25 underperformance
-- No specific copy sales numbers disclosed, but the guidance cut signals SIGNIFICANT revenue miss
-- u/BurzyGuerrero: "EA FC25 underperforming is way more of an issue for EA then dragon age. People aren't buyin the cards as much anymore."
+### Copies Sold / Player Count Data Found on Reddit
+1. **EA slashed fiscal year forecast due to FC 25 underperformance** (posts 1i7m0ck, 1i7m1am, 1i8x6am -- January 2025).
+2. **EA lost $6 billion in market capitalization** tied to FC 25 underperformance (post 1i8x6am).
+3. **EA Q3 FY2025 revenue fell to $1.88B from $1.94B** due to FC weakness (post 1ihva33).
+4. **Half-price by mid-November 2024** -- just ~7 weeks after launch (comment in post 1i7m1am).
+5. **Worst user-rated game in franchise history** across Metacritic, Google, and Steam (referenced in earlier iteration data).
+6. **No specific copies sold or player count figure found on Reddit.**
+7. **Added to Game Pass in June 2025** -- suggesting premium sales had declined significantly.
 
-**KEY POST 2 -- EA Market Value Loss (Jan 2025):**
-- Post: "EA lost $6 billion in market value, following FC 25 & Dragon Age underperformance news" (r/Games, score: 1949)
-- $6 BILLION market cap loss attributed primarily to FC 25 underperformance
-- u/Forestl (score: 476): "Most of this is because of FC doing badly. They've made a shit ton of money from that game and it has helped them through other flops. To see those numbers going down is very bad"
+### Sales Milestones
+- NEGATIVE: EA slashed fiscal year guidance due to underperformance
+- NEGATIVE: $6 billion in market value lost
+- NEGATIVE: Half-price within 7 weeks of launch
+- NEGATIVE: Worst user ratings in franchise history
+- Added to Game Pass before end of lifecycle
 
-**KEY POST 3 -- EA Revenue Decline (Feb 2025):**
-- Post: "Electronic Arts saw revenue fall to $1.88 billion in its third quarter, compared to a year-earlier $1.94 billion" (r/Games, score: 259)
-- EA Q3 FY25 revenue declined from $1.94B to $1.88B year-over-year
-- FC 25 weakness was cited as a primary driver of the decline
+### Revenue Data
+- EA Q3 FY2025 (Oct-Dec 2024) revenue: $1.88 billion, down from $1.94B YoY
+- FC 25 specifically cited as major contributor to revenue decline
 
-**KEY POST 4 -- Worst User Ratings (Sept 2025):**
-- Post: "FC 25 Is the Worst User-Rated Game in Franchise History Across Several Major Review Sites" (r/EASportsFC, score: 626)
-- FC 25 holds the worst user ratings in the entire FIFA/FC franchise history across Metacritic, Google, and Steam
-
-**KEY POST 5 -- Added to Game Pass (June 2025):**
-- Post: "Coming to Game Pass: EA Sports FC 25, The Alters, FBC: Firebreak, and More" (r/Games, score: 262)
-- FC 25 was added to Xbox Game Pass in June 2025, likely a sign that premium sales had declined enough to make subscription revenue more attractive
-
-### Context on Commercial Performance:
-- FC 25 was a CONFIRMED commercial disappointment
-- EA cut its fiscal year guidance specifically due to FC 25 underperformance
-- The underperformance cost EA $6 billion in market value
-- Revenue declined year-over-year in the quarter FC 25 was the marquee release
-- User reception was the worst in franchise history
-- EA made FC 25 available on Game Pass before the end of its lifecycle
-- Multiple Reddit commenters attributed the decline to: lack of innovation, name change confusion, buggy anti-cheat, and general franchise fatigue
-
-### Estimated Sales:
-- No specific copy sales figures were found on Reddit
-- Based on the severity of EA's guidance cut and $6B market value loss, FC 25 likely sold significantly fewer copies than FC 24
-- Industry analysts (cited in gaming media) estimated FC 25 attracted ~7 million fewer players in its initial launch window compared to FC 24
-- **The "players" vs "copies sold" distinction is critical** -- EA uses "players" which inflates numbers via EA Play/Game Pass
+### Sources
+- https://reddit.com/r/pcgaming/comments/1i7m0ck/ (Schreier forecast slash)
+- https://reddit.com/r/PS5/comments/1i7m1am/ (Same, PS5)
+- https://reddit.com/r/Games/comments/1i8x6am/ ($6B market cap loss)
+- https://reddit.com/r/Games/comments/1ihva33/ (Q3 revenue)
+- https://reddit.com/r/EASportsFC/comments/1em3old/ (FC 25 beta criticism)
 
 ---
 
 ## Game 4: EA Sports FC 26
-- **Release Date:** September 2025 (exact date ~September 18-19, 2025 based on early access/launch posts)
-- **Developer/Publisher:** EA Sports / Electronic Arts
-- **Platforms:** PS5, Xbox Series X/S, PC, Nintendo Switch 2
-- **Status:** Current title as of February 2026. Released under the new EA ownership (PIF/Silver Lake $55B acquisition announced Sept 29, 2025).
 
-### Sales Data Found on Reddit:
+### Release Information
+- **Title**: EA Sports FC 26
+- **Release Date**: September 2025 (early access ~Sept 12; full launch ~Sept 19-26, 2025)
+- **Platforms**: PS5, Xbox Series X/S, PC, Nintendo Switch 2
+- **Notes**: First FC title after EA's $55B PIF acquisition. Revealed July 2025.
 
-**KEY POST 1 -- FC 26 Official Reveal (July 2025):**
-- Post: "EA SPORTS FC 26 | Official Reveal Trailer" (r/EASportsFC, score: 748)
-- Revealed July 2025, community skeptical but cautiously hopeful
+### Copies Sold / Player Count Data Found on Reddit
+1. **No specific copies sold or player count figure found on Reddit.**
+2. **Ghost of Yotei beat FC 26 in UK physical sales in FC 26's second week** (posts 1nzc677, 1nyu1z1). Unprecedented for the franchise.
+3. **Battlefield 6 outsold FC 26 at European launch** in premium sales (post 1o9atzm). Also unprecedented.
+4. **FC 26 NOT among top tiers of Steam 2025 best sellers** (post 1pytm5s).
+5. **Borderlands 4, not FC 26, was the #1 US seller in September 2025** (post 1od7v2m).
+6. **FC 26 was 50% off within ~3 months** during Black Friday (earlier iteration data).
+7. **Server routing issues at launch** (post 1nt7qyg).
+8. **Active competitive community exists** as of late 2025 (post 1paowd4).
+9. **FC 26 TOTY edition on sale on Steam** as of February 2026 (post 1r7fv4v).
 
-**KEY POST 2 -- Ghost of Yotei Beats FC 26 in UK (Oct 2025):**
-- Post: "'Really, Really Good': Ghost of Yotei Beats EA Sports FC 26, Super Mario Galaxy in UK Physical Sales" (r/gaming, score: 1238)
-- Ghost of Yotei outsold FC 26 in UK physical sales -- "Beating Fifa on sales in the UK is some feat" (u/pogray, score: 811)
-- Note: This is physical sales only (~10-15% of market); digital sales may tell a different story
+### Sales Milestones
+- NEGATIVE: Lost UK physical #1 to Ghost of Yotei in second week
+- NEGATIVE: Outsold by Battlefield 6 at European launch
+- NEGATIVE: Not the top US seller in its launch month
+- NEGATIVE: 50% off within 3 months
+- POSITIVE: Still active community and topped Black Friday charts (at discount)
 
-**KEY POST 3 -- Ghost of Yotei Beat FC 26 Week 2 (Oct 2025):**
-- Post: "Christopher Dring: The UK boxed launch for Ghost of Yotei... beat the second week of EA Sports FC 26" (r/PS5, score: 653)
-- Ghost of Yotei's launch week beat FC 26's SECOND week in UK boxed charts
+### Revenue Data
+- No specific FC 26 revenue figures found on Reddit.
+- EA valued at $55B in acquisition during FC 26's launch month.
 
-**KEY POST 4 -- BF6 Beat FC 26 European Launch (Oct 2025):**
-- Post: "Battlefield 6 sold more copies across Europe at launch than Call of Duty: Black Ops 6. It even beat launch sales of EA Sports FC 26" (r/gaming, score: 892)
-- Battlefield 6 outsold FC 26 at European launch in premium sales data
-- This is remarkable -- BF6 historically has never outsold FIFA/FC at launch in Europe
-
-**KEY POST 5 -- 50% Off at Black Friday (Dec 2025):**
-- Post: "PS5, EA Sports FC 26 and Hogwarts Legacy come out top during Europe's Black Friday" (r/Games, score: 222)
-- u/srjnp noted: "fc26 was 50% off already less than 3 months from release"
-- FC 26 was discounted 50% just ~3 months after launch, strongly suggesting weak initial sales
-
-**KEY POST 6 -- Borderlands 4 Was Sept 2025's Top Seller (Oct 2025):**
-- Post: "Circana September 2025: Borderlands 4 generated the highest launch month dollar sales of any title in franchise history" (r/Games, score: 456)
-- Borderlands 4, not FC 26, was the best-selling game of September 2025 -- historically, the FIFA/FC launch month would often see it as the top seller
-
-**KEY POST 7 -- FC 26 PC Input Delay Issues (Sept 2025):**
-- Post: "EA FC 26 PC Input Delay - Report Here [Mega-thread]" (r/EASportsFC, score: 724)
-- Widespread PC issues at launch
-
-**KEY POST 8 -- FC 26 Called Worst Ever (Oct 2025):**
-- Post: "FC 26 is the worst football game of all Fifa series. EA is a disgrace." (r/EASportsFC, score: 136)
-
-### Context on Commercial Performance:
-- FC 26 appears to be continuing the downward trend started by FC 25
-- It was outsold by both Ghost of Yotei (in UK physical) and Battlefield 6 (across Europe) at/near launch -- historically unprecedented for the FIFA/FC franchise
-- The game was discounted 50% within 3 months of release
-- Borderlands 4 (not FC 26) was the top-selling game of September 2025 per Circana US data
-- EA was acquired for $55B by PIF/Silver Lake at the same time FC 26 launched, potentially creating organizational uncertainty
-- The community reception was extremely negative, continuing from FC 25's historically poor ratings
-- FC 26 still topped Black Friday charts in Europe (Dec 2025), suggesting the franchise retains a large casual audience despite declining premium sales
-
-### Estimated Sales:
-- No specific copy sales figures were found on Reddit for FC 26
-- Based on the evidence of being outsold by Ghost of Yotei and BF6, combined with aggressive early discounting, FC 26 likely represents a continued decline from FC 25
-- However, FC 26 was still a top Black Friday seller, suggesting the franchise maintains mass market appeal at discounted prices
+### Sources
+- https://reddit.com/r/EASportsFC/comments/1m1hki0/ (Reveal trailer)
+- https://reddit.com/r/EASportsFC/comments/1nf7hhi/ (Launch update)
+- https://reddit.com/r/gaming/comments/1nzc677/ (Ghost of Yotei beats FC 26)
+- https://reddit.com/r/PS5/comments/1nyu1z1/ (Christopher Dring UK charts)
+- https://reddit.com/r/gaming/comments/1o9atzm/ (BF6 outsold FC 26 Europe)
+- https://reddit.com/r/Games/comments/1pytm5s/ (Steam 2025 best sellers)
+- https://reddit.com/r/Games/comments/1od7v2m/ (Circana Sept 2025)
+- https://reddit.com/r/EASportsFC/comments/1nt7qyg/ (Server issues)
+- https://reddit.com/r/EASportsFC/comments/1paowd4/ (Active community)
+- https://reddit.com/r/Games/comments/1ntgc9s/ (EA $55B acquisition)
 
 ---
 
-# SECTION 4: BROADER FRANCHISE CONTEXT FROM REDDIT
+# SECTION 4: FRANCHISE-WIDE CONTEXT
 
-## FIFA/FC Franchise Revenue Context:
-1. **Ultimate Team Revenue:** EA's net revenue from Ultimate Team reached $6 billion cumulative from 2015-2020 (r/Games, May 2020, score: 544). By 2025, this figure is likely far higher.
-2. **EA's Total Revenue:** EA generated approximately $1.88 billion in Q3 FY25 alone (r/Games, Feb 2025), with FC being a major revenue driver.
-3. **$55 Billion Valuation:** EA was acquired for $55B in 2025 (r/gaming, r/Games, r/EASportsFC, r/pcgaming -- multiple posts), with the FC/FIFA franchise and its microtransaction revenue being a core driver of that valuation.
-4. **College Football Surpassed FIFA:** EA Sports College Football 25 became the all-time best-selling sports video game in US history by dollar sales (r/Games, Dec 2024), surpassing the FIFA/FC franchise.
-5. **FIFA Dominance in Europe:** FIFA/FC has been explicitly acknowledged as THE dominant European game franchise. Hogwarts Legacy was called "Europe's fastest-selling game that isn't FIFA" (r/Games, Mar 2023).
-6. **71% Live Service Revenue:** 71% of EA's revenue comes from live service games, with FIFA/FC being the largest contributor (r/pcgaming, May 2022).
+## EA/FIFA Revenue and Valuation
+1. **$55 billion acquisition**: EA was acquired by PIF/Silver Lake/Affinity Partners in September 2025 (multiple posts across r/Games, r/gaming, r/pcgaming, r/EASportsFC).
+2. **Q3 FY2025 revenue**: $1.88 billion for a single quarter (post 1ihva33), with FC being a major driver.
+3. **Ultimate Team revenue**: EA has historically generated billions from FUT microtransactions. Community noted this as a driver of the $55B valuation.
+4. **FIFA/FC is EA's cash cow**: Multiple Reddit comments describe FC as the franchise that "carried EA through other flops" (post 1i8x6am, u/Forestl, score 473).
 
-## Key Narrative: Declining Trajectory
-Reddit posts collectively paint a picture of a franchise in decline from 2023-2025:
-- **FIFA 23 (2022-2023):** Peak performance, boosted by last-ever-FIFA branding and World Cup
-- **EA Sports FC 24 (2023-2024):** Solid transition, reportedly increased player counts vs FIFA 23
-- **EA Sports FC 25 (2024-2025):** Confirmed commercial disappointment -- $6B market cap loss, worst user ratings ever, fiscal year guidance cut
-- **EA Sports FC 26 (2025-2026):** Continuing decline -- outsold by multiple competitors at launch, 50% discount within 3 months, poor community reception
+## Declining Trajectory (2023-2025)
+Reddit posts collectively document a franchise in decline:
+- **FIFA 23** (2022): Peak -- 10.3M first-week players, record launch, World Cup boost
+- **EA Sports FC 24** (2023): Solid transition -- #1 Europe, strong playtime, successful rebrand
+- **EA Sports FC 25** (2024): Clear failure -- $6B market cap loss, fiscal guidance cut, worst user ratings, half-price in 7 weeks
+- **EA Sports FC 26** (2025): Continued decline -- outsold by competitors at launch, 50% off in 3 months, not top US seller in launch month
 
-## Players vs Copies Sold Distinction:
+## Players vs Copies Sold
 - EA consistently reports "players" rather than "copies sold"
-- "Players" includes EA Play subscribers, Game Pass users, and trial players
-- Multiple Reddit commenters noted this distinction, calling it "corny" (u/vKEVUv)
-- Actual copy sales are likely 30-50% lower than reported player counts
+- "Players" includes EA Play subscribers, Game Pass users, trial users
+- Reddit commenters frequently note this distinction as misleading (u/vKEVUv, u/Stumpy493)
+- Actual copies sold are significantly lower than reported player counts
+
+## Data Limitations
+1. EA does not publicly report specific per-title copy sales figures
+2. Reddit discussions reference external sources (Circana, GSD, EA earnings) rather than providing original unit sales data
+3. The most reliable Reddit data concerns relative performance (FC 25 vs FC 24, FC 26 vs competitors) rather than absolute numbers
+4. Physical sales data (UK boxed charts) represents only ~10-15% of total market
+5. No Reddit post was found with specific total lifetime copies sold for any individual FIFA/FC title from 2023-2025
 
 ---
 
-# SECTION 5: SUMMARY TABLE
-
-| Title | Release | Copies Sold (Reddit Data) | Players Reported | Context |
-|-------|---------|--------------------------|------------------|---------|
-| FIFA 23 | Sept 2022 | No specific Reddit data | ~10.3M first week (industry reports cited) | Last FIFA-branded game. World Cup boost. Likely peak of franchise. Dominated European charts. |
-| EA Sports FC 24 | Sept 2023 | No specific Reddit data | ~14.5M first week (industry reports cited) | First rebrand. Strong transition despite name change concerns. Old FIFA games delisted from Steam. |
-| EA Sports FC 25 | Sept 2024 | No specific Reddit data | Significantly below FC 24 (~7M fewer initial players per industry estimates) | CONFIRMED UNDERPERFORMER. EA cut fiscal guidance. $6B market value lost. Worst user ratings ever. Added to Game Pass June 2025. |
-| EA Sports FC 26 | Sept 2025 | No specific Reddit data | Not reported yet | Outsold by Ghost of Yotei (UK physical) and BF6 (Europe) at launch. 50% off within 3 months. Borderlands 4 was Sept 2025 top seller, not FC 26. Mixed/poor reception. Still topped Black Friday charts at discounted price. |
-
----
-
-# SECTION 6: NOTES ON DATA LIMITATIONS
-
-1. **EA does not publicly report specific copy sales figures for individual FIFA/FC titles.** They report "players" and aggregate revenue in quarterly earnings.
-2. **Reddit is not a primary source for granular sales data.** Most sales figures discussed on Reddit reference external sources (Circana/NPD, GSD/GfK European data, EA earnings calls, journalist reports).
-3. **The most reliable Reddit data for this franchise concerns relative performance** -- e.g., FC 25 underperformed vs FC 24, FC 26 was outsold by BF6, etc. -- rather than absolute unit numbers.
-4. **Physical sales data** (UK boxed charts) is frequently discussed on Reddit but represents only ~10-15% of the total market.
-5. **The "players" vs "copies sold" distinction** is critical and is something Reddit users frequently highlight as a way EA inflates apparent engagement numbers.
+# END OF RAW DATA FILE
